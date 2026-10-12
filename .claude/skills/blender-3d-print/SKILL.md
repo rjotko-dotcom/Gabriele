@@ -30,6 +30,13 @@ Naujus modelius daryk tuo pačiu stiliumi.
 - Etiketė – įleista, lygiai su paviršiumi, 0.4 mm nuožula; šriftas Inter SemiBold, didžiosios
   raidės, `space_character ≈ 1.1`.
 - Funkcinės detalės (varžtai, jungtys) – iš apačios arba ten, kur nesimato.
+- **Nedėk funkcijų, kurių neprašė** (skylių, griovelių, jungčių) – vartotojas nori lygių, švarių paviršių.
+  Pasiūlyk žodžiu, modeliuok tik patvirtinus.
+- Matmenis visada susiek su etikete / priekiu („ilgis nuo etiketės iki galo“), patikrink, kuri
+  sienelė yra priekis, prieš pradėdamas modeliuoti.
+- Keičiama etiketė: liežuvėlis viršuje į paslėptą plyšį + spragtelėjimas apačioje + nago įpjova
+  (žr. `blender/raktu_deze.py`, `label_base`). Patikrink pjūviu (`trimesh.section`) ir ar
+  rėmelis nesikerta su dėžute (`trimesh.boolean.intersection`, tūris = 0).
 
 ## Tolerancijos (FDM, 0.4 mm antgalis)
 | Kas | Reikšmė |

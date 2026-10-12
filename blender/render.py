@@ -120,7 +120,7 @@ def shot(name, pos, target, lens=60):
     bpy.ops.render.render(write_still=True)
 
 
-shot("priekis.png", (-300, -620, 360), (15, -25, 20))
+shot("priekis.png", (-330, -560, 360), (0, -30, 22))
 shot("is_virsaus.png", (220, -380, 520), (0, -10, 15), 55)
 floor.hide_render = True
 shot("apacia.png", (300, 330, -420), (0, 0, 20), 50)

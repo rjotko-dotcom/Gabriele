@@ -9,7 +9,7 @@ Paleidimas:
     arba su pip paketu "bpy":  python raktu_deze.py --out ../
 
 Visi matmenys milimetrais (1 Blender vienetas = 1 mm).
-Ašys: X = ilgis (22 cm), Y = plotis (18 cm, priekis -Y pusėje), Z = aukštis.
+Ašys: X = plotis (18 cm, priekinė sienelė su etikete), Y = ilgis (22 cm, priekis -Y pusėje), Z = aukštis (7 cm).
 """
 
 import math
@@ -24,38 +24,42 @@ from mathutils import Matrix, Vector
 # ---------------------------------------------------------------------------
 # PARAMETRAI – keisk čia
 # ---------------------------------------------------------------------------
-LENGTH = 220.0          # dėžutės ilgis (X)
-WIDTH = 180.0           # dėžutės plotis (Y)
+LENGTH = 180.0          # dėžutės plotis (X) – priekinė sienelė su etikete
+WIDTH = 220.0           # dėžutės ilgis (Y) – nuo etiketės iki galinės sienelės
 HEIGHT = 70.0           # dėžutės aukštis (Z)
 WALL = 5.0              # sienelės storis
-FLOOR = 8.0             # dugno storis (storas – kad tilptų M3 įvoržės iš apačios)
+FLOOR = 4.0             # dugno storis
 R_OUT = 16.0            # išorinių kampų spindulys (vaizdas iš viršaus)
 R_TOP_OUT = 2.5         # viršutinės išorinės briaunos apvalinimas
 R_TOP_IN = 2.3          # viršutinės vidinės briaunos apvalinimas (2.5+2.3 ~ pilnai apvalus kraštas)
 R_FLOOR = 8.0           # vidinis dugno apvalinimas (lengva išsemti raktus)
 BOTTOM_CHAMFER = 0.4    # apatinė nuožula (prieš "elephant foot")
-PLINTH_GAP = 1.0        # "šešėlio" griovelis apačioje – dėžutė atrodo lyg pakibusi
-PLINTH_H = 3.0          # cokolio aukštis
 
 # Priekinė įduba (scoop) – kaip nuotraukoje
 SCOOP_BOTTOM_Z = 41.0   # žemiausias įdubos taškas
-SCOOP_FLAT_HALF = 34.0  # pusė plokščios dalies pločio
-SCOOP_HALF = 78.0       # pusė viso įdubos pločio
+SCOOP_FLAT_HALF = 28.0  # pusė plokščios dalies pločio
+SCOOP_HALF = 62.0       # pusė viso įdubos pločio
 SCOOP_EDGE_R = 2.0      # įdubos briaunų apvalinimas
 
 # Etiketės kišenė priekyje
 LABEL_W = 100.0         # kišenės ilgis
 LABEL_H = 26.0          # kišenės aukštis
 LABEL_Z = 21.0          # kišenės centro aukštis
-LABEL_DEPTH = 2.2       # kišenės gylis (rėmelis 1.6 + 0.6 popieriui/plėvelei)
+LABEL_DEPTH = 2.6       # kišenės gylis (rėmelis 2.0 + 0.6 popieriui/plėvelei)
 LABEL_R = 3.0           # kišenės kampų spindulys
 LABEL_CLEAR = 0.2       # tarpas tarp rėmelio ir kišenės (iš visų pusių)
-FRAME_T = 1.6           # rėmelio / plokštelės storis
+FRAME_T = 2.0           # rėmelio / plokštelės storis
 WINDOW_W = 92.0         # rėmelio langelio ilgis
 WINDOW_H = 19.0         # rėmelio langelio aukštis
-SNAP_R = 0.5            # spragtelėjimo griovelio spindulys kišenėje
-SNAP_RIDGE_R = 0.4      # rėmelio iškilimo spindulys
-SNAP_LEN = 56.0         # spragtelėjimo iškilimo ilgis
+# Rėmelio laikymas: viršuje liežuvėlis įlenda į paslėptą plyšį sienelėje,
+# apačioje – spragtelėjimas (iškilimas į griovelį). Įdėti: viršų į plyšį, apačią prispausti – "klik".
+TONGUE_LEN = 84.0       # liežuvėlio ilgis
+TONGUE_H = 2.5          # kiek liežuvėlis įlenda į plyšį
+TONGUE_T = 0.9          # liežuvėlio storis (galinėje rėmelio pusėje)
+SLOT_CLEAR = 0.15       # plyšio tarpas aplink liežuvėlį
+SNAP_R = 0.6            # apatinio spragtelėjimo griovelio spindulys kišenėje
+SNAP_RIDGE_R = 0.5      # rėmelio apatinio iškilimo spindulys
+SNAP_LEN = 70.0         # spragtelėjimo iškilimo ilgis
 
 # Etiketės plokštelė su tekstu (variantas be popieriaus)
 LABEL_NUMBER = "01"
@@ -64,19 +68,6 @@ TEXT_RAISE = 0.6        # teksto aukštis virš plokštelės (spalvos keitimui)
 TEXT_SPACING = 1.12     # tarpai tarp raidžių (modernesnis vaizdas)
 PLATE_CHAMFER = 0.4     # rėmelio / plokštelės priekinės briaunos nuožula
 FONT_FILE = "Inter-SemiBold.ttf"  # blender/fonts/ (OFL licencija); nėra -> Blender numatytasis šriftas
-
-# M3 tvirtinimas iš apačios (į spintelės lentyną)
-M3_HOLE_D = 4.0         # 4.0 = M3 įlydoma įvorė (heat-set); 2.6 = tiesiai įsukamas varžtas
-M3_HOLE_DEPTH = 6.0     # gylis (dugnas 8 mm -> lieka 2 mm, iš vidaus nesimato)
-M3_POSITIONS = [(sx * 80.0, sy * 60.0) for sx in (-1, 1) for sy in (-1, 1)]
-
-# Dovetail (kregždės uodegos) jungtys šonuose – dėžutės jungiasi tarpusavyje
-DT_SURFACE_W = 8.0      # griovelio plotis ties paviršiumi
-DT_INNER_W = 11.0       # griovelio plotis gilumoje
-DT_DEPTH = 2.4          # griovelio gylis sienelėje
-DT_HEIGHT = 25.0        # griovelio aukštis nuo apačios (atviras apačioje, žemas – mažiau matosi)
-DT_POSITIONS_Y = (-45.0, 45.0)
-DT_CLEAR = 0.15         # tarpas jungčiai (vienai pusei)
 
 SEG = 12                # segmentų skaičius kampo lankui
 COLLECTION = "Raktu_deze"
@@ -178,9 +169,7 @@ def material(name, rgb, rough=0.55):
 # ---------------------------------------------------------------------------
 def build_tray(coll):
     # Išorė: apatinė nuožula + viršutinis apvalinimas
-    g = PLINTH_GAP
-    prof = [(0.0, g + BOTTOM_CHAMFER), (BOTTOM_CHAMFER, g), (PLINTH_H - g, g), (PLINTH_H, 0.0),
-            (HEIGHT - R_TOP_OUT, 0.0)]
+    prof = [(0.0, BOTTOM_CHAMFER), (BOTTOM_CHAMFER, 0.0), (HEIGHT - R_TOP_OUT, 0.0)]
     for i in range(1, SEG + 1):
         a = math.radians(90 * i / SEG)
         prof.append((HEIGHT - R_TOP_OUT + R_TOP_OUT * math.sin(a), R_TOP_OUT * (1 - math.cos(a))))
@@ -208,37 +197,20 @@ def build_tray(coll):
         [(x, yf - 1, LABEL_Z + z) for x, z in pocket],
         [(x, yf + LABEL_DEPTH, LABEL_Z + z) for x, z in pocket]]), coll))
     ymid = yf + FRAME_T / 2
-    for zs in (LABEL_Z + LABEL_H / 2, LABEL_Z - LABEL_H / 2):
-        ring = [(ymid + y, zs + z) for y, z in circle(SNAP_R, 24)]
-        cutters.append(new_obj("cut_snap", loft("cut_snap", [
-            [(-SNAP_LEN / 2 - 2, y, z) for y, z in ring],
-            [(SNAP_LEN / 2 + 2, y, z) for y, z in ring]]), coll))
+    ring = [(ymid + y, LABEL_Z - LABEL_H / 2 + z) for y, z in circle(SNAP_R, 24)]
+    cutters.append(new_obj("cut_snap", loft("cut_snap", [
+        [(-SNAP_LEN / 2 - 2, y, z) for y, z in ring],
+        [(SNAP_LEN / 2 + 2, y, z) for y, z in ring]]), coll))
+    # paslėptas plyšys liežuvėliui virš kišenės (iš priekio jo nesimato)
+    y0 = yf + FRAME_T - TONGUE_T - SLOT_CLEAR
+    y1 = yf + FRAME_T + SLOT_CLEAR
+    slot = [(x, (y0 + y1) / 2 + y) for x, y in rrect(TONGUE_LEN + 2 * SLOT_CLEAR + 0.6, y1 - y0, 0.3, 4)]
+    top = LABEL_Z + LABEL_H / 2
+    cutters.append(new_obj("cut_slot", prism_z("cut_slot", slot, top - 1.0, top + TONGUE_H + 0.7), coll))
     notch = [(x, LABEL_Z - LABEL_H / 2 + z) for x, z in rrect(14.0, 4.0, 1.5)]
     cutters.append(new_obj("cut_notch", loft("cut_notch", [
         [(x, yf - 1, z) for x, z in notch],
         [(x, yf + LABEL_DEPTH + 0.6, z) for x, z in notch]]), coll))
-
-    # M3 skylės iš apačios (su 0.6 mm nuožula)
-    rh = M3_HOLE_D / 2
-    for px, py in M3_POSITIONS:
-        rings = []
-        for z, r in ((-1.0, rh + 1.6), (0.6, rh), (M3_HOLE_DEPTH, rh)):
-            rings.append([(px + x, py + y, z) for x, y in circle(r, 32)])
-        cutters.append(new_obj("cut_m3", loft("cut_m3", rings), coll))
-
-    # Dovetail grioveliai abiejuose šonuose (atviri apačioje, iš vidaus nesimato)
-    for side in (-1, 1):
-        x0 = side * LENGTH / 2
-        for py in DT_POSITIONS_Y:
-            poly = [
-                (x0 + side * 1.0, py - DT_SURFACE_W / 2 - 1.0 * 0.625),
-                (x0 - side * DT_DEPTH, py - DT_INNER_W / 2),
-                (x0 - side * DT_DEPTH, py + DT_INNER_W / 2),
-                (x0 + side * 1.0, py + DT_SURFACE_W / 2 + 1.0 * 0.625),
-            ]
-            if side < 0:
-                poly.reverse()
-            cutters.append(new_obj("cut_dt", prism_z("cut_dt", poly, -1.0, DT_HEIGHT), coll))
 
     boolean(tray, cutters)
     return tray
@@ -293,20 +265,24 @@ def scoop_cutter():
 
 
 def label_base(name, coll):
-    """Rėmelio / plokštelės pagrindas su spragtelėjimo iškilimais (vietinės koord.:
+    """Rėmelio / plokštelės pagrindas su liežuvėliu viršuje ir spragtelėjimu apačioje (vietinės koord.:
     priekinis paviršius viršuje z=FRAME_T, spausdinama gulint)."""
     fw, fh = LABEL_W - 2 * LABEL_CLEAR, LABEL_H - 2 * LABEL_CLEAR
     rings = []
     for z, ins in ((0.0, 0.0), (FRAME_T - PLATE_CHAMFER, 0.0), (FRAME_T, PLATE_CHAMFER)):
         rings.append([(x, y, z) for x, y in rrect(fw - 2 * ins, fh - 2 * ins, LABEL_R - LABEL_CLEAR - ins)])
     ob = new_obj(name, loft(name, rings), coll)
-    ridges = []
-    for ys in (fh / 2, -fh / 2):
-        ring = [(ys + y, FRAME_T / 2 + z) for y, z in circle(SNAP_RIDGE_R, 24)]
-        ridges.append(new_obj("ridge", loft("ridge", [
-            [(-SNAP_LEN / 2, y, z) for y, z in ring],
-            [(SNAP_LEN / 2, y, z) for y, z in ring]]), coll))
-    boolean(ob, ridges, "UNION")
+    ring = [(-fh / 2 + y, FRAME_T / 2 + z) for y, z in circle(SNAP_RIDGE_R, 24)]
+    ridge = new_obj("ridge", loft("ridge", [
+        [(-SNAP_LEN / 2, y, z) for y, z in ring],
+        [(SNAP_LEN / 2, y, z) for y, z in ring]]), coll)
+    # liežuvėlis viršuje, galinėje pusėje; galas nusklembtas, kad lengvai įlįstų
+    L, T = TONGUE_LEN, TONGUE_T
+    rings = []
+    for y, l, t in ((fh / 2 - 1.0, L, T), (fh / 2 + TONGUE_H - 0.5, L, T), (fh / 2 + TONGUE_H, L - 1.0, T - 0.4)):
+        rings.append([(-l / 2, y, 0.0), (l / 2, y, 0.0), (l / 2, y, t), (-l / 2, y, t)])
+    tongue = new_obj("tongue", loft("tongue", rings), coll)
+    boolean(ob, [ridge, tongue], "UNION")
     return ob
 
 
@@ -379,17 +355,6 @@ def build_plate(coll):
     return plate, text
 
 
-def build_connector(coll):
-    """Dvigubas dovetail ("peteliškė") – sujungia dvi gretimas dėžutes iš apačios."""
-    d = DT_DEPTH - 0.2
-    ws = (DT_SURFACE_W - 2 * DT_CLEAR) / 2
-    wi = (DT_INNER_W - 2 * DT_CLEAR) / 2
-    poly = [(-d, -wi), (0, -ws), (d, -wi), (d, wi), (0, ws), (-d, wi)]
-    poly.reverse()
-    ln = DT_HEIGHT - 1.0
-    return new_obj("Jungtis", prism_z("Jungtis", poly, 0.0, ln), coll)
-
-
 # ---------------------------------------------------------------------------
 # Eksportas
 # ---------------------------------------------------------------------------
@@ -429,23 +394,19 @@ def main(out_dir=None):
     tray = build_tray(coll)
     frame = build_frame(coll)
     plate, text = build_plate(coll)
-    conn = build_connector(coll)
 
     # Spausdinimo orientacijos (lokalios koordinatės) -> STL
     if out_dir:
         stl = os.path.join(out_dir, "stl")
         os.makedirs(stl, exist_ok=True)
-        write_stl(os.path.join(stl, "deze_220x180x70.stl"), [tray])
+        write_stl(os.path.join(stl, "deze_180x220x70.stl"), [tray])
         write_stl(os.path.join(stl, "etiketes_remelis.stl"), [frame])
         write_stl(os.path.join(stl, "etiketes_plokstele_su_tekstu.stl"), [plate, text])
         write_stl(os.path.join(stl, "etiketes_plokstele_be_teksto.stl"), [plate])
         write_stl(os.path.join(stl, "etiketes_tekstas_tik_spalva.stl"), [text])
-        # jungtis spausdinama gulint ant plokščio šono
-        write_stl(os.path.join(stl, "jungtis_dovetail.stl"), [conn],
-                  Matrix.Rotation(math.radians(90), 4, "Y") @ Matrix.Translation((0, 0, 0)))
 
     # Scenos išdėstymas: rėmelis kišenėje, už jo popierinė etiketė (tik peržiūrai);
-    # plokštelė su tekstu ir jungtis – šalia (nerenderinamos)
+    # plokštelė su tekstu – šalia (nerenderinama)
     rx = Matrix.Rotation(math.radians(90), 4, "X")
     frame.matrix_world = Matrix.Translation((0, -WIDTH / 2 + FRAME_T, LABEL_Z)) @ rx
     paper_scale = Matrix.Diagonal((1, 1, 0.25, 1))
@@ -454,21 +415,20 @@ def main(out_dir=None):
     for ob in (paper, paper_txt):
         ob.matrix_world = Matrix.Translation((0, -WIDTH / 2 + LABEL_DEPTH, LABEL_Z)) @ rx @ paper_scale
     plate.matrix_world = text.matrix_world = Matrix.Translation((LENGTH / 2 + 90, 0, 0))
-    conn.location = (LENGTH / 2 + 30, -45, 0)
-    for ob in (plate, text, conn):
+    for ob in (plate, text):
         ob.hide_render = True
 
     m_box = material("Deze_juoda", (0.025, 0.025, 0.028), 0.45)
     m_lbl = material("Etikete_balta", (0.80, 0.80, 0.78), 0.4)
     m_paper = material("Popierius", (0.86, 0.86, 0.84), 0.8)
     m_txt = material("Tekstas_juodas", (0.02, 0.02, 0.02), 0.5)
-    for ob, m in ((tray, m_box), (frame, m_box), (plate, m_lbl), (text, m_txt), (conn, m_box),
+    for ob, m in ((tray, m_box), (frame, m_box), (plate, m_lbl), (text, m_txt),
                   (paper, m_paper), (paper_txt, m_txt)):
         ob.data.materials.clear()
         ob.data.materials.append(m)
         for p in ob.data.polygons:
             p.use_smooth = False
-    return dict(tray=tray, frame=frame, plate=plate, text=text, conn=conn)
+    return dict(tray=tray, frame=frame, plate=plate, text=text)
 
 
 if __name__ == "__main__":
