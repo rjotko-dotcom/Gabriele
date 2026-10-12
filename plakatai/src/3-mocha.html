@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<title>Mocha – medžiagos pristatymas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="poster.css">
+<style>
+  :root { --accent: #9A5B24; }
+  .main { display: grid; grid-template-columns: 74mm 1fr; column-gap: 9mm; min-height: 0; }
+  .hero { position: relative; }
+  .hero figcaption { font-size: 7pt; }
+  .content { display: grid; grid-template-rows: auto auto 1fr auto; row-gap: 4.2mm; min-height: 0; }
+  .head { display: grid; grid-template-columns: 1fr 76mm; column-gap: 8mm; align-items: end; }
+  .material { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 26pt; line-height: 1; color: var(--ink); margin-top: 1.5mm; }
+  .mid { display: grid; grid-template-columns: 74mm 1fr; column-gap: 8mm; min-height: 0; }
+  .layers { display: flex; flex-direction: column; gap: 1.4mm; }
+  .layer { padding: 2mm 3mm; margin-left: var(--o); }
+  .layer h3 { font-size: 8pt; }
+  .layer p { font-size: 7pt; line-height: 1.35; }
+  .props { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; align-content: start; }
+  .props div { background: var(--card); padding: 2.4mm 3mm 2.6mm; border-top: 0.6mm solid var(--accent); }
+  .props div.minus { background: var(--paper-2); border-top-color: var(--gray); }
+  .props h3 { font-size: 8.2pt; margin-bottom: 0.8mm; }
+  .props p { font-size: 7.2pt; line-height: 1.4; }
+  .spec { display: grid; grid-template-columns: auto 1fr; column-gap: 4mm; row-gap: 1.2mm; font-size: 7.4pt; color: var(--body); }
+  .spec dt { color: var(--accent); font-weight: 600; }
+  .strip { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.2mm; height: 40mm; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <header class="top">
+    <div class="task"><b>3</b>Užduotis · Pasirinktos medžiagos pristatymas</div>
+    <div class="course">Daiktinės aplinkos elementai · dėst. K. Čimkutė · III k. rudens semestras</div>
+  </header>
+
+  <main class="main">
+    <figure class="photo hero"><img src="img/mochatex.jpg" alt=""><figcaption><b>Detalė:</b> horizontalios metalinio šepečio vagos primena nuosėdinių uolienų sluoksnius</figcaption></figure>
+
+    <section class="content">
+      <div class="head">
+        <div>
+          <h1>Mocha</h1>
+          <div class="where">Pune, Indija · Loop Design Studio · ≈ 650 m² · 2025 · 15 aukšto terasa</div>
+        </div>
+        <dl class="spec">
+          <dt>Naudojimas</dt><dd>kolonos, sienos, kabantys lubų tūriai</dd>
+          <dt>Paviršius</dt><dd>grubus, sluoksniuotas, matinis</dd>
+          <dt>Spalva</dt><dd>šilta smėlio, vienoda visur</dd>
+          <dt>Apdirbimas</dt><dd>glaistas + metalinis šepetys</dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="eyebrow">Pasirinkta medžiaga</div>
+        <div class="material">Faktūrinis glaistas ant faneros</div>
+        <p style="margin-top:2mm"><span class="tagline" style="font-size:13pt">„Akmuo“, kuris nėra akmuo.</span> Masyvios, tarsi iš uolos iškaltos kolonos ir skliautai iš tikrųjų yra lengvi: tuščiaviduris plieno karkasas apkalamas fanera, padengiamas glaistu ir apdirbamas metaliniu šepečiu. Viena medžiaga dengia visus paviršius, todėl dangoraižio viršuje atsiranda vientisas požemių urvas.</p>
+      </div>
+
+      <div class="mid">
+        <div>
+          <div class="eyebrow" style="margin-bottom:2mm">Sandara · iš išorės į vidų</div>
+          <div class="layers">
+            <div class="layer" style="--o:0mm; background:#D9C3A0"><h3>4 · Metalinio šepečio faktūra</h3><p>horizontalios „nuosėdų“ vagos</p></div>
+            <div class="layer" style="--o:5mm; background:#C9AE86"><h3>3 · Glaistas</h3><p>vientisas, besiūlis paviršius</p></div>
+            <div class="layer" style="--o:10mm; background:#A9804F"><h3>2 · Komercinė fanera</h3><p style="color:#1C1A17">apkala ir pagrindas glaistui</p></div>
+            <div class="layer" style="--o:15mm; background:#3B342D"><h3 style="color:#F3EFE8">1 · Plieno karkasas</h3><p style="color:#D9CFC0">tuščiaviduris, laiko formą</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow" style="margin-bottom:2mm">Kodėl ši medžiaga</div>
+          <div class="props">
+            <div><h3>Lengvumas</h3><p>Tikras akmuo 15 aukšte būtų per sunkus – karkasas sukuria masyvų vaizdą be apkrovos.</p></div>
+            <div><h3>Laisvos formos</h3><p>Konsolės, kabantys tūriai ir „indai“ po lubomis įmanomi tik su lengvu karkasu.</p></div>
+            <div><h3>Vientisumas</h3><p>Sienos, kolonos ir lubos susilieja į vieną uolą – urvo įspūdis be siūlių.</p></div>
+            <div class="minus"><h3>Ribotumai</h3><p>Jautrus smūgiams ir drėgmei; gili faktūra kaupia dulkes, reikia priežiūros.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="strip">
+        <figure class="photo"><img src="img/mocha16.jpg" alt=""><figcaption><b>Centrinė salė</b> – kolonos ir skliautai</figcaption></figure>
+        <figure class="photo"><img src="img/mocha3.jpg" alt="" style="object-position:50% 30%"><figcaption><b>Kabantys tūriai</b></figcaption></figure>
+        <figure class="photo"><img src="img/mocha6.jpg" alt=""><figcaption><b>Koridoriai</b></figcaption></figure>
+        <figure class="photo"><img src="img/mocha10.jpg" alt=""><figcaption><b>Po stoglangiais</b></figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <span class="name">Gabrielė Meilūnaitė</span>
+    <span>Nuotr. Purnesh Dev Nikhanj · Sandara pagal STIR, ArchDaily; savybių vertinimas – autorės</span>
+    <span>03 / 03</span>
+  </footer>
+</div>
+</body>
+</html>

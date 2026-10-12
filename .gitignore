@@ -1,0 +1,5 @@
+# Trečiųjų šalių nuotraukos (autorių teisės) ir sugeneruoti failai – į repozitoriją nekeliami
+plakatai/src/img/
+plakatai/src/node_modules
+plakatai/src/preview-*.png
+plakatai/*.pdf
