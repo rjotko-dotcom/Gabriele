@@ -17,8 +17,8 @@ import os
 import struct
 import sys
 
+import bpy  # bpy pirmas (reikia, kai naudojamas pip paketas "bpy")
 import bmesh
-import bpy
 from mathutils import Matrix, Vector
 
 # ---------------------------------------------------------------------------
@@ -30,21 +30,21 @@ HEIGHT = 70.0           # dėžutės aukštis (Z)
 WALL = 5.0              # sienelės storis
 FLOOR = 8.0             # dugno storis (storas – kad tilptų M3 įvoržės iš apačios)
 R_OUT = 16.0            # išorinių kampų spindulys (vaizdas iš viršaus)
-R_TOP_OUT = 2.0         # viršutinės išorinės briaunos apvalinimas
-R_TOP_IN = 1.5          # viršutinės vidinės briaunos apvalinimas
+R_TOP_OUT = 2.5         # viršutinės išorinės briaunos apvalinimas
+R_TOP_IN = 2.3          # viršutinės vidinės briaunos apvalinimas (2.5+2.3 ~ pilnai apvalus kraštas)
 R_FLOOR = 8.0           # vidinis dugno apvalinimas (lengva išsemti raktus)
 BOTTOM_CHAMFER = 0.6    # apatinė nuožula (prieš "elephant foot")
 
 # Priekinė įduba (scoop) – kaip nuotraukoje
-SCOOP_BOTTOM_Z = 42.0   # žemiausias įdubos taškas
-SCOOP_FLAT_HALF = 35.0  # pusė plokščios dalies pločio
-SCOOP_HALF = 72.0       # pusė viso įdubos pločio
-SCOOP_EDGE_R = 1.5      # įdubos briaunų apvalinimas
+SCOOP_BOTTOM_Z = 41.0   # žemiausias įdubos taškas
+SCOOP_FLAT_HALF = 34.0  # pusė plokščios dalies pločio
+SCOOP_HALF = 78.0       # pusė viso įdubos pločio
+SCOOP_EDGE_R = 2.0      # įdubos briaunų apvalinimas
 
 # Etiketės kišenė priekyje
 LABEL_W = 100.0         # kišenės ilgis
 LABEL_H = 26.0          # kišenės aukštis
-LABEL_Z = 22.0          # kišenės centro aukštis
+LABEL_Z = 21.0          # kišenės centro aukštis
 LABEL_DEPTH = 2.2       # kišenės gylis (rėmelis 1.6 + 0.6 popieriui/plėvelei)
 LABEL_R = 3.0           # kišenės kampų spindulys
 LABEL_CLEAR = 0.2       # tarpas tarp rėmelio ir kišenės (iš visų pusių)
@@ -59,6 +59,9 @@ SNAP_LEN = 56.0         # spragtelėjimo iškilimo ilgis
 LABEL_NUMBER = "01"
 LABEL_TEXT = "ATSARGINIAI RAKTAI"
 TEXT_RAISE = 0.6        # teksto aukštis virš plokštelės (spalvos keitimui)
+TEXT_SPACING = 1.12     # tarpai tarp raidžių (modernesnis vaizdas)
+PLATE_CHAMFER = 0.4     # rėmelio / plokštelės priekinės briaunos nuožula
+FONT_FILE = "Inter-SemiBold.ttf"  # blender/fonts/ (OFL licencija); nėra -> Blender numatytasis šriftas
 
 # M3 tvirtinimas iš apačios (į spintelės lentyną)
 M3_HOLE_D = 4.0         # 4.0 = M3 įlydoma įvorė (heat-set); 2.6 = tiesiai įsukamas varžtas
@@ -69,7 +72,7 @@ M3_POSITIONS = [(sx * 80.0, sy * 60.0) for sx in (-1, 1) for sy in (-1, 1)]
 DT_SURFACE_W = 8.0      # griovelio plotis ties paviršiumi
 DT_INNER_W = 11.0       # griovelio plotis gilumoje
 DT_DEPTH = 2.4          # griovelio gylis sienelėje
-DT_HEIGHT = 45.0        # griovelio aukštis nuo apačios (atviras apačioje)
+DT_HEIGHT = 25.0        # griovelio aukštis nuo apačios (atviras apačioje, žemas – mažiau matosi)
 DT_POSITIONS_Y = (-45.0, 45.0)
 DT_CLEAR = 0.15         # tarpas jungčiai (vienai pusei)
 
@@ -206,7 +209,7 @@ def build_tray(coll):
         cutters.append(new_obj("cut_snap", loft("cut_snap", [
             [(-SNAP_LEN / 2 - 2, y, z) for y, z in ring],
             [(SNAP_LEN / 2 + 2, y, z) for y, z in ring]]), coll))
-    notch = [(LABEL_W / 2 + x, LABEL_Z + z) for x, z in circle(3.5, 32)]
+    notch = [(x, LABEL_Z - LABEL_H / 2 + z) for x, z in rrect(14.0, 4.0, 1.5)]
     cutters.append(new_obj("cut_notch", loft("cut_notch", [
         [(x, yf - 1, z) for x, z in notch],
         [(x, yf + LABEL_DEPTH + 0.6, z) for x, z in notch]]), coll))
@@ -289,7 +292,10 @@ def label_base(name, coll):
     """Rėmelio / plokštelės pagrindas su spragtelėjimo iškilimais (vietinės koord.:
     priekinis paviršius viršuje z=FRAME_T, spausdinama gulint)."""
     fw, fh = LABEL_W - 2 * LABEL_CLEAR, LABEL_H - 2 * LABEL_CLEAR
-    ob = new_obj(name, prism_z(name, rrect(fw, fh, LABEL_R - LABEL_CLEAR), 0.0, FRAME_T), coll)
+    rings = []
+    for z, ins in ((0.0, 0.0), (FRAME_T - PLATE_CHAMFER, 0.0), (FRAME_T, PLATE_CHAMFER)):
+        rings.append([(x, y, z) for x, y in rrect(fw - 2 * ins, fh - 2 * ins, LABEL_R - LABEL_CLEAR - ins)])
+    ob = new_obj(name, loft(name, rings), coll)
     ridges = []
     for ys in (fh / 2, -fh / 2):
         ring = [(ys + y, FRAME_T / 2 + z) for y, z in circle(SNAP_RIDGE_R, 24)]
@@ -302,9 +308,25 @@ def label_base(name, coll):
 
 def build_frame(coll):
     ob = label_base("Etiketes_remelis", coll)
-    win = new_obj("cut_win", prism_z("cut_win", rrect(WINDOW_W, WINDOW_H, 1.5), -1, FRAME_T + 1), coll)
+    c = PLATE_CHAMFER
+    win = new_obj("cut_win", loft("cut_win", [
+        [(x, y, z) for x, y in rrect(WINDOW_W + 2 * ins, WINDOW_H + 2 * ins, 1.5 + ins)]
+        for z, ins in ((-1, 0), (FRAME_T - c, 0), (FRAME_T, c), (FRAME_T + 1, c))]), coll)
     boolean(ob, [win])
     return ob
+
+
+def find_font():
+    dirs = []
+    if "__file__" in globals():
+        dirs.append(os.path.dirname(os.path.abspath(__file__)))
+    if bpy.data.filepath:
+        dirs.append(os.path.dirname(bpy.data.filepath))
+    for d in dirs:
+        for f in (os.path.join(d, "fonts", FONT_FILE), os.path.join(d, "blender", "fonts", FONT_FILE)):
+            if os.path.exists(f):
+                return f
+    return None
 
 
 def make_text(body, size, x, coll, max_w=None):
@@ -314,6 +336,10 @@ def make_text(body, size, x, coll, max_w=None):
     cu.align_x = "CENTER"
     cu.align_y = "CENTER"
     cu.extrude = (TEXT_RAISE + 0.1) / 2
+    cu.space_character = TEXT_SPACING
+    font = find_font()
+    if font:
+        cu.font = bpy.data.fonts.load(font, check_existing=True)
     tmp = bpy.data.objects.new("txt", cu)
     coll.objects.link(tmp)
     dg = bpy.context.evaluated_depsgraph_get()
@@ -416,8 +442,8 @@ def main(out_dir=None):
 
     # Scenos išdėstymas: rėmelis kišenėje, plokštelė ir jungtis šalia
     place = Matrix.Translation((0, -WIDTH / 2 + FRAME_T, LABEL_Z)) @ Matrix.Rotation(math.radians(90), 4, "X")
-    frame.matrix_world = place
-    plate.matrix_world = text.matrix_world = Matrix.Translation((0, -WIDTH / 2 - 40, 0)) @ place
+    plate.matrix_world = text.matrix_world = place
+    frame.matrix_world = Matrix.Translation((LENGTH / 2 - 10, -WIDTH / 2 - 45, 0))
     plate.hide_viewport = text.hide_viewport = False
     conn.location = (LENGTH / 2 + 30, -45, 0)
 
@@ -439,6 +465,9 @@ if __name__ == "__main__":
         out = os.path.abspath(argv[argv.index("--out") + 1])
     elif bpy.data.filepath:
         out = os.path.dirname(bpy.data.filepath)
+    if bpy.app.background:  # švari scena (be numatytojo kubo, kameros, šviesos)
+        for ob in list(bpy.data.objects):
+            bpy.data.objects.remove(ob)
     main(out)
     if out and bpy.app.background:
         os.makedirs(os.path.join(out, "blender"), exist_ok=True)
