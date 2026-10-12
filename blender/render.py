@@ -41,24 +41,18 @@ def mat(name, build):
 
 
 def wood(nt):
+    # ramus šviesaus ąžuolo tonas su subtiliu triukšmu (be ryškių raštų)
     n = nt.nodes
     bsdf = n["Principled BSDF"]
-    tc = n.new("ShaderNodeTexCoord")
-    mp = n.new("ShaderNodeMapping")
-    mp.inputs["Scale"].default_value = (0.004, 0.06, 0.004)
-    wave = n.new("ShaderNodeTexWave")
-    wave.inputs["Scale"].default_value = 2.0
-    wave.inputs["Distortion"].default_value = 6.0
-    wave.inputs["Detail"].default_value = 3.0
+    noise = n.new("ShaderNodeTexNoise")
+    noise.inputs["Scale"].default_value = 0.02
+    noise.inputs["Detail"].default_value = 4.0
     ramp = n.new("ShaderNodeValToRGB")
-    ramp.color_ramp.elements[0].color = (0.50, 0.33, 0.18, 1)
-    ramp.color_ramp.elements[1].color = (0.70, 0.50, 0.31, 1)
-    l = nt.links
-    l.new(tc.outputs["Object"], mp.inputs["Vector"])
-    l.new(mp.outputs["Vector"], wave.inputs["Vector"])
-    l.new(wave.outputs["Fac"], ramp.inputs["Fac"])
-    l.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
-    bsdf.inputs["Roughness"].default_value = 0.5
+    ramp.color_ramp.elements[0].color = (0.56, 0.40, 0.25, 1)
+    ramp.color_ramp.elements[1].color = (0.64, 0.47, 0.30, 1)
+    nt.links.new(noise.outputs["Fac"], ramp.inputs["Fac"])
+    nt.links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
+    bsdf.inputs["Roughness"].default_value = 0.6
 
 
 bpy.ops.mesh.primitive_plane_add(size=4000)
@@ -127,6 +121,6 @@ def shot(name, pos, target, lens=60):
 
 
 shot("priekis.png", (-300, -620, 360), (15, -25, 20))
-shot("is_virsaus.png", (0, -260, 700), (0, -10, 20), 50)
+shot("is_virsaus.png", (220, -380, 520), (0, -10, 15), 55)
 floor.hide_render = True
 shot("apacia.png", (300, 330, -420), (0, 0, 20), 50)
