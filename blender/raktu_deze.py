@@ -33,7 +33,9 @@ R_OUT = 16.0            # išorinių kampų spindulys (vaizdas iš viršaus)
 R_TOP_OUT = 2.5         # viršutinės išorinės briaunos apvalinimas
 R_TOP_IN = 2.3          # viršutinės vidinės briaunos apvalinimas (2.5+2.3 ~ pilnai apvalus kraštas)
 R_FLOOR = 8.0           # vidinis dugno apvalinimas (lengva išsemti raktus)
-BOTTOM_CHAMFER = 0.6    # apatinė nuožula (prieš "elephant foot")
+BOTTOM_CHAMFER = 0.4    # apatinė nuožula (prieš "elephant foot")
+PLINTH_GAP = 1.0        # "šešėlio" griovelis apačioje – dėžutė atrodo lyg pakibusi
+PLINTH_H = 3.0          # cokolio aukštis
 
 # Priekinė įduba (scoop) – kaip nuotraukoje
 SCOOP_BOTTOM_Z = 41.0   # žemiausias įdubos taškas
@@ -49,8 +51,8 @@ LABEL_DEPTH = 2.2       # kišenės gylis (rėmelis 1.6 + 0.6 popieriui/plėvele
 LABEL_R = 3.0           # kišenės kampų spindulys
 LABEL_CLEAR = 0.2       # tarpas tarp rėmelio ir kišenės (iš visų pusių)
 FRAME_T = 1.6           # rėmelio / plokštelės storis
-WINDOW_W = 88.0         # rėmelio langelio ilgis
-WINDOW_H = 17.0         # rėmelio langelio aukštis
+WINDOW_W = 92.0         # rėmelio langelio ilgis
+WINDOW_H = 19.0         # rėmelio langelio aukštis
 SNAP_R = 0.5            # spragtelėjimo griovelio spindulys kišenėje
 SNAP_RIDGE_R = 0.4      # rėmelio iškilimo spindulys
 SNAP_LEN = 56.0         # spragtelėjimo iškilimo ilgis
@@ -176,7 +178,9 @@ def material(name, rgb, rough=0.55):
 # ---------------------------------------------------------------------------
 def build_tray(coll):
     # Išorė: apatinė nuožula + viršutinis apvalinimas
-    prof = [(0.0, BOTTOM_CHAMFER), (BOTTOM_CHAMFER, 0.0), (HEIGHT - R_TOP_OUT, 0.0)]
+    g = PLINTH_GAP
+    prof = [(0.0, g + BOTTOM_CHAMFER), (BOTTOM_CHAMFER, g), (PLINTH_H - g, g), (PLINTH_H, 0.0),
+            (HEIGHT - R_TOP_OUT, 0.0)]
     for i in range(1, SEG + 1):
         a = math.radians(90 * i / SEG)
         prof.append((HEIGHT - R_TOP_OUT + R_TOP_OUT * math.sin(a), R_TOP_OUT * (1 - math.cos(a))))
@@ -440,17 +444,26 @@ def main(out_dir=None):
         write_stl(os.path.join(stl, "jungtis_dovetail.stl"), [conn],
                   Matrix.Rotation(math.radians(90), 4, "Y") @ Matrix.Translation((0, 0, 0)))
 
-    # Scenos išdėstymas: rėmelis kišenėje, plokštelė ir jungtis šalia
-    place = Matrix.Translation((0, -WIDTH / 2 + FRAME_T, LABEL_Z)) @ Matrix.Rotation(math.radians(90), 4, "X")
-    plate.matrix_world = text.matrix_world = place
-    frame.matrix_world = Matrix.Translation((LENGTH / 2 - 10, -WIDTH / 2 - 45, 0))
-    plate.hide_viewport = text.hide_viewport = False
+    # Scenos išdėstymas: rėmelis kišenėje, už jo popierinė etiketė (tik peržiūrai);
+    # plokštelė su tekstu ir jungtis – šalia (nerenderinamos)
+    rx = Matrix.Rotation(math.radians(90), 4, "X")
+    frame.matrix_world = Matrix.Translation((0, -WIDTH / 2 + FRAME_T, LABEL_Z)) @ rx
+    paper_scale = Matrix.Diagonal((1, 1, 0.25, 1))
+    paper = new_obj("Popierius_perziura", plate.data.copy(), coll)
+    paper_txt = new_obj("Popierius_tekstas_perziura", text.data.copy(), coll)
+    for ob in (paper, paper_txt):
+        ob.matrix_world = Matrix.Translation((0, -WIDTH / 2 + LABEL_DEPTH, LABEL_Z)) @ rx @ paper_scale
+    plate.matrix_world = text.matrix_world = Matrix.Translation((LENGTH / 2 + 90, 0, 0))
     conn.location = (LENGTH / 2 + 30, -45, 0)
+    for ob in (plate, text, conn):
+        ob.hide_render = True
 
     m_box = material("Deze_juoda", (0.025, 0.025, 0.028), 0.45)
     m_lbl = material("Etikete_balta", (0.80, 0.80, 0.78), 0.4)
+    m_paper = material("Popierius", (0.86, 0.86, 0.84), 0.8)
     m_txt = material("Tekstas_juodas", (0.02, 0.02, 0.02), 0.5)
-    for ob, m in ((tray, m_box), (frame, m_lbl), (plate, m_lbl), (text, m_txt), (conn, m_box)):
+    for ob, m in ((tray, m_box), (frame, m_box), (plate, m_lbl), (text, m_txt), (conn, m_box),
+                  (paper, m_paper), (paper_txt, m_txt)):
         ob.data.materials.clear()
         ob.data.materials.append(m)
         for p in ob.data.polygons:

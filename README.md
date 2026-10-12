@@ -10,15 +10,16 @@ Jos darbai
 | `blender/raktu_deze.py` | Parametrinis Blender skriptas – visi matmenys failo viršuje |
 | `blender/raktu_deze.blend` | Paruoštas Blender failas |
 | `stl/deze_220x180x70.stl` | Pati dėžutė |
-| `stl/etiketes_remelis.stl` | Spragtelintis rėmelis su langeliu (už jo – popierinė etiketė) |
+| `stl/etiketes_remelis.stl` | **Pagrindinis variantas:** juodas spragtelintis rėmelis su langeliu, už jo – keičiama popierinė etiketė |
+| `labels/etiketes_A4.pdf` | Popierinės etiketės spausdinimui (A4, 20 vnt., 98 × 24 mm); savo tekstams – `labels/etiketes.py` |
 | `stl/etiketes_plokstele_su_tekstu.stl` | Variantas be popieriaus: plokštelė su iškiliu tekstu „01 \| ATSARGINIAI RAKTAI“ |
 | `stl/etiketes_plokstele_be_teksto.stl` + `etiketes_tekstas_tik_spalva.stl` | Tas pats, atskirai dviem spalvoms (AMS / MMU) |
 | `stl/jungtis_dovetail.stl` | Jungtis dviem gretimoms dėžutėms sujungti |
 
 ### Dizainas
-- **Forma:** 16 mm suapvalinti kampai, 5 mm sienelės, pilnai apvalus viršutinis kraštas, 8 mm vidinis dugno apvalinimas (raktus lengva išsemti), priekyje įduba su suapvalintais kraštais – kaip nuotraukoje.
+- **Forma:** 16 mm suapvalinti kampai, 5 mm sienelės, pilnai apvalus viršutinis kraštas, 8 mm vidinis dugno apvalinimas (raktus lengva išsemti), apačioje 1 mm „šešėlio“ griovelis (dėžutė atrodo lyg pakibusi, kartu paslepia „elephant foot“), priekyje įduba su suapvalintais kraštais – kaip nuotraukoje.
 - **Etiketė:** priekyje 100 × 26 × 2,2 mm kišenė. Rėmelis įsispaudžia ir spragteli (iškilimai rėmelio kraštuose, grioveliai kišenėje). Apačioje per vidurį – įpjova nagui, kad rėmelį galėtum išimti.
-  Popieriaus dydis: **98 × 24 mm** (matomas langelis 88 × 17 mm). Galima uždėti skaidrią plėvelę (iki 0,4 mm).
+  Rėmelį spausdink tuo pačiu juodu plastiku – susilieja su dėžute, matosi tik baltas popierius. Popieriaus dydis: **98 × 24 mm** (matomas langelis 92 × 19 mm). Galima uždėti skaidrią plėvelę (iki 0,4 mm).
 - **Tvirtinimas į spintelę:** 4 skylės dugne **iš apačios** (Ø4,0 × 6 mm) – M3 įlydomoms įvorėms (heat-set inserts, M3 × 5,7). Dugnas 8 mm storio, todėl iš vidaus nieko nesimato. Prisukama **M3 × 8** varžtais per lentyną/plokštelę iki ~3 mm storio (storesnei lentynai – ilgesni varžtai). Jei nori sukti tiesiai į plastiką be įvorių – skripte `M3_HOLE_D = 2.6`.
 - **Dėžučių jungimas:** šonuose po 2 žemus (25 mm) dovetail griovelius – atviri tik apačioje, iš vidaus ir iš viršaus nesimato. Dėžutes pastatai vieną šalia kitos, apverti, įstumi jungtį iš apačios – laikosi tvirtai be klijų.
 
@@ -31,6 +32,11 @@ Jos darbai
 - **Dėžutė:** stačia (dugnu ant pagrindo), be atramų. PETG arba PLA (matinė juoda – kaip nuotraukoje), 0,2 mm sluoksnis, 3 sienelės, 15 % gyroid. ~530 cm³ tūris, bet su užpildu realiai ~250–300 g.
 - **Rėmelis / plokštelė:** gulint, be atramų. Plokštelė su tekstu: vienu spausdintuvu – spalvos keitimas (M600 / „Add pause“) 1,6 mm aukštyje.
 - **Jungtis:** gulint ant plokščio šono, be atramų. Jei per kieta/per laisva – skripte `DT_CLEAR`.
+
+### Etiketės keitimas
+1. Atsispausdink `labels/etiketes_A4.pdf` (100 % mastelis), iškirpk.
+   Savo tekstai: `python labels/etiketes.py "07:KLIENTŲ RAKTAI" "08:"` (arba `--csv sarasas.csv`, eilutės `numeris;tekstas`).
+2. Nagu už įpjovos apačioje ištrauk rėmelį, įdėk popierių (ir, jei nori, 98 × 24 mm skaidrią plėvelę), užspausk rėmelį.
 
 ### Šriftas
 Etiketės tekstas – **Inter SemiBold** (`blender/fonts/`, SIL OFL licencija), didžiosios raidės su platesniais tarpais.
