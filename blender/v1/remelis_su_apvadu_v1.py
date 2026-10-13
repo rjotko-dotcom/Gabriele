@@ -17,7 +17,9 @@ import bpy  # noqa: E402
 
 BEZEL = 3.5        # kiek apvadas užeina ant dėžutės priekio iš kiekvienos pusės
 BEZEL_T = 1.2      # apvado storis (kiek išsikiša virš dėžutės paviršiaus)
-BEZEL_CH = 0.6     # apvado išorinės briaunos nuožula
+BEZEL_CH = 0.3     # apvado išorinės briaunos nuožula (vos vos)
+BEZEL_R = 1.5      # apvado kampų spindulys – toks pat kaip langelio
+WIN_CH = 0.3       # langelio briaunos nuožula
 
 
 def build():
@@ -27,14 +29,14 @@ def build():
     ob = v1.label_base("V1_remelis_su_apvadu", coll)
     bw = v1.LABEL_W + 2 * BEZEL
     bh = v1.LABEL_H + 2 * BEZEL
-    r = v1.LABEL_R + BEZEL
+    r = BEZEL_R
     T = v1.FRAME_T
     rings = []
     for z, ins in ((T, 0.0), (T + BEZEL_T - BEZEL_CH, 0.0), (T + BEZEL_T, BEZEL_CH)):
         rings.append([(x, y, z) for x, y in v1.rrect(bw - 2 * ins, bh - 2 * ins, r - ins)])
     bez = v1.new_obj("bezel", v1.loft("bezel", rings), coll)
     v1.boolean(ob, [bez], "UNION")
-    c = 0.5
+    c = WIN_CH
     zt = T + BEZEL_T
     win = v1.new_obj("cut_win", v1.loft("cut_win", [
         [(x, y, z) for x, y in v1.rrect(v1.WINDOW_W + 2 * ins, v1.WINDOW_H + 2 * ins, 1.5 + ins)]
