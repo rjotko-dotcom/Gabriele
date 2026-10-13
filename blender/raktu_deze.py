@@ -51,15 +51,17 @@ LABEL_CLEAR = 0.2       # tarpas tarp rėmelio ir kišenės (iš visų pusių)
 FRAME_T = 2.0           # rėmelio / plokštelės storis
 WINDOW_W = 92.0         # rėmelio langelio ilgis
 WINDOW_H = 19.0         # rėmelio langelio aukštis
-# Rėmelio laikymas: viršuje liežuvėlis įlenda į paslėptą plyšį sienelėje,
-# apačioje – spragtelėjimas (iškilimas į griovelį). Įdėti: viršų į plyšį, apačią prispausti – "klik".
+# Rėmelio laikymas: APAČIOJE liežuvėlis įlenda į plyšį sienelėje (žemyn),
+# VIRŠUJE – spragtelėjimas. Įdėti: apačią į plyšį, viršų prispausti – "klik".
+# Viskas suprojektuota spausdinti dėžutę stačią be atramų (jokių horizontalių "lubų").
 TONGUE_LEN = 84.0       # liežuvėlio ilgis
 TONGUE_H = 2.5          # kiek liežuvėlis įlenda į plyšį
 TONGUE_T = 0.9          # liežuvėlio storis (galinėje rėmelio pusėje)
 SLOT_CLEAR = 0.15       # plyšio tarpas aplink liežuvėlį
-SNAP_R = 0.6            # apatinio spragtelėjimo griovelio spindulys kišenėje
-SNAP_RIDGE_R = 0.5      # rėmelio apatinio iškilimo spindulys
+SNAP_R = 0.65           # viršutinio spragtelėjimo griovelio spindulys kišenėje
+SNAP_RIDGE_R = 0.5      # rėmelio viršutinio iškilimo spindulys
 SNAP_LEN = 70.0         # spragtelėjimo iškilimo ilgis
+SNAP_DEPTH_POS = 1.0    # kur (nuo priekio) nuožulnioje viršutinėje briaunoje yra iškilimas
 
 # Etiketės plokštelė su tekstu (variantas be popieriaus)
 LABEL_NUMBER = "01"
@@ -190,27 +192,38 @@ def build_tray(coll):
     # Priekinė įduba su suapvalintomis briaunomis
     cutters.append(new_obj("cut_scoop", scoop_cutter(), coll))
 
-    # Etiketės kišenė + spragtelėjimo grioveliai + nago įpjova
+    # Etiketės kišenė. Dėžutė spausdinama stačia, todėl viskas be iškyšų:
+    #  - kišenės "lubos" nuožulnios 45° (ne horizontalios);
+    #  - liežuvėlio plyšys APAČIOJE eina žemyn į sienelę (atviras į viršų);
+    #  - spragtelėjimo griovelis VIRŠUJE, nuožulnioje dalyje;
+    #  - nago įpjova viršuje per vidurį, irgi su 45° viršumi.
     yf = -WIDTH / 2
-    pocket = rrect(LABEL_W, LABEL_H, LABEL_R)
+    top, bot = LABEL_Z + LABEL_H / 2, LABEL_Z - LABEL_H / 2
+
+    def pocket_ring(y, d):
+        h = LABEL_H - d
+        return [(x, y, bot + h / 2 + z) for x, z in rrect(LABEL_W, h, LABEL_R)]
     cutters.append(new_obj("cut_label", loft("cut_label", [
-        [(x, yf - 1, LABEL_Z + z) for x, z in pocket],
-        [(x, yf + LABEL_DEPTH, LABEL_Z + z) for x, z in pocket]]), coll))
-    ymid = yf + FRAME_T / 2
-    ring = [(ymid + y, LABEL_Z - LABEL_H / 2 + z) for y, z in circle(SNAP_R, 24)]
+        pocket_ring(yf - 1, 0.0), pocket_ring(yf, 0.0), pocket_ring(yf + LABEL_DEPTH, LABEL_DEPTH)]), coll))
+
+    # spragtelėjimo griovelis nuožulnioje viršutinėje dalyje
+    d = SNAP_DEPTH_POS
+    ring = [(yf + d + y, top - d + z) for y, z in circle(SNAP_R, 24)]
     cutters.append(new_obj("cut_snap", loft("cut_snap", [
         [(-SNAP_LEN / 2 - 2, y, z) for y, z in ring],
         [(SNAP_LEN / 2 + 2, y, z) for y, z in ring]]), coll))
-    # paslėptas plyšys liežuvėliui virš kišenės (iš priekio jo nesimato)
+
+    # liežuvėlio plyšys apačioje (žemyn į sienelę)
     y0 = yf + FRAME_T - TONGUE_T - SLOT_CLEAR
     y1 = yf + FRAME_T + SLOT_CLEAR
     slot = [(x, (y0 + y1) / 2 + y) for x, y in rrect(TONGUE_LEN + 2 * SLOT_CLEAR + 0.6, y1 - y0, 0.3, 4)]
-    top = LABEL_Z + LABEL_H / 2
-    cutters.append(new_obj("cut_slot", prism_z("cut_slot", slot, top - 1.0, top + TONGUE_H + 0.7), coll))
-    notch = [(x, LABEL_Z - LABEL_H / 2 + z) for x, z in rrect(14.0, 4.0, 1.5)]
+    cutters.append(new_obj("cut_slot", prism_z("cut_slot", slot, bot - TONGUE_H - 0.7, bot + 1.0), coll))
+
+    # nago įpjova viršuje (45° viršus – spausdinasi be atramų)
+    nd = LABEL_DEPTH + 0.6
+    prof = [(yf - 1, top - 3.0), (yf - 1, top + 4.0), (yf + nd, top + 3.0 - nd), (yf + nd, top - 3.0)]
     cutters.append(new_obj("cut_notch", loft("cut_notch", [
-        [(x, yf - 1, z) for x, z in notch],
-        [(x, yf + LABEL_DEPTH + 0.6, z) for x, z in notch]]), coll))
+        [(x, y, z) for y, z in prof] for x in (-7.0, 7.0)]), coll))
 
     boolean(tray, cutters)
     return tray
@@ -265,22 +278,27 @@ def scoop_cutter():
 
 
 def label_base(name, coll):
-    """Rėmelio / plokštelės pagrindas su liežuvėliu viršuje ir spragtelėjimu apačioje (vietinės koord.:
-    priekinis paviršius viršuje z=FRAME_T, spausdinama gulint)."""
+    """Rėmelio / plokštelės pagrindas (vietinės koord.: priekis viršuje z=FRAME_T, nugara z=0,
+    spausdinama gulint ant nugaros). Viršutinė briauna nusklembta 45° (atitinka kišenės lubas),
+    joje spragtelėjimo iškilimas; apačioje – liežuvėlis, įlendantis į plyšį dėžutėje."""
     fw, fh = LABEL_W - 2 * LABEL_CLEAR, LABEL_H - 2 * LABEL_CLEAR
-    rings = []
-    for z, ins in ((0.0, 0.0), (FRAME_T - PLATE_CHAMFER, 0.0), (FRAME_T, PLATE_CHAMFER)):
-        rings.append([(x, y, z) for x, y in rrect(fw - 2 * ins, fh - 2 * ins, LABEL_R - LABEL_CLEAR - ins)])
-    ob = new_obj(name, loft(name, rings), coll)
-    ring = [(-fh / 2 + y, FRAME_T / 2 + z) for y, z in circle(SNAP_RIDGE_R, 24)]
+    T, c = FRAME_T, PLATE_CHAMFER
+
+    def ring(z, ins, top_drop):
+        y0, y1 = -fh / 2 + ins, fh / 2 - max(ins, top_drop)
+        return [(x, (y0 + y1) / 2 + y, z) for x, y in rrect(fw - 2 * ins, y1 - y0, LABEL_R - LABEL_CLEAR - ins)]
+    ob = new_obj(name, loft(name, [ring(0.0, 0.0, T), ring(T - c, 0.0, c), ring(T, c, c)]), coll)
+
+    d = SNAP_DEPTH_POS  # iškilimas nuožulnioje briaunoje
+    rr = [(fh / 2 - d + y, T - d + z) for y, z in circle(SNAP_RIDGE_R, 24)]
     ridge = new_obj("ridge", loft("ridge", [
-        [(-SNAP_LEN / 2, y, z) for y, z in ring],
-        [(SNAP_LEN / 2, y, z) for y, z in ring]]), coll)
-    # liežuvėlis viršuje, galinėje pusėje; galas nusklembtas, kad lengvai įlįstų
-    L, T = TONGUE_LEN, TONGUE_T
+        [(-SNAP_LEN / 2, y, z) for y, z in rr],
+        [(SNAP_LEN / 2, y, z) for y, z in rr]]), coll)
+    # liežuvėlis apačioje, galinėje pusėje; galas nusklembtas, kad lengvai įlįstų
+    L, t = TONGUE_LEN, TONGUE_T
     rings = []
-    for y, l, t in ((fh / 2 - 1.0, L, T), (fh / 2 + TONGUE_H - 0.5, L, T), (fh / 2 + TONGUE_H, L - 1.0, T - 0.4)):
-        rings.append([(-l / 2, y, 0.0), (l / 2, y, 0.0), (l / 2, y, t), (-l / 2, y, t)])
+    for y, l, tt in ((-fh / 2 + 1.0, L, t), (-fh / 2 - TONGUE_H + 0.5, L, t), (-fh / 2 - TONGUE_H, L - 1.0, t - 0.4)):
+        rings.append([(-l / 2, y, 0.0), (l / 2, y, 0.0), (l / 2, y, tt), (-l / 2, y, tt)])
     tongue = new_obj("tongue", loft("tongue", rings), coll)
     boolean(ob, [ridge, tongue], "UNION")
     return ob
