@@ -34,8 +34,11 @@ Naujus modelius daryk tuo pačiu stiliumi.
   Pasiūlyk žodžiu, modeliuok tik patvirtinus.
 - Matmenis visada susiek su etikete / priekiu („ilgis nuo etiketės iki galo“), patikrink, kuri
   sienelė yra priekis, prieš pradėdamas modeliuoti.
-- Keičiama etiketė: liežuvėlis viršuje į paslėptą plyšį + spragtelėjimas apačioje + nago įpjova
-  (žr. `blender/raktu_deze.py`, `label_base`). Patikrink pjūviu (`trimesh.section`) ir ar
+- Keičiama etiketė: liežuvėlis APAČIOJE į plyšį žemyn + spragtelėjimas viršuje + nago įpjova viršuje
+  (žr. `blender/raktu_deze.py`, `label_base`).
+- **Patikrink spausdinimo orientaciją kiekvienai ertmei**: jokių horizontalių „lubų“ ar plonų sienelių,
+  kabančių ore (v1 klaida: plyšys virš kišenės su 1 mm sienele priekyje – spausdinosi ore, išėjo siūlai).
+  Ertmių lubos – 45° nuožula; plyšiai – atviri į viršų. Patikrink pjūviu (`trimesh.section`) ir ar
   rėmelis nesikerta su dėžute (`trimesh.boolean.intersection`, tūris = 0).
 
 ## Tolerancijos (FDM, 0.4 mm antgalis)
