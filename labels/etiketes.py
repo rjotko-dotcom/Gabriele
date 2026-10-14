@@ -5,7 +5,7 @@ Popierinės etiketės raktų dėžutei – A4 PDF (20 vnt. lape, 98 × 23 mm).
   python labels/etiketes.py                                  # pavyzdinis lapas
   python labels/etiketes.py "01:ATSARGINIAI RAKTAI" "02:SERVISAS" "03:"
   python labels/etiketes.py --csv sarasas.csv                # eilutės: numeris;tekstas
-  python labels/etiketes.py --crop --out x.pdf "01:X-TRAIL"  # tik kampų žymekliai, kitas failo vardas
+  python labels/etiketes.py --grid --out x.pdf "01:X-TRAIL"  # etiketės liečiasi, viena linija kirpimui
 
 Matoma dalis (rėmelio langelis) – 92 × 19 mm, todėl tekstas laikomas jos viduje.
 Spausdink 100 % mastelio (be "Fit to page"), kirpk pagal pilkas linijas.
@@ -127,6 +127,11 @@ if __name__ == "__main__":
         CROP = True
         GAP_X, GAP_Y = 6 * mm, 6 * mm  # daugiau vietos, kad žymekliai nesusilietų
         args.remove("--crop")
+    if "--grid" in args:
+        # etiketės liečiasi: viena plona pilka linija tarp jų -> vienas kirpimas
+        GAP_X, GAP_Y = 0, 0
+        CUT = Color(0.55, 0.55, 0.55)
+        args.remove("--grid")
     if "--out" in args:
         i = args.index("--out")
         out_name = args[i + 1]
