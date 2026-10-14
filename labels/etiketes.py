@@ -1,5 +1,5 @@
 """
-Popierinės etiketės raktų dėžutei – A4 PDF (20 vnt. lape, 98 × 23 mm).
+Popierinės etiketės raktų dėžutei – A4 PDF (20 vnt. lape, 98 × 25 mm; su --v2 – 98 × 23 mm).
 
   pip install reportlab
   python labels/etiketes.py                                  # pavyzdinis lapas
@@ -21,7 +21,8 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
-LABEL_W, LABEL_H = 98 * mm, 23 * mm      # popieriaus dydis
+LABEL_W, LABEL_H = 98 * mm, 25 * mm      # popieriaus dydis (v1 dėžutė / rėmelis su apvadu)
+WINDOW_OFFSET = None                     # None -> tekstas tiksliai per vidurį popieriaus
 WINDOW_W, WINDOW_H = 92 * mm, 19 * mm    # matoma dalis
 COLS, ROWS = 2, 10
 GAP_X, GAP_Y = 4 * mm, 3 * mm
@@ -79,7 +80,8 @@ def draw_cut(c, x, y):
 def draw_label(c, x, y, num, text):
     draw_cut(c, x, y)
     wx = x + (LABEL_W - WINDOW_W) / 2
-    wy = y + 3.5 * mm  # popierius stovi ant kišenės dugno -> langelis prasideda 3.5 mm nuo apačios
+    off = (LABEL_H - WINDOW_H) / 2 if WINDOW_OFFSET is None else WINDOW_OFFSET
+    wy = y + off
     cy = wy + WINDOW_H / 2
     pad = 5 * mm
     # numeris
@@ -127,6 +129,10 @@ if __name__ == "__main__":
         CROP = True
         GAP_X, GAP_Y = 6 * mm, 6 * mm  # daugiau vietos, kad žymekliai nesusilietų
         args.remove("--crop")
+    if "--v2" in args:
+        # pataisyta dėžutė (nuožulnios kišenės lubos): popierius 23 mm, stovi ant kišenės dugno
+        LABEL_H, WINDOW_OFFSET = 23 * mm, 3.5 * mm
+        args.remove("--v2")
     if "--grid" in args:
         # etiketės liečiasi: viena plona pilka linija tarp jų -> vienas kirpimas
         GAP_X, GAP_Y = 0, 0

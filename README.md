@@ -11,7 +11,7 @@ Jos darbai
 | `blender/raktu_deze.blend` | Paruoštas Blender failas |
 | `stl/deze_180x220x70.stl` | Pati dėžutė |
 | `stl/etiketes_remelis.stl` | **Pagrindinis variantas:** juodas spragtelintis rėmelis su langeliu, už jo – keičiama popierinė etiketė |
-| `labels/etiketes_A4.pdf` | Popierinės etiketės spausdinimui (A4, 20 vnt., 98 × 23 mm); savo tekstams – `labels/etiketes.py` |
+| `labels/etiketes_A4.pdf` | Popierinės etiketės spausdinimui (A4, 20 vnt., 98 × 25 mm; pataisytai dėžutei – `--v2`, 98 × 23 mm); savo tekstams – `labels/etiketes.py` |
 | `stl/etiketes_plokstele_su_tekstu.stl` | Variantas be popieriaus: plokštelė su iškiliu tekstu „01 \| ATSARGINIAI RAKTAI“ |
 | `stl/etiketes_plokstele_be_teksto.stl` + `etiketes_tekstas_tik_spalva.stl` | Tas pats, atskirai dviem spalvoms (AMS / MMU) |
 
@@ -45,7 +45,7 @@ etiketės išėjo siūlai ir kreiva briauna. Dėžutės perspausdinti nereikia:
 - Išimama paėmus už apvado krašto. v1 failai: `blender/v1/`.
 
 ### Etiketės keitimas
-1. Atsispausdink `labels/etiketes_A4.pdf` (100 % mastelis), iškirpk.
+1. Atsispausdink `labels/etiketes_A4.pdf` (100 % mastelis), iškirpk. Popierius: **98 × 25 mm** pirmai (v1) dėžutei, **98 × 23 mm** pataisytai (`python labels/etiketes.py --v2`).
    Savo tekstai: `python labels/etiketes.py "07:KLIENTŲ RAKTAI" "08:"` (arba `--csv sarasas.csv`, eilutės `numeris;tekstas`).
 2. Nagu už įpjovos viršuje patrauk rėmelio viršų į save, ištrauk jį aukštyn. Įdėk popierių (ir, jei nori, 98 × 23 mm skaidrią plėvelę), liežuvėlį įkišk į plyšį apačioje, viršų prispausk iki „klik“.
 
