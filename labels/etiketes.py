@@ -5,6 +5,7 @@ Popierinės etiketės raktų dėžutei – A4 PDF (20 vnt. lape, 98 × 23 mm).
   python labels/etiketes.py                                  # pavyzdinis lapas
   python labels/etiketes.py "01:ATSARGINIAI RAKTAI" "02:SERVISAS" "03:"
   python labels/etiketes.py --csv sarasas.csv                # eilutės: numeris;tekstas
+  python labels/etiketes.py --crop --out x.pdf "01:X-TRAIL"  # tik kampų žymekliai, kitas failo vardas
 
 Matoma dalis (rėmelio langelis) – 92 × 19 mm, todėl tekstas laikomas jos viduje.
 Spausdink 100 % mastelio (be "Fit to page"), kirpk pagal pilkas linijas.
@@ -57,10 +58,26 @@ def width_spaced(text, size, spacing=0.12):
     return pdfmetrics.stringWidth(text, "Inter", size) + size * spacing * max(0, len(text) - 1)
 
 
-def draw_label(c, x, y, num, text):
+CROP = False  # True -> vietoj rėmelio tik maži kampų žymekliai už etiketės ribų
+
+
+def draw_cut(c, x, y):
     c.setStrokeColor(CUT)
-    c.setLineWidth(0.25)
-    c.rect(x, y, LABEL_W, LABEL_H)
+    if not CROP:
+        c.setLineWidth(0.25)
+        c.rect(x, y, LABEL_W, LABEL_H)
+        return
+    # minimalūs kirpimo žymekliai: 1.5 mm brūkšneliai kampuose, 0.5 mm nuo etiketės krašto
+    c.setLineWidth(0.3)
+    g, l = 0.5 * mm, 1.5 * mm
+    for cx, sx in ((x, -1), (x + LABEL_W, 1)):
+        for cy, sy in ((y, -1), (y + LABEL_H, 1)):
+            c.line(cx + sx * g, cy, cx + sx * (g + l), cy)
+            c.line(cx, cy + sy * g, cx, cy + sy * (g + l))
+
+
+def draw_label(c, x, y, num, text):
+    draw_cut(c, x, y)
     wx = x + (LABEL_W - WINDOW_W) / 2
     wy = y + 3.5 * mm  # popierius stovi ant kišenės dugno -> langelis prasideda 3.5 mm nuo apačios
     cy = wy + WINDOW_H / 2
@@ -105,6 +122,15 @@ def main(items, out):
 
 if __name__ == "__main__":
     args = sys.argv[1:]
+    out_name = "etiketes_A4.pdf"
+    if "--crop" in args:
+        CROP = True
+        GAP_X, GAP_Y = 6 * mm, 6 * mm  # daugiau vietos, kad žymekliai nesusilietų
+        args.remove("--crop")
+    if "--out" in args:
+        i = args.index("--out")
+        out_name = args[i + 1]
+        del args[i:i + 2]
     if "--csv" in args:
         with open(args[args.index("--csv") + 1], newline="", encoding="utf-8") as f:
             items = [(r[0].strip(), r[1].strip().upper() if len(r) > 1 else "") for r in csv.reader(f, delimiter=";") if r]
@@ -112,4 +138,4 @@ if __name__ == "__main__":
         items = [(a.split(":", 1)[0], a.split(":", 1)[1].upper() if ":" in a else "") for a in args]
     else:
         items = EXAMPLE + [(f"{n:02d}", "") for n in range(len(EXAMPLE) + 1, 21)]
-    main(items, os.path.join(HERE, "etiketes_A4.pdf"))
+    main(items, os.path.join(HERE, out_name))
