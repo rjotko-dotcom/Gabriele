@@ -28,13 +28,13 @@ def arrow(d, p1, p2, color, w):
     d.polygon([p2, (b[0] + n[0], b[1] + n[1]), (b[0] - n[0], b[1] - n[1])], fill=color)
 
 
-def callout(d, anchor, txt_pos, text, font, color=(40, 40, 40)):
+def callout(d, anchor, txt_pos, text, font, color=(40, 40, 40), side=None):
     w = max(2, font.size // 12)
     d.line([anchor, txt_pos], fill=color, width=w)
     d.ellipse([anchor[0] - 2 * w, anchor[1] - 2 * w, anchor[0] + 2 * w, anchor[1] + 2 * w], fill=color)
     bbox = d.multiline_textbbox(txt_pos, text, font=font)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    left = txt_pos[0] < anchor[0]
+    left = (txt_pos[0] < anchor[0]) if side is None else (side == "left")
     x = txt_pos[0] - tw - 12 if left else txt_pos[0] + 12
     y = txt_pos[1] - th / 2
     pad = 10
@@ -44,7 +44,7 @@ def callout(d, anchor, txt_pos, text, font, color=(40, 40, 40)):
 
 
 for f in sorted(os.listdir(SRC)):
-    if f.endswith(".png") and f[:2] in ("01", "02", "03", "04"):
+    if f.endswith(".png") and f[:2] in ("01", "02", "03", "04", "06"):
         on_white(os.path.join(SRC, f)).save(os.path.join(OUT, f.replace(".png", ".jpg")), quality=93)
 
 # mazgas
@@ -56,12 +56,12 @@ d = ImageDraw.Draw(im)
 f = ImageFont.truetype(FONT, int(26 * k))
 fb = ImageFont.truetype(FONTB, int(34 * k))
 fs = ImageFont.truetype(FONT, int(22 * k))
-callout(d, pts["tipon"], (0.50 * W, 0.08 * H),
-        "Blum TIP-ON (atšokimo mechanizmas),\nprisuktas prie spintelės šono,\n70 mm nuo durelės viršaus", f)
-callout(d, pts["plate"], (0.80 * W, 0.25 * H), "Metalinė plokštelė\nant durelės", f)
-callout(d, pts["hinge_top"], (0.62 * W, 0.80 * H),
+callout(d, pts["tipon"], (0.37 * W, 0.40 * H),
+        "Blum TIP-ON, prisuktas\nprie spintelės šono,\n70 mm nuo durelės viršaus", f, side="left")
+callout(d, pts["plate"], (0.985 * W, 0.40 * H), "Metalinė plokštelė\nant durelės", f, side="left")
+callout(d, pts["hinge_top"], (0.55 * W, 0.80 * H),
         "Vyriai Blum CLIP top 110°\nBE spyruoklės (2 vnt.)", f)
-callout(d, pts["shelf"], (0.36 * W, 0.62 * H), "Reguliuojama lentyna", f)
+callout(d, pts["shelf"], (0.30 * W, 0.58 * H), "Reguliuojama lentyna", f)
 
 
 def tag(xy, text, color):
@@ -71,10 +71,10 @@ def tag(xy, text, color):
 
 
 red, green = (190, 30, 60), (30, 120, 60)
-arrow(d, (0.985 * W, 0.71 * H), (0.90 * W, 0.645 * H), red, int(7 * k))
-tag((0.70 * W, 0.62 * H), "1. paspausti", red)
-arrow(d, (0.90 * W, 0.75 * H), (0.985 * W, 0.815 * H), green, int(7 * k))
-tag((0.72 * W, 0.70 * H), "2. atšoka", green)
+arrow(d, (0.99 * W, 0.60 * H), (0.875 * W, 0.555 * H), red, int(7 * k))
+tag((0.80 * W, 0.61 * H), "1. paspausti", red)
+arrow(d, (0.875 * W, 0.70 * H), (0.99 * W, 0.745 * H), green, int(7 * k))
+tag((0.80 * W, 0.755 * H), "2. atšoka", green)
 d.rectangle([0, H - 130 * k, W, H], fill=(255, 255, 255))
 d.text((25 * k, H - 120 * k), "MAZGAS: atšokančios durelės mechanizmas", font=fb, fill=(30, 30, 30))
 d.text((25 * k, H - 75 * k),
