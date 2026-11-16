@@ -122,6 +122,8 @@ M_GLASS = mat("Stiklas_gintarinis", (0.45, 0.25, 0.08), rough=0.05, trans=0.8)
 M_VASE = mat("Vaza_bordo", (0.09, 0.008, 0.018), rough=0.08, coat=1.0)
 M_FLOWER1 = mat("Gele_rozine", (0.55, 0.10, 0.18), rough=0.7)
 M_FLOWER2 = mat("Gele_bordo", (0.18, 0.01, 0.03), rough=0.7)
+M_STEM = mat("Gelės_kotas", (0.06, 0.12, 0.03), rough=0.6)
+M_LEAF = mat("Gelės_lapas", (0.05, 0.14, 0.04), rough=0.5)
 M_LAMPSH = mat("Lempos_vidus", (1.0, 0.85, 0.6), rough=0.5, emit=6.0)
 M_FABRIC = mat_tex("Kedes_audinys", "rozinis_BaseColor.jpg", 4.0, height_f="rozinis_Height.jpg",
                    val=1.1, export_color=(0.45, 0.22, 0.22))
@@ -413,13 +415,15 @@ def props():
     TT = H_TOTAL
     # monitorius
     mx, my = 120, 70
-    cbox("Monitorius_pagrindas", mx, my, W + 5, 230, 180, 10, M_BLACK, 2)
-    cbox("Monitorius_kojele", mx, my - 40, W + 135, 50, 25, 250, M_BLACK, 2)
-    cbox("Monitorius_korpusas", mx, my - 60, W + 330, 540, 22, 320, M_BLACK, 3)
-    cbox("Monitorius_ekranas", mx, my - 48.5, W + 335, 520, 1, 290, M_SCREEN, 0)
-    t = text("Ekrano_logotipas", "MARI", mx, my - 47, W + 345, 32, M_BRASS, 1.3, 0.6)
+    # ekranas žiūri į darbuotoją (+Y); stovas – UŽ ekrano
+    cbox("Monitorius_pagrindas", mx, my - 15, W + 5, 230, 180, 10, M_BLACK, 2)
+    cbox("Monitorius_kojele", mx, my - 25, W + 150, 50, 22, 280, M_BLACK, 2)
+    cbox("Monitorius_laikiklis", mx, my - 5, W + 300, 90, 18, 90, M_BLACK, 2)
+    cbox("Monitorius_korpusas", mx, my + 15, W + 330, 540, 22, 320, M_BLACK, 3)
+    cbox("Monitorius_ekranas", mx, my + 26.5, W + 335, 520, 1, 290, M_SCREEN, 0)
+    t = text("Ekrano_logotipas", "MARI", mx, my + 28, W + 345, 32, M_BRASS, 1.3, 0.6)
     t.rotation_euler = (math.radians(90), 0, math.radians(180))
-    t2 = text("Ekrano_logotipas_2", "MADE", mx, my - 47, W + 310, 12, M_BRASS, 1.6, 0.6)
+    t2 = text("Ekrano_logotipas_2", "MADE", mx, my + 28, W + 310, 12, M_BRASS, 1.6, 0.6)
     t2.rotation_euler = (math.radians(90), 0, math.radians(180))
     # kilimėlis, klaviatūra, pelė
     cbox("Kilimelis", 40, 230, W + 1.5, 620, 280, 3, M_PAPER_B, 1)
@@ -483,14 +487,14 @@ def props():
                 c.rotation_euler = (math.radians(15 * (k % 2 - 0.5)), math.radians(12 * (k - 2)), 0)
     bag("Maisas_ant_atramos", 820, -230, TT, 280, 120, 320, 0, tissue=True)
     # lempa
-    cyl("Lempa_pagrindas", -820, -230, TT, TT + 18, 70, M_BRASS)
-    cyl("Lempa_kojele", -820, -230, TT + 18, TT + 300, 12, M_BRASS, 16)
-    sh = sphere("Lempa_gaubtas", -820, -230, TT + 290, 140, M_BRASS, 1, 1, 0.6)
-    cutter = cbox("c", -820, -230, TT + 200, 400, 400, 180, M_BRASS, 0)
+    cyl("Lempa_pagrindas", -760, -230, TT, TT + 18, 70, M_BRASS)
+    cyl("Lempa_kojele", -760, -230, TT + 18, TT + 300, 12, M_BRASS, 16)
+    sh = sphere("Lempa_gaubtas", -760, -230, TT + 290, 140, M_BRASS, 1, 1, 0.6)
+    cutter = cbox("c", -760, -230, TT + 200, 400, 400, 180, M_BRASS, 0)
     mod = sh.modifiers.new("cut", 'BOOLEAN'); mod.operation = 'DIFFERENCE'; mod.object = cutter
     apply_mod(sh, mod); bpy.data.objects.remove(cutter, do_unlink=True)
-    cyl("Lempa_sviesa", -820, -230, TT + 288, TT + 291, 125, M_LAMPSH)
-    bpy.ops.object.light_add(type='POINT', location=(-0.82, -0.23, (TT + 250) * S))
+    cyl("Lempa_sviesa", -760, -230, TT + 288, TT + 291, 125, M_LAMPSH)
+    bpy.ops.object.light_add(type='POINT', location=(-0.76, -0.23, (TT + 250) * S))
     lt = _adopt(bpy.context.active_object, "Lempos_sviesa", None)
     lt.data.energy = 15
     lt.data.color = (1, 0.8, 0.55)
@@ -499,14 +503,38 @@ def props():
     cyl("Vazos_kaklelis", -1060, -200, TT + 290, TT + 330, 60, M_VASE)
     import random
     random.seed(4)
-    for k in range(70):
-        a, b = random.uniform(0, 2 * math.pi), random.uniform(0, 1.75)
-        r = 200
-        x = -1060 + r * math.sin(b) * math.cos(a)
-        y = -200 + r * math.sin(b) * math.sin(a)
-        z = TT + 380 + r * 0.75 * math.cos(b)
-        sphere(f"Ziedas_{k}", x, y, z, random.uniform(45, 70), M_FLOWER1 if k % 3 else M_FLOWER2, seg=12)
-    cbox("Dezute_ant_atramos", -650, -250, TT + 35, 210, 120, 70, M_PAPER_B, 3)
+    vx, vy, vz = -1060, -200, TT + 330          # vazos kaklelio viršus
+    cz = TT + 500                                # žiedų „debesies“ centras
+    # kotai iš vazos į žiedynus
+    heads = []
+    for k in range(9):
+        a = k * 2 * math.pi / 9 + random.uniform(-0.2, 0.2)
+        rr = random.uniform(60, 150)
+        heads.append((vx + rr * math.cos(a), vy + rr * math.sin(a) * 0.8, cz + random.uniform(-40, 60)))
+    for k, (hx, hy, hz) in enumerate(heads):
+        x0, y0 = vx + (hx - vx) * 0.15, vy + (hy - vy) * 0.15
+        dx, dy, dz = hx - x0, hy - y0, hz - 60 - (vz - 120)
+        L = math.sqrt(dx * dx + dy * dy + dz * dz)
+        st = cyl(f"Gelės_kotas_{k}", 0, 0, 0, L, 5, M_STEM, 8)
+        st.location = ((x0 + dx / 2) * S, (y0 + dy / 2) * S, (vz - 120 + dz / 2) * S)
+        st.rotation_euler = Vector((dx, dy, dz)).to_track_quat('Z', 'Y').to_euler()
+    # lapai prie kotų
+    for k in range(8):
+        a = k * 2 * math.pi / 8
+        lf = sphere(f"Gelės_lapas_{k}", vx + 90 * math.cos(a), vy + 90 * math.sin(a), vz + 70, 55, M_LEAF,
+                    1.0, 0.45, 0.12, 12)
+        lf.rotation_euler = (math.radians(25 * math.sin(a)), math.radians(-25 * math.cos(a)), a)
+    # hortenzijų žiedynai – žiedų kekės ant kotų viršūnių
+    n = 0
+    for (hx, hy, hz) in heads:
+        for j in range(9):
+            a, b = random.uniform(0, 2 * math.pi), random.uniform(0, 1.6)
+            r = 75
+            sphere(f"Ziedas_{n}", hx + r * math.sin(b) * math.cos(a), hy + r * math.sin(b) * math.sin(a),
+                   hz + r * 0.8 * math.cos(b), random.uniform(32, 48),
+                   M_FLOWER1 if n % 3 else M_FLOWER2, seg=12)
+            n += 1
+    cbox("Dezute_ant_atramos", -560, -250, TT + 35, 210, 120, 70, M_PAPER_B, 3)
     # kasos stalčius nišelėje
     cx = (MID_X1 + BLK_X1 - T) / 2
     cbox("Kasos_pinigu_staliukas", cx, 120, CUBBY_SHELF_Z0 + T + 55, 410, 420, 110, M_BLACK, 4)
