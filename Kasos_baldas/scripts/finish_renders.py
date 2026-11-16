@@ -56,21 +56,29 @@ d = ImageDraw.Draw(im)
 f = ImageFont.truetype(FONT, int(26 * k))
 fb = ImageFont.truetype(FONTB, int(34 * k))
 fs = ImageFont.truetype(FONT, int(22 * k))
-callout(d, pts["tipon"], (0.30 * W, 0.20 * H),
-        "Blum TIP-ON (atšokimo mechanizmas),\nprisuktas prie vidurinės pertvaros,\n70 mm nuo durų viršaus", f)
-callout(d, pts["hinge_top"], (0.60 * W, 0.75 * H),
-        "Vyriai Blum CLIP top 110°\nBE spyruoklės (2 vnt. durims)", f)
-callout(d, pts["shelf"], (0.30 * W, 0.47 * H), "Reguliuojama lentyna", f)
-c_push = (190, 30, 60)
-arrow(d, (0.05 * W, 0.68 * H), (0.11 * W, 0.53 * H), c_push, int(7 * k))
-d.text((0.01 * W, 0.69 * H), "Paspausti\ndurų kraštą", font=f, fill=c_push)
-hx, hy = pts["hinge_bot"]
-arrow(d, (0.70 * W, 0.42 * H), (0.85 * W, 0.52 * H), (30, 110, 60), int(7 * k))
-d.text((0.70 * W, 0.53 * H), "durys atšoka", font=f, fill=(30, 110, 60))
+callout(d, pts["tipon"], (0.40 * W, 0.09 * H),
+        "Blum TIP-ON (atšokimo mechanizmas),\nprisuktas prie spintelės šono,\n70 mm nuo durelės viršaus", f)
+callout(d, pts["plate"], (0.80 * W, 0.25 * H), "Metalinė plokštelė\nant durelės", f)
+callout(d, pts["hinge_top"], (0.62 * W, 0.80 * H),
+        "Vyriai Blum CLIP top 110°\nBE spyruoklės (2 vnt.)", f)
+callout(d, pts["shelf"], (0.36 * W, 0.62 * H), "Reguliuojama lentyna", f)
+
+
+def tag(xy, text, color):
+    bb = d.multiline_textbbox(xy, text, font=f)
+    d.rounded_rectangle([bb[0] - 8, bb[1] - 6, bb[2] + 8, bb[3] + 8], radius=6, fill=(255, 255, 255))
+    d.multiline_text(xy, text, font=f, fill=color)
+
+
+red, green = (190, 30, 60), (30, 120, 60)
+arrow(d, (0.985 * W, 0.71 * H), (0.90 * W, 0.645 * H), red, int(7 * k))
+tag((0.70 * W, 0.62 * H), "1. paspausti", red)
+arrow(d, (0.90 * W, 0.75 * H), (0.985 * W, 0.815 * H), green, int(7 * k))
+tag((0.72 * W, 0.70 * H), "2. atšoka", green)
 d.rectangle([0, H - 130 * k, W, H], fill=(255, 255, 255))
-d.text((25 * k, H - 120 * k), "MAZGAS: atšokančių durų mechanizmas", font=fb, fill=(30, 30, 30))
+d.text((25 * k, H - 120 * k), "MAZGAS: atšokančios durelės mechanizmas", font=fb, fill=(30, 30, 30))
 d.text((25 * k, H - 75 * k),
-       "Durys be rankenų. Paspaudus kraštą, TIP-ON išstumia duris, toliau atidaroma ranka.\n"
-       "Uždaroma pastumiant iki galo – magnetas prilaiko duris.", font=fs, fill=(70, 70, 70))
+       "Durelė be rankenos. Paspaudus kraštą, TIP-ON išstumia durelę, toliau atidaroma ranka.\n"
+       "Uždaroma pastumiant iki galo – magnetas prilaiko durelę.", font=fs, fill=(70, 70, 70))
 im.save(os.path.join(OUT, "05_mazgas_TIP-ON.jpg"), quality=93)
 print("ok")

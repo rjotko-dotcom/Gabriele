@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461361.773425926
+2461361.82181713
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461361.773425926
+2461361.82181713
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{38A9ACA2-243B-4FBF-B22E-2A43C2D7BA2F}
+{68DF9A87-56F0-4AD5-9698-165B7EC306BA}
   9
 $VERSIONGUID
   2
-{7C97F572-96FB-4166-8412-B16175E82E23}
+{4E6E8A2C-ECF2-445F-9882-9FA8371538DA}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -7231,13 +7231,13 @@ AcDbEntity
 100
 AcDbLine
  10
-657.0
+407.0
  20
 684.0
  30
 0.0
  11
-732.0
+482.0
  21
 684.0
  31
@@ -7257,13 +7257,13 @@ AcDbEntity
 100
 AcDbLine
  10
-657.0
+407.0
  20
 754.0
  30
 0.0
  11
-732.0
+482.0
  21
 754.0
  31
@@ -7285,7 +7285,7 @@ AcDbBlockReference
   2
 _ARCHTICK
  10
-717.0
+467.0
  20
 684.0
  30
@@ -7313,7 +7313,7 @@ AcDbBlockReference
   2
 _ARCHTICK
  10
-717.0
+467.0
  20
 754.0
  30
@@ -7339,13 +7339,13 @@ AcDbEntity
 100
 AcDbLine
  10
-717.0
+467.0
  20
 684.0
  30
 0.0
  11
-717.0
+467.0
  21
 754.0
  31
@@ -7365,7 +7365,7 @@ MATMENYS
 100
 AcDbMText
  10
-700.0
+450.0
  20
 719.0
  30
@@ -7393,7 +7393,7 @@ Defpoints
 100
 AcDbPoint
  10
-717.0
+467.0
  20
 684.0
  30
@@ -7411,7 +7411,7 @@ Defpoints
 100
 AcDbPoint
  10
-647.0
+397.0
  20
 684.0
  30
@@ -7429,7 +7429,7 @@ Defpoints
 100
 AcDbPoint
  10
-647.0
+397.0
  20
 754.0
  30
@@ -7739,13 +7739,13 @@ AcDbEntity
 100
 AcDbLine
  10
-629.5
+368.5
  20
 764.0
  30
 0.0
  11
-629.5
+368.5
  21
 839.0
  31
@@ -7765,13 +7765,13 @@ AcDbEntity
 100
 AcDbLine
  10
-647.0
+397.0
  20
 764.0
  30
 0.0
  11
-647.0
+397.0
  21
 839.0
  31
@@ -7793,7 +7793,7 @@ AcDbBlockReference
   2
 _ARCHTICK
  10
-629.5
+368.5
  20
 824.0
  30
@@ -7819,7 +7819,7 @@ AcDbBlockReference
   2
 _ARCHTICK
  10
-647.0
+397.0
  20
 824.0
  30
@@ -7845,13 +7845,13 @@ AcDbEntity
 100
 AcDbLine
  10
-629.5
+368.5
  20
 824.0
  30
 0.0
  11
-647.0
+397.0
  21
 824.0
  31
@@ -7871,7 +7871,7 @@ MATMENYS
 100
 AcDbMText
  10
-638.25
+382.75
  20
 856.0
  30
@@ -7881,7 +7881,7 @@ AcDbMText
  71
 5
   1
-17,5
+28,5
   7
 LT
   0
@@ -7897,7 +7897,7 @@ Defpoints
 100
 AcDbPoint
  10
-629.5
+368.5
  20
 824.0
  30
@@ -7915,7 +7915,7 @@ Defpoints
 100
 AcDbPoint
  10
-629.5
+368.5
  20
 754.0
  30
@@ -7933,7 +7933,7 @@ Defpoints
 100
 AcDbPoint
  10
-647.0
+397.0
  20
 754.0
  30
@@ -8017,13 +8017,13 @@ AcDbEntity
 100
 AcDbLine
  10
-647.0
+397.0
  20
 764.0
  30
 0.0
  11
-647.0
+397.0
  21
 909.0
  31
@@ -8073,7 +8073,7 @@ AcDbBlockReference
   2
 _ARCHTICK
  10
-647.0
+397.0
  20
 894.0
  30
@@ -8103,7 +8103,7 @@ AcDbLine
  30
 0.0
  11
-647.0
+397.0
  21
 894.0
  31
@@ -8123,7 +8123,7 @@ MATMENYS
 100
 AcDbMText
  10
-323.5
+198.5
  20
 911.0
  30
@@ -8133,7 +8133,7 @@ AcDbMText
  71
 5
   1
-647
+397
   7
 LT
   0
@@ -8185,7 +8185,7 @@ Defpoints
 100
 AcDbPoint
  10
-647.0
+397.0
  20
 754.0
  30
@@ -8441,11 +8441,11 @@ AcDbPolyline
  20
 0.0
  10
-647.0
+397.0
  20
 0.0
  10
-647.0
+397.0
  20
 754.0
  10
@@ -8669,19 +8669,19 @@ AcDbPolyline
  70
 1
  10
-617.5
+356.5
  20
 668.0
  10
-641.5
+380.5
  20
 668.0
  10
-641.5
+380.5
  20
 700.0
  10
-617.5
+356.5
  20
 700.0
   0
@@ -8697,13 +8697,13 @@ ASYS
 100
 AcDbLine
  10
-599.5
+338.5
  20
 684.0
  30
 0.0
  11
-659.5
+398.5
  21
 684.0
  31
@@ -8721,13 +8721,13 @@ ASYS
 100
 AcDbLine
  10
-629.5
+368.5
  20
 654.0
  30
 0.0
  11
-629.5
+368.5
  21
 714.0
  31
@@ -8805,13 +8805,13 @@ PJUVIS
 100
 AcDbLine
  10
-777.0
+527.0
  20
 684.0
  30
 0.0
  11
-752.0
+502.0
  21
 684.0
  31
@@ -8829,7 +8829,7 @@ TEKSTAS
 100
 AcDbText
  10
-777.0
+527.0
  20
 699.0
  30
@@ -8843,7 +8843,7 @@ LT
  72
 1
  11
-777.0
+527.0
  21
 699.0
  31
@@ -9087,13 +9087,13 @@ AcDbDimension
   3
 M1_10
  10
-717.0
+467.0
  20
 684.0
  30
 0.0
  11
-700.0
+450.0
  21
 719.0
  31
@@ -9107,13 +9107,13 @@ M1_10
 100
 AcDbAlignedDimension
  13
-647.0
+397.0
  23
 684.0
  33
 0.0
  14
-647.0
+397.0
  24
 754.0
  34
@@ -9195,13 +9195,13 @@ AcDbDimension
   3
 M1_10
  10
-629.5
+368.5
  20
 824.0
  30
 0.0
  11
-638.25
+382.75
  21
 856.0
  31
@@ -9215,13 +9215,13 @@ M1_10
 100
 AcDbAlignedDimension
  13
-629.5
+368.5
  23
 754.0
  33
 0.0
  14
-647.0
+397.0
  24
 754.0
  34
@@ -9255,7 +9255,7 @@ M1_10
  30
 0.0
  11
-323.5
+198.5
  21
 911.0
  31
@@ -9275,7 +9275,7 @@ AcDbAlignedDimension
  33
 0.0
  14
-647.0
+397.0
  24
 754.0
  34
@@ -9353,13 +9353,13 @@ M1_10
  30
 0.0
  10
-757.0
+507.0
  20
 524.0
  30
 0.0
  10
-787.0
+537.0
  20
 524.0
  30
@@ -9377,7 +9377,7 @@ TEKSTAS
 100
 AcDbText
  10
-795.0
+545.0
  20
 528.0
  30
@@ -9389,7 +9389,7 @@ Vyris Blum CLIP top 110° BE spyruoklės, 2 vnt.
   7
 LT
  11
-795.0
+545.0
  21
 528.0
  31
@@ -9409,7 +9409,7 @@ TEKSTAS
 100
 AcDbText
  10
-795.0
+545.0
  20
 494.0
  30
@@ -9421,7 +9421,7 @@ Taurelė Ø35, gylis 13 mm, C = 4 mm nuo krašto
   7
 LT
  11
-795.0
+545.0
  21
 494.0
  31
@@ -9447,19 +9447,19 @@ M1_10
  76
 3
  10
-641.5
+380.5
  20
 674.0
  30
 0.0
  10
-757.0
+507.0
  20
 574.0
  30
 0.0
  10
-787.0
+537.0
  20
 574.0
  30
@@ -9477,7 +9477,7 @@ TEKSTAS
 100
 AcDbText
  10
-795.0
+545.0
  20
 578.0
  30
@@ -9489,7 +9489,7 @@ Atsitrenkimo plokštelė (TIP-ON)
   7
 LT
  11
-795.0
+545.0
  21
 578.0
  31
@@ -9541,7 +9541,7 @@ TEKSTAS
 100
 AcDbText
  10
-632.0
+382.0
  20
 377.0
  30
@@ -9555,7 +9555,7 @@ LT
  72
 2
  11
-632.0
+382.0
  21
 377.0
  31
@@ -9575,7 +9575,7 @@ TEKSTAS
 100
 AcDbMText
  10
-787.0
+537.0
  20
 380.0
  30
@@ -9587,13 +9587,13 @@ AcDbMText
  71
 1
   3
-VEIKIMAS\P1. Durys be rankenų. Lengvai paspaudus durų kraštą (~2 mm), TIP-ON stūmoklis išstumia duris, toliau jos atidaromos ranka.\P2. Uždaroma pastumiant iki galo – magnetinis stūmoklis prilaiko duris.\PMONTAVIMAS\P3. TIP-ON – spintelės viduje, į v
+VEIKIMAS\P1. Durelė be rankenos. Lengvai paspaudus jos kraštą (~2 mm), TIP-ON stūmoklis išstumia durelę, toliau ji atidaroma ranka.\P2. Uždaroma pastumiant iki galo – magnetinis stūmoklis prilaiko durelę.\PMONTAVIMAS\P3. TIP-ON – spintelės viduje, an
   3
-idurinės pertvaros šoną (per adapterinę plokštelę), 70 mm nuo durų viršaus, prie atidarymo krašto. Ant durų – metalinė plokštelė.\P4. Vyriai TIK be spyruoklės ir be BLUMOTION, kitaip durys neatšoks.\P5. Tarpas tarp durų 3 mm; TIP-ON stūmoklio ilgis r
+t šono prie vietos kojoms (per adapterinę plokštelę), 70 mm nuo durelės viršaus, prie atidarymo krašto. Ant durelės – metalinė plokštelė.\P4. Vyriai TIK be spyruoklės ir be BLUMOTION, kitaip durelė neatšoks.\P5. Tarpai aplink durelę 1,5–3 mm; TIP-ON 
   3
-eguliuojamas.\PFURNITŪRA (2 durims)\PBlum TIP-ON durims – 2 vnt.; adapterinė plokštelė – 2 vnt.; atsitrenkimo plokštelė – 2 vnt.; vyris CLIP top 110° be spyruoklės – 4 vnt.; montavimo plokštelė – 4 vnt.; lentynų laikiklis Ø5 – 8 vnt.; reguliuojama ko
+stūmoklio ilgis reguliuojamas.\PFURNITŪRA\PBlum TIP-ON durims – 1 vnt.; adapterinė plokštelė – 1; atsitrenkimo plokštelė – 1; vyris CLIP top 110° be spyruoklės – 2; montavimo plokštelė – 2; lentynos laikiklis Ø5 – 4; stalčių kreipiančiosios Blum MOVE
   1
-jelė h=100 – 6 vnt.; kabelių anga Ø60 – 3 vnt.
+NTO 500 mm su BLUMOTION – 3 kompl.; reguliuojama kojelė h=100 – 8; kabelių anga Ø60 – 3.
   7
 LT
   0
@@ -9617,7 +9617,7 @@ AcDbText
  40
 50.0
   1
-MAZGAS. DURŲ VIDINĖ PUSĖ – vyrių ir TIP-ON padėtis
+MAZGAS. DURELĖS VIDINĖ PUSĖ – vyrių ir TIP-ON padėtis
   7
 LT
  11
@@ -9649,7 +9649,7 @@ AcDbText
  40
 30.0
   1
-M 1:10   |   matmenys mm   |   dešinės durys (žiūrint iš darbuotojo pusės); kitos – veidrodiškai
+M 1:10   |   matmenys mm   |   spintelės durelė (darbuotojo dešinėje)
   7
 LT
  11
@@ -10763,7 +10763,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-16T18:33:44.526137+00:00
+1.4.5 @ 2026-11-16T19:43:25.579227+00:00
   0
 VISUALSTYLE
   5
@@ -17325,7 +17325,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-16T18:33:44.533701+00:00
+1.4.5 @ 2026-11-16T19:43:25.586388+00:00
   0
 ENDSEC
   0
