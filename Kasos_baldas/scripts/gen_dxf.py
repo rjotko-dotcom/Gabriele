@@ -163,26 +163,60 @@ def label(s, anchor, txt_pt, text):
            align=LFT if right else RGT)
 
 
-# 1. VAIZDAS IŠ VIRŠAUS ===================================================
+# 1. VAIZDAS IŠ VIRŠAUS (kontūrai – iš 3D modelio pjūvių) ===================
+import json as _json
+from shapely.geometry import Polygon, LineString, MultiLineString
+
+SECTIONS = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "sections.json")))
+
+
+def _loops(key, closed_only=False):
+    return [l["pts"] + ([l["pts"][0]] if l["closed"] else []) for l in SECTIONS[key]
+            if (l["closed"] or not closed_only) and len(l["pts"]) > 2]
+
+
+def _lines(geom):
+    if geom.is_empty:
+        return []
+    if isinstance(geom, LineString):
+        return [list(geom.coords)]
+    if hasattr(geom, "geoms"):
+        out = []
+        for g in geom.geoms:
+            out += _lines(g)
+        return out
+    return []
+
+
+def top_polygon():
+    loops = _loops("top_1141")
+    return Polygon(max(loops, key=len))
+
+
+def cut_curve_y(poly, x):
+    """Išpjovos kreivės y ties x (žemiausias kontūro taškas virš y=-300)."""
+    ln = LineString([(x, -300), (x, 500)])
+    inter = poly.boundary.intersection(ln)
+    ys = [p.y for p in getattr(inter, "geoms", [inter]) if hasattr(p, "y")]
+    return min(ys)
+
+
 def plan():
     s = Sheet(50)
     r = ROW * s.sc
-    # viršutinis stalviršis su lenkta išpjova
-    s.poly([(-A, -RT, 0), (A, -RT, 1), (A, RT, 0), (ARC_HALF, RT, -ARC_BULGE),
-            (-ARC_HALF, RT, 0), (-A, RT, 1)])
-    # darbo stalviršio matomas kraštas
-    s.line((-ARC_HALF, WORK_Y1), (ARC_HALF, WORK_Y1))
-    # nematomos: lenkta sienelė, darbo stalviršis, korpusas, spintelės
-    s.poly([(CAV_HALF, Y_BACK, -(Y_BACK - arc_wall_y(0)) / CAV_HALF), (-CAV_HALF, Y_BACK, 0)],
-           "NEMATOMOS", close=False)
-    s.rect(-CAV_HALF, Y_INNER_FRONT, CAV_HALF, WORK_Y1, "NEMATOMOS")
-    RB = R_BODY
-    s.poly([(-CAV_HALF, RB, 0), (-A, RB, 1), (-A, -RB, 0), (A, -RB, 1), (A, RB, 0),
-            (CAV_HALF, RB, 0)], "NEMATOMOS", close=False)
+    tp = top_polygon()
+    s.poly([(x, y, 0) for x, y in tp.exterior.coords])
+    # kitos linijos: matoma dalis – už stalviršio, nematoma – po juo
+    for key in ("work_900", "body_1000", "body_500"):
+        for pts in _loops(key):
+            ln = LineString(pts)
+            for seg in _lines(ln.difference(tp)):
+                s.poly([(x, y, 0) for x, y in seg], "KONTURAI" if key == "work_900" else "MATOMOS", close=False)
+            for seg in _lines(ln.intersection(tp)):
+                s.poly([(x, y, 0) for x, y in seg], "NEMATOMOS", close=False)
     s.rect(PED_X0, CARC_Y0, PED_X1, FRONT_Y1, "NEMATOMOS")
     s.rect(CAB_X0, CARC_Y0, CAB_X1, FRONT_Y1, "NEMATOMOS")
-    s.rect(CAB_X1, KNEE_PANEL_Y0, PED_X0, KNEE_PANEL_Y1, "NEMATOMOS")
-    for (x, y) in GROMMETS_WORK + GROMMETS_LEDGE:
+    for (x, y) in GROMMETS_WORK:
         s.circle((x, y), GROMMET_D / 2)
         s.circle((x, y), GROMMET_D / 2 - 6, "MATOMOS")
         s.line((x - 50, y), (x + 50, y), "ASYS")
@@ -190,36 +224,54 @@ def plan():
     s.line((0, -RT - 100), (0, RT + 100), "ASYS")
     s.line((-HT - 100, 0), (HT + 100, 0), "ASYS")
 
-    s.hdim(-HT, -A, -RT, -RT - r)
-    s.hdim(-A, A, -RT, -RT - r)
-    s.hdim(A, HT, -RT, -RT - r)
-    s.hdim(-HT, HT, -RT, -RT - 2 * r)
-    gx = [g[0] for g in GROMMETS_WORK]
-    s.hdim(-ARC_HALF, gx[0], RT, RT + r)
-    s.hdim(gx[0], gx[1], RT, RT + r)
-    s.hdim(gx[1], ARC_HALF, RT, RT + r)
-    s.hdim(-HT, -ARC_HALF, RT, RT + 2 * r)
-    s.hdim(-ARC_HALF, ARC_HALF, RT, RT + 2 * r)
-    s.hdim(ARC_HALF, HT, RT, RT + 2 * r)
-    s.vdim(-RT, ARC_APEX_Y, 0, -HT - r)
-    s.vdim(ARC_APEX_Y, RT, 0, -HT - r)
-    s.vdim(-RT, RT, -HT, -HT - 2 * r)
-    s.rdim((A, 0), RT, 60)
-    s.rdim((0, ARC_CY), R_ARC_TOP, 260)
+    minx, miny, maxx, maxy = tp.bounds
+    minx, maxx, miny = -HT, HT, -RT          # vardiniai išoriniai matmenys
+    apex = cut_curve_y(tp, 0.0)
+    # išpjovos plotis ties y = RT
+    inter = tp.boundary.intersection(LineString([(-A, RT), (A, RT)]))
+    xs = sorted(p.x for p in getattr(inter, "geoms", [inter]) if hasattr(p, "x"))
+    cutx = max(abs(xs[0]), abs(xs[-1])) if xs else 650.0
+    lip = [p for p in tp.exterior.coords if abs(p[0]) > cutx and abs(p[0]) < A + 60]
+    lipx, lipy = max(lip, key=lambda p: p[1]) if lip else (680, maxy)
+    lipx = abs(lipx)
 
-    s.text("KLIENTO PUSĖ (priekis)", (0, -RT - 2 * r - 6 * s.sc), align=CTR)
-    s.text("DARBUOTOJO PUSĖ (galas)", (0, RT + 2 * r + 9 * s.sc), align=CTR)
-    X = HT + 8 * s.sc
-    label(s, (-800, -250), (X, -RT - 60), "Viršutinis stalviršis h=1141, medis 40 mm")
-    label(s, (150, 250), (X, 230), "Darbo stalviršis h=900, medis 40 mm")
-    label(s, GROMMETS_LEDGE[0], (X, -RT + 130), "Kabelių anga Ø60 (mokėjimo terminalui)")
-    label(s, (GROMMETS_WORK[1][0] + 21, GROMMETS_WORK[1][1] + 21), (X, 90),
-          "Kabelių angos Ø60, 2 vnt. (kasos aparatui, monitoriui)")
-    label(s, (PED_X0 + 200, 250), (X, 370), "Stalčių blokas / spintelė (nematomi)")
-    s.text("Kabelių angų centrai: darbo stalviršyje – ±350 mm nuo ašies, 80 mm nuo išilginės ašies "
-           "link darbuotojo; atramoje – 450 mm nuo ašies, 183,5 mm nuo priekinio krašto.",
-           (-HT - 2 * r, -RT - 2 * r - 11 * s.sc))
-    s.title("VAIZDAS IŠ VIRŠAUS", "M 1:50   |   matmenys mm", (-HT - 2 * r, -RT - 2 * r - 20 * s.sc))
+    s.hdim(minx, -A, miny, miny - r)
+    s.hdim(-A, A, miny, miny - r)
+    s.hdim(A, maxx, miny, miny - r)
+    s.hdim(minx, maxx, miny, miny - 2 * r)
+    s.hdim(-cutx, cutx, RT, maxy + r)
+    s.hdim(cutx, lipx, maxy, maxy + r)
+    s.hdim(-NICHE_HALF if False else -CAV_HALF, CAV_HALF, WORK_Y1, maxy + 2 * r)
+    s.vdim(miny, apex, 0, -HT - r)
+    s.vdim(apex, RT, 0, -HT - r)
+    s.vdim(miny, RT, minx, -HT - 2 * r)
+    s.vdim(RT, maxy, lipx, HT + r)
+    s.vdim(miny, maxy, maxx, HT + 2 * r)
+    s.rdim((A, 0), RT, -60)
+
+    # išpjovos kreivės koordinatės (nuo stalviršio galinio krašto y = RT)
+    rows = []
+    for x in (0, 100, 200, 300, 400, 500, 600):
+        try:
+            rows.append((x, RT - cut_curve_y(tp, x)))
+        except ValueError:
+            pass
+    tx, ty = -HT - 2 * r, miny - 2 * r - 9 * s.sc
+    s.text("Išpjovos kreivė (simetriška): atstumas nuo stalviršio galinio krašto, mm", (tx, ty))
+    s.text("x nuo ašies:  " + "   ".join(f"{x:>4}" for x, _ in rows), (tx, ty - 3.5 * s.sc))
+    s.text("gylis:          " + "   ".join(f"{v:>5.0f}" for _, v in rows), (tx, ty - 7 * s.sc))
+
+    s.text("KLIENTO PUSĖ (priekis)", (0, miny - 2 * r - 4 * s.sc), align=CTR)
+    s.text("DARBUOTOJO PUSĖ (galas)", (0, maxy + 2 * r + 9 * s.sc), align=CTR)
+    X = HT + 2 * r + 6 * s.sc
+    label(s, (-800, -250), (X, -RT - 40), "Viršutinis stalviršis h=1141, medis 40 mm")
+    label(s, (150, 300), (X, 260), "Darbo stalviršis h=900, medis 40 mm, kampai R28")
+    label(s, (GROMMETS_WORK[1][0] + 21, GROMMETS_WORK[1][1] + 21), (X, 120),
+          "Kabelių angos Ø60, 2 vnt.")
+    label(s, (lipx - 5, maxy - 3), (X, 400), "Suapvalintas iškyšulys išpjovos gale")
+    label(s, (0, -200), (X, -150), "Lenkta niša (nematoma po atrama)")
+    s.title("VAIZDAS IŠ VIRŠAUS", "M 1:50   |   matmenys mm   |   kontūrai pagal 3D modelį",
+            (-HT - 2 * r, miny - 2 * r - 27 * s.sc))
     return s.save("01_Vaizdas_is_virsaus_M1-50")
 
 
@@ -232,16 +284,19 @@ def front():
     s.rect(-HB + 10, 0, HB - 10, BASE_H)
     s.line((-A, BASE_H), (-A, H_BODY), "MATOMOS")
     s.line((A, BASE_H), (A, H_BODY), "MATOMOS")
-    s.rect(-FLUTE_HALF, FLUTE_Z0, FLUTE_HALF, H_BODY)
+    # rievių niša
+    s.rect(-FLUTE_NICHE_HALF - 5, BASE_H, FLUTE_NICHE_HALF + 5, H_BODY)
+    s.rect(-FLUTE_HALF, BASE_H, FLUTE_HALF, H_BODY, "MATOMOS")
     for i in range(1, FLUTE_N):
         x = -FLUTE_HALF + i * 2 * FLUTE_R
-        s.line((x, FLUTE_Z0), (x, H_BODY), "MATOMOS")
+        s.line((x, BASE_H), (x, H_BODY), "MATOMOS")
     s.rect(-CAV_HALF, WORK_TOP_Z - T_WORK, CAV_HALF, WORK_TOP_Z, "NEMATOMOS")
     s.line((-HT - 150, 0), (HT + 150, 0))
 
-    s.hdim(-HB, -FLUTE_HALF, 0, -r)
-    s.hdim(-FLUTE_HALF, FLUTE_HALF, 0, -r)
-    s.hdim(FLUTE_HALF, HB, 0, -r)
+    nh = FLUTE_NICHE_HALF + 5
+    s.hdim(-HB, -nh, 0, -r)
+    s.hdim(-nh, nh, 0, -r)
+    s.hdim(nh, HB, 0, -r)
     s.hdim(-HB, HB, 0, -2 * r)
     s.hdim(-HT, HT, H_TOTAL, H_TOTAL + r)
     s.vdim(0, BASE_H, -HT, -HT - r)
@@ -252,9 +307,9 @@ def front():
 
     X = HT + 2 * r + 6 * s.sc
     label(s, (900, 500), (X, 700), "Korpusas – dekoratyvinis tinkas, pudrinė rožinė")
-    label(s, (300, 300), (X, 450), "Rievėta panelė: 40 rievių po 29,8 mm, dažytas MDF")
+    label(s, (300, 300), (X, 450), "Rievės: 40 vnt. Ø29, vyno sp., įleistos į 14 mm nišą (R10 kampai)")
     label(s, (700, H_TOTAL - 20), (X, 1000), "Stalviršis – medis, 40 mm")
-    label(s, (-300, 20), (X, 120), "Cokolis – bronzos sp. metalas, h=40, įtrauktas 10 mm")
+    label(s, (-300, 20), (X, 120), "Cokolis – tamsiai rudas, h=40, įtrauktas 10 mm")
     s.title("VAIZDAS IŠ PRIEKIO (kliento pusė)", "M 1:50   |   matmenys mm", (-HT - r, -2 * r - 15 * s.sc))
     return s.save("02_Vaizdas_is_priekio_M1-50")
 
@@ -272,15 +327,14 @@ def back():
     s.line((-A, BASE_H), (-A, H_BODY), "MATOMOS")
     s.line((A, BASE_H), (A, H_BODY), "MATOMOS")
     s.rect(-CAV_HALF, WORK_TOP_Z - T_WORK, CAV_HALF, WORK_TOP_Z)
-    # stalčių blokas (darbuotojo kairėje)
     px0, px1 = sorted((m(PED_X0), m(PED_X1)))
     s.line((px0, 0), (px0, TOPRAIL_Z1))
     s.line((px1, 0), (px1, TOPRAIL_Z1))
+    hx0, hx1 = sorted((m(HANDLE_X0), m(HANDLE_X1)))
     for (z0, z1) in drawer_fronts():
         s.rect(px0 + 1.5, z0, px1 - 1.5, z1)
-        s.rect(px0 + 100, z1 - 22, px1 - 100, z1 - 12, "MATOMOS")
+        s.rect(hx0, z1 - HANDLE_FROM_TOP - HANDLE_H, hx1, z1 - HANDLE_FROM_TOP, "FURNITURA")
     s.rect(px0 + T, 0, px1 - T, LEG_H - 2, "MATOMOS")
-    # spintelė (darbuotojo dešinėje)
     cx0, cx1 = sorted((m(CAB_X0), m(CAB_X1)))
     s.line((cx0, 0), (cx0, TOPRAIL_Z1))
     s.line((cx1, 0), (cx1, TOPRAIL_Z1))
@@ -291,7 +345,6 @@ def back():
     s.circle((dx0 + 50, TIPON_Z), 15, "FURNITURA")
     s.rect(cx0 + T, 0, cx1 - T, LEG_H - 2, "MATOMOS")
     s.line((cx0 + T + 1, SHELF_Z0 + T / 2), (cx1 - T - 1, SHELF_Z0 + T / 2), "NEMATOMOS")
-    # kojų vieta – galinė panelė
     s.line((px1, 0), (cx0, 0))
     s.line((-HT - 150, 0), (HT + 150, 0))
 
@@ -302,6 +355,7 @@ def back():
     s.hdim(px0, px1, 0, -r)
     s.hdim(px1, cx0, 0, -r)
     s.hdim(cx0, cx1, 0, -r)
+    s.hdim(hx0, hx1, 0, -2 * r)
     fr = drawer_fronts()
     s.vdim(0, LEG_H, -HT, -HT - 2 * r)
     s.vdim(fr[0][0], fr[0][1], -HT, -HT - r)
@@ -313,16 +367,16 @@ def back():
 
     X = HT + 2 * r + 6 * s.sc
     label(s, (dx0 + 60, TIPON_Z + 10), (X, 760), "Spaudimo vieta – durelė be rankenos (Blum TIP-ON)")
-    label(s, (0, 1000), (X, 1250), "Lenkta niša po kliento atrama, aukštis 201 mm")
+    label(s, (0, 1000), (X, 1250), "Lenkta niša po kliento atrama, h 201 mm, juoda matinė")
     label(s, (450, 880), (X, 1000), "Darbo stalviršis h=900, medis 40 mm")
     label(s, (450, SHELF_Z0 + 9), (X, 520), "Reguliuojama lentyna")
-    label(s, (500, 300), (X, 300), "Durelė LMDP 18 mm, matinis laminatas")
+    label(s, (500, 300), (X, 300), "Fasadai – antracito sp. matinis laminatas, 18 mm")
     label(s, (0, 400), (X, 160), "Vieta kojoms 542 mm, su galine panele")
-    label(s, (px0 + 120, fr[2][1] - 17), (X, 1120), "Stalčiai (3 vnt.) su įfrezuota rankenėle")
+    label(s, ((hx0 + hx1) / 2, fr[2][1] - 17), (X, 1120), "Metalinės rankenėlės 200 mm, išsikišusios 12 mm")
     label(s, (cx0 + 100, 50), (X, 30), "Įtrauktas cokolis 60 mm, kojelės h=100")
-    s.text("Stalčių blokas – darbuotojo kairėje, spintelė – dešinėje", (0, -2 * r), align=CTR)
+    s.text("Stalčių blokas – darbuotojo kairėje, spintelė – dešinėje", (0, -3 * r), align=CTR)
     s.title("VAIZDAS IŠ GALO (darbuotojo pusė)", "M 1:50   |   matmenys mm",
-            (-HT - 2 * r - 2 * s.sc, -2 * r - 15 * s.sc))
+            (-HT - 2 * r - 2 * s.sc, -3 * r - 15 * s.sc))
     return s.save("03_Vaizdas_is_galo_M1-50")
 
 
@@ -432,8 +486,8 @@ def detail_door():
         "FURNITŪRA\\P"
         "Blum TIP-ON durims – 1 vnt.; adapterinė plokštelė – 1; atsitrenkimo plokštelė – 1; "
         "vyris CLIP top 110° be spyruoklės – 2; montavimo plokštelė – 2; lentynos laikiklis Ø5 – 4; "
-        "stalčių kreipiančiosios Blum MOVENTO 500 mm su BLUMOTION – 3 kompl.; "
-        "reguliuojama kojelė h=100 – 8; kabelių anga Ø60 – 3."
+        "stalčių kreipiančiosios Blum MOVENTO 500 mm su BLUMOTION – 3 kompl.; stalčių rankenėlė 200 mm – 3; "
+        "reguliuojama kojelė h=100 – 8; kabelių anga Ø60 – 2."
     )
     s.mtext(notes, (X, by + 380), width=95)
     s.title("MAZGAS. DURELĖS VIDINĖ PUSĖ – vyrių ir TIP-ON padėtis",

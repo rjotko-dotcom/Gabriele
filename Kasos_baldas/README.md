@@ -23,25 +23,30 @@ Brėžiniai nubraižyti mastelyje 1:1 (mm). Matmenų stilius pritaikytas spausdi
 
 ## Pagrindiniai sprendimai
 
+**Pagrindinis modelis – `3D_modelis/Kasos_baldas.blend`** (Blender 4.5, su Gabrielės pakeitimais). Renderiai, SketchUp eksportas ir brėžinių vaizdo iš viršaus kontūrai daromi tiesiai iš jo.
+
 | Elementas | Sprendimas |
 |---|---|
-| Bendri matmenys | 2159 × 767 mm, aukštis 1141 mm (kaip modelyje) |
-| Kliento atrama | Viršutinis stalviršis (medis, 40 mm, h = 1141) su **lenkta išpjova** darbuotojo pusėje: lankas R 685,9, angos plotis 1300, per vidurį lieka 300 mm atrama |
-| Darbuotojo zona | Lenkta vidinė sienelė (atrama išsikiša 30 mm). Darbo stalviršis h = **900 mm** (medis, 40 mm), 1342 mm pločio |
-| Po darbo stalviršiu | **Kairėje** (žiūrint darbuotojui) – stalčių blokas 400 mm, 3 stalčiai (328 / 260 / 160) su įfrezuota rankenėle ir Blum MOVENTO kreipiančiosiomis. **Per vidurį** – 542 mm vieta kojoms su galine panele. **Dešinėje** – spintelė 400 mm su lentyna ir viena atšokančia durele |
+| Bendri matmenys | 2159 × 767 mm (su iškyšuliais išpjovos galuose – 785 mm), aukštis 1141 mm |
+| Kliento atrama | Viršutinis stalviršis (medis, 40 mm, h = 1141) su **laisvos formos išpjova** darbuotojo pusėje: per vidurį atrama 438 mm gylio, išpjovos plotis ties galiniu kraštu ~1279 mm, galuose – suapvalinti iškyšuliai (+18 mm). Kreivės koordinatės – brėžinyje 01 |
+| Darbuotojo zona | Lenkta niša (juoda matinė), 201 mm aukščio. Darbo stalviršis h = **900 mm** (medis, 40 mm), 1342 mm pločio, galiniai kampai R28 |
+| Po darbo stalviršiu | **Kairėje** (žiūrint darbuotojui) – stalčių blokas 400 mm, 3 stalčiai (328 / 260 / 160) su metalinėmis 200 mm rankenėlėmis ir Blum MOVENTO kreipiančiosiomis. **Per vidurį** – 542 mm vieta kojoms su galine panele. **Dešinėje** – spintelė 400 mm su lentyna ir viena atšokančia durele |
 | Atšokimo mechanizmas | Blum TIP-ON, ant spintelės šono prie vietos kojoms, 70 mm nuo durelės viršaus. Vyriai Blum CLIP top 110° **be spyruoklės** |
-| Kabelių angos | Ø60, 3 vnt.: 2 darbo stalviršyje, 1 atramoje |
-| Medžiagos | Medis – Wood060 tekstūra; korpusas – dekoratyvinis tinkas (pudrinė rožinė); rievėta panelė – dažytas MDF; fasadai ir spintelės – matinis laminatas (LMDP); cokolis – bronzos spalvos metalas |
-| Pagrindas | Korpusui – bronzinis cokolis 40 mm. Spintelėms – kojelės h = 100 su 60 mm įtrauktu cokoliu |
+| Kliento pusė | Rievės (40 vnt., vyno spalvos) įleistos į ~14 mm gylio, ~1210 mm pločio nišą su R10 kampais |
+| Kabelių angos | Ø60, 2 vnt. darbo stalviršyje |
+| Medžiagos | Medis – Wood060 tekstūra; korpusas – dekoratyvinis tinkas (pudrinė rožinė); rievės – vyno spalvos; fasadai, durelė, kojų panelė – antracito sp. matinis laminatas; niša – juoda matinė; cokolis – tamsiai rudas |
+| Pagrindas | Korpusui – cokolis 40 mm. Spintelėms – kojelės h = 100 su 60 mm įtrauktu cokoliu |
 
 Tekstūros: [ambientCG](https://ambientcg.com) (CC0) – Wood060, Plaster001.
 
-## Kaip sugeneruoti iš naujo
+## Kaip sugeneruoti iš naujo (Blender 4.5)
 ```bash
-pip install ezdxf matplotlib
+pip install ezdxf matplotlib shapely
+blender -b 3D_modelis/Kasos_baldas.blend -P scripts/extract_sections.py -- scripts/sections.json
 python3 scripts/gen_dxf.py Breziniai
-blender -b -P scripts/build_blender.py -- <renderiu_aplankas>          # vaizdai
-MODE=detail blender -b -P scripts/build_blender.py -- <renderiu_aplankas>
-MODE=export blender -b -P scripts/build_blender.py -- 3D_modelis
+blender -b 3D_modelis/Kasos_baldas.blend -P scripts/render_blend.py -- <renderiu_aplankas>
+MODE=detail blender -b 3D_modelis/Kasos_baldas.blend -P scripts/render_blend.py -- <renderiu_aplankas>
 python3 scripts/finish_renders.py <renderiu_aplankas> Renderiai
+blender -b 3D_modelis/Kasos_baldas.blend -P scripts/export_sketchup.py -- 3D_modelis
 ```
+`build_blender.py` – pradinis parametrinis modelis (ankstesnė versija).

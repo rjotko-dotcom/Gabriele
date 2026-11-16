@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461361.82181713
+2461361.876516204
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461361.82181713
+2461361.876516204
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{68DF9A87-56F0-4AD5-9698-165B7EC306BA}
+{D3A62AFB-6212-4F16-99FB-1ED93CC8CD8C}
   9
 $VERSIONGUID
   2
-{4E6E8A2C-ECF2-445F-9882-9FA8371538DA}
+{78E19C87-4DF8-490B-9B71-7A63D856C792}
   9
 $EXTNAMES
 290
@@ -9593,7 +9593,7 @@ t šono prie vietos kojoms (per adapterinę plokštelę), 70 mm nuo durelės vir
   3
 stūmoklio ilgis reguliuojamas.\PFURNITŪRA\PBlum TIP-ON durims – 1 vnt.; adapterinė plokštelė – 1; atsitrenkimo plokštelė – 1; vyris CLIP top 110° be spyruoklės – 2; montavimo plokštelė – 2; lentynos laikiklis Ø5 – 4; stalčių kreipiančiosios Blum MOVE
   1
-NTO 500 mm su BLUMOTION – 3 kompl.; reguliuojama kojelė h=100 – 8; kabelių anga Ø60 – 3.
+NTO 500 mm su BLUMOTION – 3 kompl.; stalčių rankenėlė 200 mm – 3; reguliuojama kojelė h=100 – 8; kabelių anga Ø60 – 2.
   7
 LT
   0
@@ -10763,7 +10763,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-16T19:43:25.579227+00:00
+1.4.5 @ 2026-11-16T21:02:11.179395+00:00
   0
 VISUALSTYLE
   5
@@ -17325,7 +17325,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-16T19:43:25.586388+00:00
+1.4.5 @ 2026-11-16T21:02:11.187068+00:00
   0
 ENDSEC
   0

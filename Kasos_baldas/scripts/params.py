@@ -27,7 +27,7 @@ Y_BACK = D_BODY / 2     # +353.5 korpuso galas (darbuotojas)
 FLUTE_HALF = 596.0
 FLUTE_N = 40
 FLUTE_R = (2 * FLUTE_HALF) / FLUTE_N / 2   # 14.9
-BASE_H = 40.0           # bronzinis cokolis apačioje (įtrauktas 10 mm)
+BASE_H = 40.0           # tamsiai rudas cokolis apačioje (įtrauktas 10 mm)
 FLUTE_Z0 = BASE_H
 
 # --- Darbuotojo zona: lenkta išpjova viršutiniame stalviršyje ---
@@ -61,7 +61,7 @@ def arc_top_y(x):
 
 GROMMET_D = 60.0
 GROMMETS_WORK = [(-350.0, 80.0), (350.0, 80.0)]       # darbo stalviršyje
-GROMMETS_LEDGE = [(450.0, -200.0)]                    # kliento atramoje
+GROMMETS_LEDGE = []                                   # (pašalinta pagal pakeistą modelį)
 
 # --- Po darbo stalviršiu ---
 T = 18.0                # LMDP storis
@@ -131,3 +131,14 @@ def drawer_fronts():
         out.append((z, z + h))
         z += h + GAP
     return out
+
+
+# --- Pakeitimai pagal Kasos_baldas.blend (v3) ---
+FLUTE_NICHE_HALF = 600.0     # rievių niša priekyje: ~1200 pločio (R10 kampai)
+FLUTE_NICHE_DEPTH = 14.0     # nišos gylis
+HANDLE_W = 200.0             # stalčių rankenėlės (metalinės, išsikišusios)
+HANDLE_H = 10.0
+HANDLE_PROJ = 12.0           # išsikišimas nuo fasado
+HANDLE_X0, HANDLE_X1 = 371.0, 571.0
+HANDLE_FROM_TOP = 12.0       # nuo stalčiaus fasado viršaus iki rankenėlės viršaus
+WORK_CORNER_R = 28.4         # darbo stalviršio galiniai kampai
