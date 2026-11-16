@@ -9,7 +9,7 @@ Aksesuarų parduotuvės kasos baldas. Darbuotojo zonoje padarytas įgilinimas su
 | `Breziniai/` | 2D brėžiniai **DXF** formatu (AutoCAD 2018). Atsidaro AutoCAD, DraftSight, LibreCAD ir SketchUp programose; norint `.dwg`, AutoCAD'e: *Save As → DWG*. |
 | `Breziniai/PDF_perziura/` | Tų pačių brėžinių PDF peržiūra |
 | `Renderiai/` | 4 vaizdai baltame fone (2 iš kliento, 2 iš darbuotojo pusės) + mazgo vaizdas |
-| `3D_modelis/` | Pakoreguotas modelis: `Kasos_baldas.dae` (importuoti į SketchUp), `.obj`, `.blend` |
+| `3D_modelis/` | `Kasos_baldas_SketchUp.zip` (DAE + medžio tekstūra – išarchyvuoti ir importuoti į SketchUp), `.obj`, `.blend` (tekstūros įpakuotos) |
 | `scripts/` | Skriptai, kurie viską sugeneruoja (`params.py` – visi matmenys vienoje vietoje) |
 
 ### Brėžiniai
