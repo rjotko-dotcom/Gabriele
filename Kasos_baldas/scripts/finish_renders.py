@@ -56,7 +56,7 @@ d = ImageDraw.Draw(im)
 f = ImageFont.truetype(FONT, int(26 * k))
 fb = ImageFont.truetype(FONTB, int(34 * k))
 fs = ImageFont.truetype(FONT, int(22 * k))
-callout(d, pts["tipon"], (0.40 * W, 0.09 * H),
+callout(d, pts["tipon"], (0.50 * W, 0.08 * H),
         "Blum TIP-ON (atšokimo mechanizmas),\nprisuktas prie spintelės šono,\n70 mm nuo durelės viršaus", f)
 callout(d, pts["plate"], (0.80 * W, 0.25 * H), "Metalinė plokštelė\nant durelės", f)
 callout(d, pts["hinge_top"], (0.62 * W, 0.80 * H),
