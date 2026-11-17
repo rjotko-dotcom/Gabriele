@@ -41,7 +41,7 @@ for a, b, z0, z1, kind in openings:
         top = SW + 2.40; mid = (a+b)/2
         msp.add_line((mm(a+t), mm(top)), (mm(b-t), mm(top)), dxfattribs=L('A-DURYS')); msp.add_line((mm(a+t), mm(top+t)), (mm(b-t), mm(top+t)), dxfattribs=L('A-DURYS'))
         msp.add_line((mm(mid), mm(SW)), (mm(mid), mm(top)), dxfattribs=L('A-DURYS'))
-        for hx in (mid-0.08, mid+0.08): msp.add_line((mm(hx), mm(SW+0.95)), (mm(hx), mm(SW+1.25)), dxfattribs={'layer': 'A-DURYS', 'lineweight': 35})
+        for hx in (mid-0.08, mid+0.08): msp.add_line((mm(hx), mm(SW+0.95)), (mm(hx), mm(SW+1.25)), dxfattribs={'layer': 'A-DURYS'})
         # opening direction marks (inward) – dashed triangles
         for (x0, x1) in ((a+t, mid), (mid, b-t)):
             hinge = x0 if x0 == a+t else x1

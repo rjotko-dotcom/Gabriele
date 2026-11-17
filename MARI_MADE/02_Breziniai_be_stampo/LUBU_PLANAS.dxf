@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461362.8342939815
+2461362.836736111
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461362.8342939815
+2461362.836747685
   9
 $TDUUPDATE
  40
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{E94588CB-8DB8-42DF-85D7-337341669865}
+{54645085-E849-4BC3-84CD-DBA958BA827B}
   9
 $EXTNAMES
 290
@@ -4216,6 +4216,8 @@ ARC
 AcDbEntity
   8
 Durys
+370
+13
 100
 AcDbCircle
  10
@@ -4268,6 +4270,8 @@ ARC
 AcDbEntity
   8
 Durys
+370
+13
 100
 AcDbCircle
  10
@@ -10394,6 +10398,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -10838,6 +10844,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -10866,6 +10874,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11050,6 +11060,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11500,6 +11512,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11534,6 +11548,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11854,6 +11870,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11888,6 +11906,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11922,6 +11942,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11956,6 +11978,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -11984,6 +12008,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -12012,6 +12038,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -12378,6 +12406,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -12822,6 +12852,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -12876,6 +12908,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -13242,6 +13276,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -13822,6 +13858,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -13908,6 +13946,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -13942,6 +13982,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -13976,6 +14018,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14294,6 +14338,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14354,6 +14400,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14388,6 +14436,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14422,6 +14472,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14450,6 +14502,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14478,6 +14532,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14532,6 +14588,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -14976,6 +15034,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -15004,6 +15064,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -15292,6 +15354,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -15742,6 +15806,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -15776,6 +15842,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16096,6 +16164,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16130,6 +16200,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16164,6 +16236,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16198,6 +16272,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16226,6 +16302,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16254,6 +16332,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16308,6 +16388,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16700,6 +16782,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16728,6 +16812,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -16912,6 +16998,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17258,6 +17346,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17292,6 +17382,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17430,6 +17522,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17464,6 +17558,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17492,6 +17588,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17546,6 +17644,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17674,6 +17774,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17708,6 +17810,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -17742,6 +17846,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -27008,6 +27114,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -27458,6 +27566,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -27492,6 +27602,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -27786,6 +27898,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28230,6 +28344,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28258,6 +28374,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28572,6 +28690,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28600,6 +28720,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28628,6 +28750,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28656,6 +28780,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28690,6 +28816,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -28724,6 +28852,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -31652,6 +31782,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -31682,6 +31814,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -31774,6 +31908,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -31804,6 +31940,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -50301,7 +50439,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-17T20:01:23.277109+00:00
+1.4.5 @ 2026-11-17T20:04:55.050953+00:00
   0
 ENDSEC
   0

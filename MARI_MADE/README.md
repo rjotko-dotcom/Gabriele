@@ -40,7 +40,7 @@ Interjero projekto brėžiniai. Atliko Gabrielė Meilūnaitė, Vilniaus dizaino 
   | Pjaunami baldai; griaunami ir demontuojami elementai (brūkšninė, sluoksnis `A-GRIAUNAMA`) | 0,35 |
   | Matomi kontūrai, langai, durys | 0,25 |
   | Toli matomi kontūrai, laiptų pakopos, matmenys, ašys | 0,18 |
-  | Stiklas, užtušavimai | 0,13 |
+  | Stiklas, užtušavimai, durų atidarymo lankai, fasado rustika | 0,13 |
 
   Visos linijos juodos, sienų pjūviai užpildyti pilkai.
 - **Ašys.** Vertikalios ašys žymimos skaičiais iš kairės į dešinę (1, 2, 3, 4), horizontalios raidėmis iš apačios į viršų (A, B, C). Senos ašys pervadintos: 1E→1, 1→2, 2→3, 3→4, AE→A, A→B, B→C. Burbulai Ø10 mm, linijos brūkšninės taškinės. Ašys su matmenimis pridėtos ir lubų, šviestuvų, baldų planuose bei pjūviuose.
@@ -64,5 +64,5 @@ Interjero projekto brėžiniai. Atliko Gabrielė Meilūnaitė, Vilniaus dizaino 
 
 ## Liko patikrinti
 
-- Griovimo plano lentelėje eilutė „ESAMOS SIENOS IR LAIKANČIOS KONSTRUKCIJOS" kartojasi du kartus su skirtingais simboliais. Galbūt antroji turėjo būti „GRIAUNAMOS SIENOS".
+- Griovimo plano lentelėje buvo dvi vienodos eilutės „ESAMOS SIENOS IR LAIKANČIOS KONSTRUKCIJOS". Palikta viena, su 0,50 mm simboliu, kaip brėžiamos esamos sienos.
 - SketchUp modelyje ant sienos parašyta „MARY MADE". Brėžiniuose naudotas teisingas prekės ženklas „MARI MADE".

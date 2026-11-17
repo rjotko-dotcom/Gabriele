@@ -15,7 +15,7 @@ META = json.load(open(S + '/geo2_meta.json'))
 LW = {'Esamos sienos': 50, 'Langai': 25, 'asys': 18, 'Durys': 25, 'kolonos': 50, 'stiklas': 13, 'evakuacija': 35,
       'konturas': 25, 'Pertvaros': 50, 'Textas bendras': 25, 'Sienu haxas': 13, 'HACAS': 13, '0.5': 25,
       '0-statramsciai': 25, '_Metalines konstr': 35, 'A-73----E--': 18, 'A-43CB--E-N': 35, 'A-45CE--E--': 18,
-      'A-45CE--E-N': 18, 'a-scianki': 25, 'B-HATCH': 13, 'Sutartiniai žymėjimai.': 50, '0': 25, 'GRIAUNAMA': 35}
+      'A-45CE--E-N': 18, 'a-scianki': 25, 'B-HATCH': 13, 'Sutartiniai žymėjimai.': 50, '0': 25, 'GRIAUNAMA': 35, '000': 13, '00': 13}
 TYPO = {'IEJIMAS': 'ĮĖJIMAS', 'IĖJIMAS': 'ĮĖJIMAS', 'ĮEJIMAS': 'ĮĖJIMAS', 'ILEIDŽIAMI': 'ĮLEIDŽIAMI', 'LAUKO DURIS': 'LAUKO DURYS',
         'GIPSINE SIENA': 'GIPSINĖ SIENA', 'GIPSO KARTONOS': 'GIPSO KARTONO', 'Į PATALPA': 'Į PATALPĄ', 'TŪRĖKLAS': 'TURĖKLAS'}
 GRAYS = {8, 9, 250, 251, 252, 253, 254, 255}
@@ -48,8 +48,10 @@ def standardise(doc):
     for l in doc.layers:
         if l.dxf.lineweight == -3: l.dxf.lineweight = 25
     for lay in [doc.modelspace()] + [b for b in doc.blocks if not b.name.lower().startswith('*paper')]:
+        inblock = lay is not doc.modelspace()
         for e in lay:
             if e.dxf.hasattr('lineweight') and e.dxf.lineweight != -1: e.dxf.lineweight = -1
+            if inblock and e.dxftype() == 'ARC': e.dxf.lineweight = 13      # door swing arcs: thin (ISO 7519)
             if e.dxftype() == 'MTEXT': e.text = fix(e.text)
             if e.dxftype() == 'TEXT': e.dxf.text = fix(e.dxf.text)
     decolour(doc)
@@ -189,7 +191,7 @@ def plan_A1(fn, lap, title, sut_rows, eks_rows, sut_box, eks_box, outname):
     p = f'{OUT}/{outname}.dxf'; doc.saveas(p); SHEETS.append((p, f'{lap:02d}_{title}'))
 
 plan_A1('GRIOVIMO_PLANAS', 1, 'GRIOVIMO PLANAS',
-    [(63600, 63950, 'ESAMOS SIENOS IR LAIKANČIOS KONSTRUKCIJOS'), (63000, 63350, 'ESAMOS SIENOS IR LAIKANČIOS KONSTRUKCIJOS'),
+    [(63000, 63350, 'ESAMOS SIENOS IR LAIKANČIOS KONSTRUKCIJOS'),
      (62350, 62700, 'UŽDAROMAS VIDINIS ĮĖJIMAS'), (61750, 62100, 'DEMONTUOJAMOS STIKLINĖS PERTVAROS'), (61200, 61600, 'DEMONTUOJAMI LAIPTAI'),
      (60350, 60950, 'ESAMAS ĮĖJIMAS'), (59400, 60250, 'ESAMOS LAUKO DURYS'), (58550, 59100, 'GRINDŲ ALTITUDĖ')],
     [('1', 'ESAMI LAIPTAI'), ('2', 'ESAMAS LIFTAS'), ('3', 'ESAMA VENTILIACIJOS ŠACHTA'), ('4', 'ESAMAS TURĖKLAS / BALKONAS'),

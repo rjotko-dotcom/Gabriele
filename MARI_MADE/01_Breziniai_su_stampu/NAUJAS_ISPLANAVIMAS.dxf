@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461362.834074074
+2461362.836516204
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461362.834074074
+2461362.836527778
   9
 $TDUUPDATE
  40
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{170E954F-396E-415D-8068-B7C14969912D}
+{502DC7A4-40B0-4F3E-9843-FE8DE5A34CBF}
   9
 $EXTNAMES
 290
@@ -2677,7 +2677,7 @@ AcDbLayerTableRecord
   6
 Continuous
 370
-15
+13
 390
 F
 347
@@ -11454,6 +11454,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -11480,6 +11482,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11506,6 +11510,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -11532,6 +11538,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11558,6 +11566,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11584,6 +11594,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11610,6 +11622,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11636,6 +11650,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11870,6 +11886,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -11896,6 +11914,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12002,6 +12022,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12028,6 +12050,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12054,6 +12078,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -12080,6 +12106,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12106,6 +12134,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12132,6 +12162,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12158,6 +12190,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12184,6 +12218,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12210,6 +12246,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -12236,6 +12274,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -13182,6 +13222,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13208,6 +13250,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13234,6 +13278,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13260,6 +13306,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13286,6 +13334,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13312,6 +13362,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13518,6 +13570,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13544,6 +13598,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13570,6 +13626,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13596,6 +13654,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13622,6 +13682,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13648,6 +13710,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13674,6 +13738,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13700,6 +13766,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13726,6 +13794,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13752,6 +13822,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13778,6 +13850,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13804,6 +13878,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13830,6 +13906,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13856,6 +13934,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13882,6 +13962,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13908,6 +13990,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13934,6 +14018,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -13960,6 +14046,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14082,6 +14170,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14132,6 +14222,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14158,6 +14250,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14184,6 +14278,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14234,6 +14330,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14308,6 +14406,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14334,6 +14434,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14360,6 +14462,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14386,6 +14490,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14412,6 +14518,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14438,6 +14546,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14464,6 +14574,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14490,6 +14602,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14516,6 +14630,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14542,6 +14658,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14568,6 +14686,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14594,6 +14714,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14620,6 +14742,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14646,6 +14770,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14672,6 +14798,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14698,6 +14826,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14724,6 +14854,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14774,6 +14906,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14800,6 +14934,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14826,6 +14962,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14852,6 +14990,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14910,6 +15050,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14936,6 +15078,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14962,6 +15106,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -14988,6 +15134,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15014,6 +15162,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15040,6 +15190,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15146,6 +15298,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15172,6 +15326,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15198,6 +15354,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15224,6 +15382,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15250,6 +15410,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15276,6 +15438,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15446,6 +15610,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -15472,6 +15638,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16094,6 +16262,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16164,6 +16334,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16190,6 +16362,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16216,6 +16390,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16282,6 +16458,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16308,6 +16486,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16374,6 +16554,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16428,6 +16610,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16454,6 +16638,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16480,6 +16666,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16550,6 +16738,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16628,6 +16818,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16654,6 +16846,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16680,6 +16874,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16706,6 +16902,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16732,6 +16930,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -16758,6 +16958,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -16784,6 +16986,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -16834,6 +17038,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16860,6 +17066,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16886,6 +17094,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16912,6 +17122,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16938,6 +17150,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16964,6 +17178,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -16990,6 +17206,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17016,6 +17234,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17042,6 +17262,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17068,6 +17290,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17094,6 +17318,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17120,6 +17346,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17146,6 +17374,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17172,6 +17402,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17198,6 +17430,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17608,6 +17842,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17634,6 +17870,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17660,6 +17898,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17686,6 +17926,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17712,6 +17954,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17802,6 +18046,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17828,6 +18074,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17854,6 +18102,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17880,6 +18130,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17906,6 +18158,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17932,6 +18186,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -17958,6 +18214,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18008,6 +18266,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18034,6 +18294,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18140,6 +18402,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18262,6 +18526,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18288,6 +18554,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18314,6 +18582,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18340,6 +18610,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18366,6 +18638,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18392,6 +18666,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18418,6 +18694,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18444,6 +18722,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18470,6 +18750,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18496,6 +18778,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18522,6 +18806,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18548,6 +18834,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18574,6 +18862,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18600,6 +18890,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18626,6 +18918,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18652,6 +18946,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18678,6 +18974,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18704,6 +19002,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18730,6 +19030,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18756,6 +19058,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18782,6 +19086,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18808,6 +19114,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18834,6 +19142,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18860,6 +19170,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18886,6 +19198,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18912,6 +19226,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18938,6 +19254,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18964,6 +19282,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -18990,6 +19310,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19016,6 +19338,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19042,6 +19366,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19068,6 +19394,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19094,6 +19422,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19120,6 +19450,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19146,6 +19478,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19172,6 +19506,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19198,6 +19534,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19224,6 +19562,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19250,6 +19590,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19276,6 +19618,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19302,6 +19646,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19328,6 +19674,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19378,6 +19726,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -19404,6 +19754,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -20920,6 +21272,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -21730,6 +22084,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -21948,6 +22304,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -22046,6 +22404,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -22428,6 +22788,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29208,6 +29570,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29234,6 +29598,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29260,6 +29626,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29286,6 +29654,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29312,6 +29682,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29338,6 +29710,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29364,6 +29738,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29390,6 +29766,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29416,6 +29794,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29442,6 +29822,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29468,6 +29850,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29494,6 +29878,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29520,6 +29906,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -29546,6 +29934,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -29668,6 +30058,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29694,6 +30086,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -29720,6 +30114,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -30482,6 +30878,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31028,6 +31426,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31054,6 +31454,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31312,6 +31714,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31338,6 +31742,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31364,6 +31770,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31390,6 +31798,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31416,6 +31826,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31442,6 +31854,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31468,6 +31882,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31494,6 +31910,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31520,6 +31938,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31546,6 +31966,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31572,6 +31994,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31598,6 +32022,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31624,6 +32050,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31650,6 +32078,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31676,6 +32106,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31702,6 +32134,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31728,6 +32162,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31754,6 +32190,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31828,6 +32266,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31854,6 +32294,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -31976,6 +32418,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32002,6 +32446,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32028,6 +32474,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32054,6 +32502,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32080,6 +32530,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32106,6 +32558,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32132,6 +32586,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32190,6 +32646,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32216,6 +32674,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32242,6 +32702,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32268,6 +32730,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32294,6 +32758,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32320,6 +32786,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32346,6 +32814,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32372,6 +32842,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32398,6 +32870,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32424,6 +32898,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32450,6 +32926,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32476,6 +32954,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32502,6 +32982,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32528,6 +33010,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32634,6 +33118,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32684,6 +33170,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32710,6 +33198,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32736,6 +33226,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32762,6 +33254,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32788,6 +33282,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32814,6 +33310,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32840,6 +33338,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32866,6 +33366,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32892,6 +33394,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32966,6 +33470,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -32992,6 +33498,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33018,6 +33526,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33044,6 +33554,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33070,6 +33582,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33096,6 +33610,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33122,6 +33638,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33148,6 +33666,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33174,6 +33694,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33200,6 +33722,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33806,6 +34330,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33832,6 +34358,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33858,6 +34386,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33924,6 +34454,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -33950,6 +34482,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34020,6 +34554,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34046,6 +34582,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34124,6 +34662,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34150,6 +34690,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34176,6 +34718,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34246,6 +34790,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34272,6 +34818,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34322,6 +34870,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34348,6 +34898,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -34374,6 +34926,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -34400,6 +34954,8 @@ ARC
 AcDbEntity
   8
 00
+370
+13
 100
 AcDbCircle
  10
@@ -34426,6 +34982,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34452,6 +35010,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34478,6 +35038,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34504,6 +35066,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34530,6 +35094,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34556,6 +35122,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34582,6 +35150,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34608,6 +35178,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34634,6 +35206,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34660,6 +35234,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34686,6 +35262,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34712,6 +35290,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34738,6 +35318,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34764,6 +35346,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34790,6 +35374,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34896,6 +35482,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34922,6 +35510,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -34948,6 +35538,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35014,6 +35606,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35040,6 +35634,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35066,6 +35662,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35092,6 +35690,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35118,6 +35718,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35144,6 +35746,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35170,6 +35774,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35196,6 +35802,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35222,6 +35830,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35248,6 +35858,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35274,6 +35886,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35300,6 +35914,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35326,6 +35942,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35352,6 +35970,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35378,6 +35998,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35404,6 +36026,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35430,6 +36054,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35456,6 +36082,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35482,6 +36110,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35508,6 +36138,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35534,6 +36166,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35560,6 +36194,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35586,6 +36222,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35708,6 +36346,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35734,6 +36374,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35760,6 +36402,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35786,6 +36430,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35812,6 +36458,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35838,6 +36486,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35864,6 +36514,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35890,6 +36542,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35916,6 +36570,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -35942,6 +36598,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36064,6 +36722,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36090,6 +36750,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36116,6 +36778,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36142,6 +36806,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36168,6 +36834,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36194,6 +36862,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36220,6 +36890,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36246,6 +36918,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36272,6 +36946,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36322,6 +36998,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36428,6 +37106,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36454,6 +37134,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36480,6 +37162,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36506,6 +37190,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36532,6 +37218,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36558,6 +37246,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36584,6 +37274,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36610,6 +37302,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36636,6 +37330,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36662,6 +37358,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36688,6 +37386,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36714,6 +37414,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36740,6 +37442,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36830,6 +37534,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -36856,6 +37562,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37072,6 +37780,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37098,6 +37808,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37124,6 +37836,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37150,6 +37864,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37176,6 +37892,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37202,6 +37920,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37228,6 +37948,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37254,6 +37976,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37280,6 +38004,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37306,6 +38032,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37332,6 +38060,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37358,6 +38088,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37384,6 +38116,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37410,6 +38144,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37436,6 +38172,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37462,6 +38200,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37488,6 +38228,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37514,6 +38256,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37564,6 +38308,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37590,6 +38336,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -37728,6 +38476,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37754,6 +38504,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37876,6 +38628,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37902,6 +38656,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37928,6 +38684,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -37954,6 +38712,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -38456,6 +39216,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -40714,6 +41476,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -42420,6 +43184,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43546,6 +44312,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -43572,6 +44340,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43666,6 +44436,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -43692,6 +44464,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -43718,6 +44492,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -43744,6 +44520,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43770,6 +44548,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43796,6 +44576,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43822,6 +44604,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43848,6 +44632,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43874,6 +44660,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43900,6 +44688,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43926,6 +44716,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43952,6 +44744,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -43978,6 +44772,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44004,6 +44800,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44030,6 +44828,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44056,6 +44856,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44106,6 +44908,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44132,6 +44936,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44182,6 +44988,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44252,6 +45060,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -44278,6 +45088,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44304,6 +45116,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44330,6 +45144,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44356,6 +45172,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44402,6 +45220,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44428,6 +45248,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44454,6 +45276,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44480,6 +45304,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44506,6 +45332,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44532,6 +45360,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44558,6 +45388,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44584,6 +45416,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44682,6 +45516,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44708,6 +45544,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44806,6 +45644,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -44832,6 +45672,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44858,6 +45700,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44908,6 +45752,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44934,6 +45780,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -44960,6 +45808,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45010,6 +45860,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45036,6 +45888,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45062,6 +45916,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45112,6 +45968,8 @@ ARC
 AcDbEntity
   8
 0
+370
+13
 100
 AcDbCircle
  10
@@ -45224,6 +46082,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45250,6 +46110,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45276,6 +46138,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -45878,6 +46742,8 @@ ARC
 AcDbEntity
   8
 Durys
+370
+13
 100
 AcDbCircle
  10
@@ -45930,6 +46796,8 @@ ARC
 AcDbEntity
   8
 Durys
+370
+13
 100
 AcDbCircle
  10
@@ -47706,6 +48574,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47732,6 +48602,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47758,6 +48630,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47784,6 +48658,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47810,6 +48686,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47836,6 +48714,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47862,6 +48742,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -47888,6 +48770,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48122,6 +49006,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48148,6 +49034,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48254,6 +49142,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48280,6 +49170,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48306,6 +49198,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48332,6 +49226,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48358,6 +49254,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48384,6 +49282,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48410,6 +49310,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48436,6 +49338,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48462,6 +49366,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -48488,6 +49394,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49434,6 +50342,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49460,6 +50370,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49486,6 +50398,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49512,6 +50426,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49538,6 +50454,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49564,6 +50482,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49770,6 +50690,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49796,6 +50718,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49822,6 +50746,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49848,6 +50774,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49874,6 +50802,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49900,6 +50830,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49926,6 +50858,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49952,6 +50886,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -49978,6 +50914,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50004,6 +50942,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50030,6 +50970,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50056,6 +50998,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50082,6 +51026,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50108,6 +51054,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50134,6 +51082,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50160,6 +51110,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50186,6 +51138,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50212,6 +51166,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50334,6 +51290,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50384,6 +51342,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50410,6 +51370,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50436,6 +51398,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50486,6 +51450,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50560,6 +51526,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50586,6 +51554,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50612,6 +51582,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50638,6 +51610,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50664,6 +51638,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50690,6 +51666,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50716,6 +51694,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50742,6 +51722,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50768,6 +51750,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50794,6 +51778,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50820,6 +51806,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50846,6 +51834,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50872,6 +51862,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50898,6 +51890,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50924,6 +51918,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50950,6 +51946,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -50976,6 +51974,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51026,6 +52026,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51052,6 +52054,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51078,6 +52082,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51104,6 +52110,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51162,6 +52170,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51188,6 +52198,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51214,6 +52226,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51240,6 +52254,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51266,6 +52282,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51292,6 +52310,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51398,6 +52418,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51424,6 +52446,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51450,6 +52474,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51476,6 +52502,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51502,6 +52530,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51528,6 +52558,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51698,6 +52730,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -51724,6 +52758,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52346,6 +53382,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52416,6 +53454,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52442,6 +53482,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52468,6 +53510,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52534,6 +53578,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52560,6 +53606,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52626,6 +53674,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52680,6 +53730,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52706,6 +53758,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52732,6 +53786,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52802,6 +53858,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52880,6 +53938,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52906,6 +53966,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52932,6 +53994,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52958,6 +54022,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -52984,6 +54050,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53010,6 +54078,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53036,6 +54106,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53086,6 +54158,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53112,6 +54186,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53138,6 +54214,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53164,6 +54242,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53190,6 +54270,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53216,6 +54298,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53242,6 +54326,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53268,6 +54354,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53294,6 +54382,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53320,6 +54410,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53346,6 +54438,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53372,6 +54466,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53398,6 +54494,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53424,6 +54522,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53450,6 +54550,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53860,6 +54962,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53886,6 +54990,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53912,6 +55018,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53938,6 +55046,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -53964,6 +55074,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54054,6 +55166,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54080,6 +55194,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54106,6 +55222,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54132,6 +55250,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54158,6 +55278,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54184,6 +55306,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54210,6 +55334,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54260,6 +55386,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54286,6 +55414,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54392,6 +55522,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54514,6 +55646,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54540,6 +55674,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54566,6 +55702,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54592,6 +55730,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54618,6 +55758,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54644,6 +55786,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54670,6 +55814,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54696,6 +55842,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54722,6 +55870,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54748,6 +55898,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54774,6 +55926,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54800,6 +55954,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54826,6 +55982,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54852,6 +56010,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54878,6 +56038,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54904,6 +56066,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54930,6 +56094,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54956,6 +56122,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -54982,6 +56150,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55008,6 +56178,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55034,6 +56206,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55060,6 +56234,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55086,6 +56262,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55112,6 +56290,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55138,6 +56318,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55164,6 +56346,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55190,6 +56374,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55216,6 +56402,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55242,6 +56430,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55268,6 +56458,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55294,6 +56486,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55320,6 +56514,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55346,6 +56542,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55372,6 +56570,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55398,6 +56598,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55424,6 +56626,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55450,6 +56654,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55476,6 +56682,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55502,6 +56710,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55528,6 +56738,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55554,6 +56766,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55580,6 +56794,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55630,6 +56846,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -55656,6 +56874,8 @@ ARC
 AcDbEntity
   8
 000
+370
+13
 100
 AcDbCircle
  10
@@ -56946,6 +58166,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -57458,6 +58680,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -58392,6 +59616,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -58420,6 +59646,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -58604,6 +59832,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -58658,6 +59888,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -58764,6 +59996,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -59620,6 +60854,8 @@ AcDbEntity
 0
   6
 Continuous
+370
+13
 100
 AcDbCircle
  10
@@ -68032,6 +69268,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -68476,6 +69714,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -68504,6 +69744,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -68688,6 +69930,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69138,6 +70382,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69172,6 +70418,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69492,6 +70740,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69526,6 +70776,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69560,6 +70812,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69594,6 +70848,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69622,6 +70878,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -69650,6 +70908,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -70016,6 +71276,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -70460,6 +71722,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -70514,6 +71778,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -70880,6 +72146,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -71460,6 +72728,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -71546,6 +72816,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -71580,6 +72852,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -71614,6 +72888,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -71904,6 +73180,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72036,6 +73314,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72096,6 +73376,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72130,6 +73412,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72164,6 +73448,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72244,6 +73530,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72298,6 +73586,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72352,6 +73642,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -72978,6 +74270,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -73006,6 +74300,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -73034,6 +74330,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -73354,6 +74652,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -73804,6 +75104,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -73838,6 +75140,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74158,6 +75462,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74192,6 +75498,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74226,6 +75534,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74260,6 +75570,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74288,6 +75600,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74316,6 +75630,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74370,6 +75686,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74762,6 +76080,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74790,6 +76110,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -74974,6 +76296,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75320,6 +76644,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75354,6 +76680,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75492,6 +76820,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75526,6 +76856,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75554,6 +76886,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75608,6 +76942,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75914,6 +77250,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -75968,6 +77306,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76542,6 +77882,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76576,6 +77918,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76896,6 +78240,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76930,6 +78276,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76964,6 +78312,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -76998,6 +78348,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -77026,6 +78378,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -77054,6 +78408,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -77304,6 +78660,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -77754,6 +79112,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -77788,6 +79148,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78082,6 +79444,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78526,6 +79890,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78554,6 +79920,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78868,6 +80236,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78896,6 +80266,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78924,6 +80296,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78952,6 +80326,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -78986,6 +80362,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -79020,6 +80398,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -79224,6 +80604,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -79674,6 +81056,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -79708,6 +81092,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80002,6 +81388,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80446,6 +81834,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80474,6 +81864,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80788,6 +82180,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80816,6 +82210,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80844,6 +82240,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80872,6 +82270,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80906,6 +82306,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -80940,6 +82342,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -81144,6 +82548,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -81594,6 +83000,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -81628,6 +83036,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -81922,6 +83332,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82366,6 +83778,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82394,6 +83808,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82708,6 +84124,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82736,6 +84154,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82764,6 +84184,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82792,6 +84214,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82826,6 +84250,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82860,6 +84286,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -82992,6 +84420,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -83436,6 +84866,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -83464,6 +84896,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -83674,6 +85108,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -83702,6 +85138,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -83730,6 +85168,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -103324,6 +104764,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -103774,6 +105216,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -103808,6 +105252,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104102,6 +105548,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104546,6 +105994,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104574,6 +106024,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104888,6 +106340,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104916,6 +106370,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104944,6 +106400,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -104972,6 +106430,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -105006,6 +106466,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -105040,6 +106502,8 @@ ARC
 AcDbEntity
   8
 stiklas
+370
+13
  48
 50.0
 100
@@ -109862,6 +111326,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -109892,6 +111358,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -109984,6 +111452,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -110014,6 +111484,8 @@ AcDbEntity
 konturas
   6
 DGN Style 4
+370
+13
  48
 30.0
 100
@@ -110702,6 +112174,8 @@ ARC
 AcDbEntity
   8
 A-73----E--
+370
+13
 100
 AcDbCircle
  10
@@ -110728,6 +112202,8 @@ ARC
 AcDbEntity
   8
 A-73----E--
+370
+13
 100
 AcDbCircle
  10
@@ -111066,6 +112542,8 @@ ARC
 AcDbEntity
   8
 A-73----E--
+370
+13
 100
 AcDbCircle
  10
@@ -111092,6 +112570,8 @@ ARC
 AcDbEntity
   8
 A-73----E--
+370
+13
 100
 AcDbCircle
  10
@@ -139389,7 +140869,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-17T20:01:04.913952+00:00
+1.4.5 @ 2026-11-17T20:04:36.293710+00:00
   0
 ENDSEC
   0
