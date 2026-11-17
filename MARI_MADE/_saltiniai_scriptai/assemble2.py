@@ -14,7 +14,7 @@ INFO = dict(objektas='Prekybos centras GO9, Gedimino pr. 9, Vilnius', patalpa='P
 META = json.load(open(S + '/geo2_meta.json'))
 LW = {'Esamos sienos': 50, 'Langai': 25, 'asys': 18, 'Durys': 25, 'kolonos': 50, 'stiklas': 13, 'evakuacija': 35,
       'konturas': 25, 'Pertvaros': 50, 'Textas bendras': 25, 'Sienu haxas': 13, 'HACAS': 13, '0.5': 25,
-      '0-statramsciai': 25, '_Metalines konstr': 35, 'A-73----E--': 25, 'A-43CB--E-N': 35, 'A-45CE--E--': 18,
+      '0-statramsciai': 25, '_Metalines konstr': 35, 'A-73----E--': 18, 'A-43CB--E-N': 35, 'A-45CE--E--': 18,
       'A-45CE--E-N': 18, 'a-scianki': 25, 'B-HATCH': 13, 'Sutartiniai žymėjimai.': 50, '0': 25, 'GRIAUNAMA': 35}
 TYPO = {'IEJIMAS': 'ĮĖJIMAS', 'IĖJIMAS': 'ĮĖJIMAS', 'ĮEJIMAS': 'ĮĖJIMAS', 'ILEIDŽIAMI': 'ĮLEIDŽIAMI', 'LAUKO DURIS': 'LAUKO DURYS',
         'GIPSINE SIENA': 'GIPSINĖ SIENA', 'GIPSO KARTONOS': 'GIPSO KARTONO', 'Į PATALPA': 'Į PATALPĄ', 'TŪRĖKLAS': 'TURĖKLAS'}
@@ -156,6 +156,15 @@ def plan_A1(fn, lap, title, sut_rows, eks_rows, sut_box, eks_box, outname):
     doc = ezdxf.readfile(f'{S}/dxf_in/{fn}.dxf'); msp = doc.modelspace(); standardise(doc)
     for n, (c, lw, lt) in {'A-ASYS': (7, 18, 'A-ASIS'), 'A-ASYS-ZYM': (7, 25, 'Continuous')}.items():
         if n not in doc.layers: doc.layers.add(n, color=c, lineweight=lw, linetype=lt)
+    if fn == 'GRIOVIMO_PLANAS':
+        # demolished / dismantled elements (dashed) -> own layer 0.35, clearly heavier than stair treads (0.18)
+        if 'A-GRIAUNAMA' not in doc.layers: doc.layers.add('A-GRIAUNAMA', color=7, lineweight=35)
+        nd = 0
+        for e in msp:
+            lt = e.dxf.get('linetype', 'BYLAYER')
+            if lt in ('DASHED', 'DASHDOT', 'DGN Style 3') and e.dxf.layer not in ('asys', 'A-ASYS'):
+                e.dxf.layer = 'A-GRIAUNAMA'; nd += 1
+        print('demolition entities', nd)
     fix_axes(msp)
     sut_all = collect(msp, sut_box[:4]); eks_all = collect(msp, eks_box[:4])
     srows = []

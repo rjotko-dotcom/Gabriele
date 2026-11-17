@@ -37,9 +37,9 @@ Interjero projekto brėžiniai. Atliko Gabrielė Meilūnaitė, Vilniaus dizaino 
   |---|---|
   | Rėmelis | 0,70 |
   | Pjaunamos sienos | 0,50 |
-  | Pjaunami baldai | 0,35 |
+  | Pjaunami baldai; griaunami ir demontuojami elementai (brūkšninė, sluoksnis `A-GRIAUNAMA`) | 0,35 |
   | Matomi kontūrai, langai, durys | 0,25 |
-  | Toli matomi kontūrai, matmenys, ašys | 0,18 |
+  | Toli matomi kontūrai, laiptų pakopos, matmenys, ašys | 0,18 |
   | Stiklas, užtušavimai | 0,13 |
 
   Visos linijos juodos, sienų pjūviai užpildyti pilkai.

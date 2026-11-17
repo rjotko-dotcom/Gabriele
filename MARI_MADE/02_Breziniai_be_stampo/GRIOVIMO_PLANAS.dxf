@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461362.7833564817
+2461362.8342708335
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461362.7833680557
+2461362.8342824075
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-A694
+A695
   9
 $SURFTAB1
  70
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{F8C1232B-388A-46CB-99D3-8F933CB4A102}
+{438AFD95-7001-4F7B-8938-BD7CA72997CD}
   9
 $EXTNAMES
 290
@@ -1447,9 +1447,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1463,9 +1463,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -2053,7 +2053,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-59
+60
   0
 LAYER
   5
@@ -2547,7 +2547,7 @@ A-73----E--
   6
 Continuous
 370
-25
+18
 390
 F
 347
@@ -3657,6 +3657,30 @@ F
 347
 98
   0
+LAYER
+  5
+A641
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+A-GRIAUNAMA
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+35
+390
+F
+347
+98
+  0
 ENDTAB
   0
 TABLE
@@ -4083,7 +4107,7 @@ AcCmTransparency
   0
 APPID
   5
-A690
+A691
 330
 9
 100
@@ -4097,7 +4121,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-A691
+A692
 330
 9
 100
@@ -4855,7 +4879,7 @@ _CLOSEDFILLED
   0
 BLOCK_RECORD
   5
-A642
+A643
 330
 1
 100
@@ -4865,7 +4889,7 @@ AcDbBlockTableRecord
   2
 *Paper_Space
 340
-A645
+A646
  70
 0
 280
@@ -63625,9 +63649,9 @@ AcDbBlockEnd
   0
 BLOCK
   5
-A643
+A644
 330
-A642
+A643
 100
 AcDbEntity
   8
@@ -63651,9 +63675,9 @@ AcDbBlockBegin
   0
 ENDBLK
   5
-A644
+A645
 330
-A642
+A643
 100
 AcDbEntity
   8
@@ -110153,7 +110177,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110179,7 +110203,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110205,7 +110229,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110231,7 +110255,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110257,7 +110281,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110283,7 +110307,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110309,7 +110333,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110335,7 +110359,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110361,7 +110385,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110387,7 +110411,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110413,7 +110437,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110439,7 +110463,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110465,7 +110489,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110491,7 +110515,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110517,7 +110541,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110543,7 +110567,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110569,7 +110593,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110595,7 +110619,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110621,7 +110645,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110695,7 +110719,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -110771,7 +110795,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110797,7 +110821,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110823,7 +110847,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110849,7 +110873,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110875,7 +110899,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110901,7 +110925,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110927,7 +110951,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110953,7 +110977,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -110979,7 +111003,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111005,7 +111029,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111031,7 +111055,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111057,7 +111081,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111083,7 +111107,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111109,7 +111133,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111135,7 +111159,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111161,7 +111185,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111187,7 +111211,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111213,7 +111237,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111239,7 +111263,7 @@ LINE
 100
 AcDbEntity
   8
-A-73----E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111265,7 +111289,7 @@ LINE
 100
 AcDbEntity
   8
-A-73----E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111291,7 +111315,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111341,7 +111365,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111391,7 +111415,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111417,7 +111441,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -111443,7 +111467,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E-N
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -115897,7 +115921,7 @@ CIRCLE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -115919,7 +115943,7 @@ LINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -115947,7 +115971,7 @@ LINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -115975,7 +115999,7 @@ LINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -116003,7 +116027,7 @@ LINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -116083,7 +116107,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116123,7 +116147,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116151,7 +116175,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116179,7 +116203,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116207,7 +116231,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116235,7 +116259,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116263,7 +116287,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116303,7 +116327,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116331,7 +116355,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116359,7 +116383,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116387,7 +116411,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116415,7 +116439,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Langai
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -116467,7 +116491,7 @@ LINE
 100
 AcDbEntity
   8
-A-45CE--E--
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -116711,7 +116735,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-_Metalines konstr
+A-GRIAUNAMA
   6
 DASHED
 100
@@ -116739,7 +116763,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-_Metalines konstr
+A-GRIAUNAMA
   6
 DASHED
 100
@@ -117701,7 +117725,7 @@ A4FB
 100
 AcDbEntity
   8
-0
+A-GRIAUNAMA
   6
 DGN Style 3
 100
@@ -118721,7 +118745,7 @@ Embedded Object
   0
 CIRCLE
   5
-A641
+A642
 330
 1F
 100
@@ -118741,9 +118765,9 @@ AcDbCircle
   0
 VIEWPORT
   5
-A646
+A647
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118845,9 +118869,9 @@ AcDbViewport
   0
 LWPOLYLINE
   5
-A647
+A648
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118881,9 +118905,9 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-A648
+A649
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118915,9 +118939,9 @@ AcDbPolyline
   0
 LINE
   5
-A649
+A64A
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118941,9 +118965,9 @@ AcDbLine
   0
 LINE
   5
-A64A
+A64B
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118967,9 +118991,9 @@ AcDbLine
   0
 LINE
   5
-A64B
+A64C
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -118993,9 +119017,9 @@ AcDbLine
   0
 LINE
   5
-A64C
+A64D
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119019,9 +119043,9 @@ AcDbLine
   0
 VIEWPORT
   5
-A64D
+A64E
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119123,9 +119147,9 @@ AcDbViewport
   0
 TEXT
   5
-A64E
+A64F
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119159,9 +119183,9 @@ AcDbText
   0
 LINE
   5
-A64F
+A650
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119185,9 +119209,9 @@ AcDbLine
   0
 TEXT
   5
-A650
+A651
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119221,9 +119245,9 @@ AcDbText
   0
 TEXT
   5
-A651
+A652
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119257,9 +119281,9 @@ AcDbText
   0
 LINE
   5
-A652
+A653
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119283,9 +119307,9 @@ AcDbLine
   0
 TEXT
   5
-A653
+A654
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119319,9 +119343,9 @@ AcDbText
   0
 TEXT
   5
-A654
+A655
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119355,9 +119379,9 @@ AcDbText
   0
 LINE
   5
-A655
+A656
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119381,9 +119405,9 @@ AcDbLine
   0
 LINE
   5
-A656
+A657
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119409,9 +119433,9 @@ AcDbLine
   0
 TEXT
   5
-A657
+A658
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119445,9 +119469,9 @@ AcDbText
   0
 LINE
   5
-A658
+A659
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119471,9 +119495,9 @@ AcDbLine
   0
 LINE
   5
-A659
+A65A
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119499,9 +119523,9 @@ AcDbLine
   0
 TEXT
   5
-A65A
+A65B
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119535,9 +119559,9 @@ AcDbText
   0
 LINE
   5
-A65B
+A65C
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119561,15 +119585,15 @@ AcDbLine
   0
 LINE
   5
-A65C
+A65D
 330
-A642
+A643
 100
 AcDbEntity
  67
 1
   8
-0
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -119591,9 +119615,9 @@ AcDbLine
   0
 TEXT
   5
-A65D
+A65E
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119627,9 +119651,9 @@ AcDbText
   0
 LINE
   5
-A65E
+A65F
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119653,15 +119677,15 @@ AcDbLine
   0
 LINE
   5
-A65F
+A660
 330
-A642
+A643
 100
 AcDbEntity
  67
 1
   8
-0
+A-GRIAUNAMA
   6
 DASHDOT
  48
@@ -119683,9 +119707,9 @@ AcDbLine
   0
 TEXT
   5
-A660
+A661
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119719,9 +119743,9 @@ AcDbText
   0
 LINE
   5
-A661
+A662
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119745,15 +119769,15 @@ AcDbLine
   0
 LINE
   5
-A662
+A663
 330
-A642
+A643
 100
 AcDbEntity
  67
 1
   8
-0
+A-GRIAUNAMA
   6
 DGN Style 3
  48
@@ -119775,9 +119799,9 @@ AcDbLine
   0
 TEXT
   5
-A663
+A664
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119811,9 +119835,9 @@ AcDbText
   0
 LINE
   5
-A664
+A665
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119837,15 +119861,15 @@ AcDbLine
   0
 LWPOLYLINE
   5
-A665
+A666
 330
-A642
+A643
 100
 AcDbEntity
  67
 1
   8
-_Metalines konstr
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -119869,15 +119893,15 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-A666
+A667
 330
-A642
+A643
 100
 AcDbEntity
  67
 1
   8
-_Metalines konstr
+A-GRIAUNAMA
   6
 DASHED
  48
@@ -119903,9 +119927,9 @@ AcDbPolyline
   0
 TEXT
   5
-A667
+A668
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119939,9 +119963,9 @@ AcDbText
   0
 LINE
   5
-A668
+A669
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119965,9 +119989,9 @@ AcDbLine
   0
 INSERT
   5
-A669
+A66A
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -119997,9 +120021,9 @@ ZDVXCV
   0
 TEXT
   5
-A66B
+A66C
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120033,9 +120057,9 @@ AcDbText
   0
 LINE
   5
-A66C
+A66D
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120059,9 +120083,9 @@ AcDbLine
   0
 LWPOLYLINE
   5
-A66D
+A66E
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120095,9 +120119,9 @@ AcDbPolyline
   0
 MTEXT
   5
-A66E
+A66F
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120173,9 +120197,9 @@ Embedded Object
   0
 TEXT
   5
-A66F
+A670
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120209,9 +120233,9 @@ AcDbText
   0
 LINE
   5
-A670
+A671
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120235,9 +120259,9 @@ AcDbLine
   0
 LINE
   5
-A671
+A672
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120261,9 +120285,9 @@ AcDbLine
   0
 LWPOLYLINE
   5
-A672
+A673
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120295,9 +120319,9 @@ AcDbPolyline
   0
 TEXT
   5
-A673
+A674
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120331,9 +120355,9 @@ AcDbText
   0
 LINE
   5
-A674
+A675
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120357,9 +120381,9 @@ AcDbLine
   0
 TEXT
   5
-A675
+A676
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120393,9 +120417,9 @@ AcDbText
   0
 TEXT
   5
-A676
+A677
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120429,9 +120453,9 @@ AcDbText
   0
 LINE
   5
-A677
+A678
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120455,9 +120479,9 @@ AcDbLine
   0
 TEXT
   5
-A678
+A679
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120493,9 +120517,9 @@ AcDbText
   0
 TEXT
   5
-A679
+A67A
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120529,9 +120553,9 @@ AcDbText
   0
 LINE
   5
-A67A
+A67B
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120555,9 +120579,9 @@ AcDbLine
   0
 TEXT
   5
-A67B
+A67C
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120593,9 +120617,9 @@ AcDbText
   0
 TEXT
   5
-A67C
+A67D
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120629,9 +120653,9 @@ AcDbText
   0
 LINE
   5
-A67D
+A67E
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120655,9 +120679,9 @@ AcDbLine
   0
 TEXT
   5
-A67E
+A67F
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120693,9 +120717,9 @@ AcDbText
   0
 TEXT
   5
-A67F
+A680
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120729,9 +120753,9 @@ AcDbText
   0
 LINE
   5
-A680
+A681
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120755,9 +120779,9 @@ AcDbLine
   0
 TEXT
   5
-A681
+A682
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120793,9 +120817,9 @@ AcDbText
   0
 TEXT
   5
-A682
+A683
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120829,9 +120853,9 @@ AcDbText
   0
 LINE
   5
-A683
+A684
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120855,9 +120879,9 @@ AcDbLine
   0
 TEXT
   5
-A684
+A685
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120893,9 +120917,9 @@ AcDbText
   0
 TEXT
   5
-A685
+A686
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120929,9 +120953,9 @@ AcDbText
   0
 LINE
   5
-A686
+A687
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120955,9 +120979,9 @@ AcDbLine
   0
 TEXT
   5
-A687
+A688
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -120993,9 +121017,9 @@ AcDbText
   0
 TEXT
   5
-A688
+A689
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121029,9 +121053,9 @@ AcDbText
   0
 LINE
   5
-A689
+A68A
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121055,9 +121079,9 @@ AcDbLine
   0
 TEXT
   5
-A68A
+A68B
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121093,9 +121117,9 @@ AcDbText
   0
 TEXT
   5
-A68B
+A68C
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121129,9 +121153,9 @@ AcDbText
   0
 LINE
   5
-A68C
+A68D
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121155,9 +121179,9 @@ AcDbLine
   0
 LINE
   5
-A68D
+A68E
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121181,9 +121205,9 @@ AcDbLine
   0
 LWPOLYLINE
   5
-A68E
+A68F
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121215,9 +121239,9 @@ AcDbPolyline
   0
 TEXT
   5
-A68F
+A690
 330
-A642
+A643
 100
 AcDbEntity
  67
@@ -121341,7 +121365,7 @@ AEC_PROPERTY_SET_DEFS
   3
 EZDXF_META
 350
-A692
+A693
   0
 DICTIONARY
   5
@@ -121567,7 +121591,7 @@ Model
   3
 01_GRIOVIMO PLANAS
 350
-A645
+A646
   0
 DICTIONARY
   5
@@ -135495,7 +135519,7 @@ CELLSTYLE_END
   0
 LAYOUT
   5
-A645
+A646
 330
 1A
 100
@@ -135617,13 +135641,13 @@ AcDbLayout
  76
 1
 330
-A642
+A643
 331
-A646
+A647
   0
 DICTIONARY
   5
-A692
+A693
 330
 C
 100
@@ -135635,19 +135659,19 @@ AcDbDictionary
   3
 WRITTEN_BY_EZDXF
 350
-A693
+A694
   0
 DICTIONARYVAR
   5
-A693
+A694
 330
-A692
+A693
 100
 DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-17T18:48:03.358578+00:00
+1.4.5 @ 2026-11-17T20:01:22.161756+00:00
   0
 ENDSEC
   0
