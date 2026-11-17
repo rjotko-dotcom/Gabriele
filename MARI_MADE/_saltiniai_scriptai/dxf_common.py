@@ -40,7 +40,7 @@ def setup(doc):
     if 'A-BRUKSNINE' not in doc.linetypes:
         doc.linetypes.add('A-BRUKSNINE', pattern=[225, 150, -75], description='Bruksnine __ __ __')
     if 'A-ASIS' not in doc.linetypes:
-        doc.linetypes.add('A-ASIS', pattern=[750, 600, -75, 0, -75], description='Asine __ . __ .')
+        doc.linetypes.add('A-ASIS', pattern=[900, 600, -150, 0, -150], description='Asine __ . __ .')
     for n, (c, lw, lt, plot) in LAYERS.items():
         if n not in doc.layers:
             l = doc.layers.add(n, color=c, lineweight=lw, linetype=lt)
@@ -96,16 +96,18 @@ def frame(psp, fmt):
         psp.add_line(a, b, dxfattribs={'layer': 'S-RAMELIS'})
 
 TB_W, TB_H = 180, 56
-def title_block(psp, fmt, info):
+def title_block(psp, fmt, info, y0=None, x0=None, w=None):
     W, H = PAPER[fmt]
-    x0, y0 = W-10-TB_W, 10
+    TBW = w or TB_W; kk = TBW/TB_W
+    x0 = W-10-TBW if x0 is None else x0
+    y0 = 10 if y0 is None else y0
     L = lambda a, b: psp.add_line(a, b, dxfattribs={'layer': 'S-STAMPAS'})
-    psp.add_lwpolyline([(x0, y0), (x0+TB_W, y0), (x0+TB_W, y0+TB_H), (x0, y0+TB_H)], close=True, dxfattribs={'layer': 'S-STAMPAS-REMAS'})
+    psp.add_lwpolyline([(x0, y0), (x0+TBW, y0), (x0+TBW, y0+TB_H), (x0, y0+TB_H)], close=True, dxfattribs={'layer': 'S-STAMPAS-REMAS'})
     rows = [7, 7, 7, 7, 14, 7, 7]   # bottom -> top
     ys = [y0]
     for r in rows: ys.append(ys[-1]+r)
-    for yy in ys[1:-1]: L((x0, yy), (x0+TB_W, yy))
-    c1, c2, c3 = x0+24, x0+110, x0+132
+    for yy in ys[1:-1]: L((x0, yy), (x0+TBW, yy))
+    c1, c2, c3 = x0+24*kk, x0+110*kk, x0+132*kk
     L((c1, y0), (c1, y0+TB_H))
     for k in range(0, 4): L((c2, ys[k]), (c2, ys[k+1])); L((c3, ys[k]), (c3, ys[k+1]))
     def put(s, x, y, h=2.5, lay='S-TEKSTAS'):

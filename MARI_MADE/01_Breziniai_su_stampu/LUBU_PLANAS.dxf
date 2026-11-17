@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461362.7341319444
+2461362.783136574
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461362.7341319444
+2461362.783136574
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-C5E
+CFE
   9
 $SURFTAB1
  70
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{29A511C0-7127-43AD-8428-2CDB86506CBB}
+{34FF763B-B8CB-4F2C-849A-002959BC4A33}
   9
 $EXTNAMES
 290
@@ -1837,13 +1837,13 @@ Asine __ . __ .
  73
 4
  40
-750.0
+900.0
  49
 600.0
  74
 0
  49
--75.0
+-150.0
  74
 0
  49
@@ -1851,7 +1851,7 @@ Asine __ . __ .
  74
 0
  49
--75.0
+-150.0
  74
 0
   0
@@ -1873,7 +1873,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-33
+35
   0
 LAYER
   5
@@ -1975,7 +1975,7 @@ asys
  62
 7
   6
-A-ASIS
+Continuous
 370
 18
 390
@@ -2167,7 +2167,7 @@ _Metalines konstr
  70
 0
  62
-150
+7
   6
 Continuous
 370
@@ -2193,7 +2193,7 @@ A-45CE--E--
  70
 0
  62
-1
+7
   6
 Continuous
 370
@@ -2219,7 +2219,7 @@ A-45CE--E-N
  70
 0
  62
-1
+7
   6
 Continuous
 370
@@ -2715,6 +2715,54 @@ F
 347
 EE
   0
+LAYER
+  5
+C14
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+A-ASYS
+ 70
+0
+ 62
+7
+  6
+A-ASIS
+370
+18
+390
+F
+347
+EE
+  0
+LAYER
+  5
+C15
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+A-ASYS-ZYM
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+25
+390
+F
+347
+EE
+  0
 ENDTAB
   0
 TABLE
@@ -3049,7 +3097,7 @@ GradientColor2ACI
   0
 APPID
   5
-C5A
+CFA
 330
 9
 100
@@ -3063,7 +3111,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-C5B
+CFB
 330
 9
 100
@@ -3681,7 +3729,7 @@ BLOCK_RECORD
 100
 AcDbSymbolTable
  70
-6
+17
   0
 BLOCK_RECORD
   5
@@ -3791,7 +3839,227 @@ _CLOSEDFILLED
   0
 BLOCK_RECORD
   5
-C16
+C26
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D1
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C35
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D2
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C41
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D3
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C50
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D4
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C5F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D5
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C6B
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D6
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C77
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D7
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C83
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D8
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C92
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D9
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+C9E
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D10
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+CAA
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*D11
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+CB5
 330
 1
 100
@@ -3801,7 +4069,7 @@ AcDbBlockTableRecord
   2
 *Paper_Space
 340
-C19
+CB8
  70
 0
 280
@@ -4110,8 +4378,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -4919,9 +5185,2371 @@ AcDbBlockEnd
   0
 BLOCK
   5
-C17
+C27
 330
-C16
+C26
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D1
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D1
+  1
+
+  0
+LINE
+  5
+C29
+330
+C26
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+1991.8000000000002
+ 20
+1353.3
+ 30
+0.0
+ 11
+1991.8000000000002
+ 21
+-261.70000000000005
+ 31
+0.0
+  0
+LINE
+  5
+C2A
+330
+C26
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+5138.8
+ 20
+1353.3
+ 30
+0.0
+ 11
+5138.8
+ 21
+-261.70000000000005
+ 31
+0.0
+  0
+INSERT
+  5
+C2B
+330
+C26
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+1991.8000000000002
+ 20
+-186.70000000000005
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+180.0
+  0
+INSERT
+  5
+C2D
+330
+C26
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+5138.8
+ 20
+-186.70000000000005
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C2F
+330
+C26
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+1916.8000000000002
+ 20
+-186.70000000000005
+ 30
+0.0
+ 11
+5213.8
+ 21
+-186.70000000000005
+ 31
+0.0
+  0
+MTEXT
+  5
+C30
+330
+C26
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+3565.3
+ 20
+-84.20000000000005
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+3147
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C31
+330
+C26
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+1991.8000000000002
+ 20
+-186.70000000000005
+ 30
+0.0
+  0
+POINT
+  5
+C32
+330
+C26
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+1991.8000000000002
+ 20
+1403.3
+ 30
+0.0
+  0
+POINT
+  5
+C33
+330
+C26
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+5138.8
+ 20
+1403.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C28
+330
+C26
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C36
+330
+C35
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D2
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D2
+  1
+
+  0
+LINE
+  5
+C38
+330
+C35
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+13138.8
+ 20
+1353.3
+ 30
+0.0
+ 11
+13138.8
+ 21
+-261.70000000000005
+ 31
+0.0
+  0
+INSERT
+  5
+C39
+330
+C35
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+13138.8
+ 20
+-186.70000000000005
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C3B
+330
+C35
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+5063.8
+ 20
+-186.70000000000005
+ 30
+0.0
+ 11
+13213.8
+ 21
+-186.70000000000005
+ 31
+0.0
+  0
+MTEXT
+  5
+C3C
+330
+C35
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+9138.8
+ 20
+-84.20000000000005
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+8000
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C3D
+330
+C35
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+5138.8
+ 20
+-186.70000000000005
+ 30
+0.0
+  0
+POINT
+  5
+C3E
+330
+C35
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+5138.8
+ 20
+1403.3
+ 30
+0.0
+  0
+POINT
+  5
+C3F
+330
+C35
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+13138.8
+ 20
+1403.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C37
+330
+C35
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C42
+330
+C41
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D3
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D3
+  1
+
+  0
+LINE
+  5
+C44
+330
+C41
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+1941.8000000000002
+ 20
+1403.3
+ 30
+0.0
+ 11
+485.8000000000002
+ 21
+1403.3
+ 31
+0.0
+  0
+LINE
+  5
+C45
+330
+C41
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+1941.8000000000002
+ 20
+8510.3
+ 30
+0.0
+ 11
+485.8000000000002
+ 21
+8510.3
+ 31
+0.0
+  0
+INSERT
+  5
+C46
+330
+C41
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+560.8000000000002
+ 20
+1403.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+270.0
+  0
+INSERT
+  5
+C48
+330
+C41
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+560.8000000000002
+ 20
+8510.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+90.0
+  0
+LINE
+  5
+C4A
+330
+C41
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+560.8000000000002
+ 20
+1328.3
+ 30
+0.0
+ 11
+560.8000000000002
+ 21
+8585.3
+ 31
+0.0
+  0
+MTEXT
+  5
+C4B
+330
+C41
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+458.3000000000002
+ 20
+4956.799999999999
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+7107
+  7
+ISO_ARIAL
+ 50
+90.0
+  0
+POINT
+  5
+C4C
+330
+C41
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+560.8000000000002
+ 20
+1403.3
+ 30
+0.0
+  0
+POINT
+  5
+C4D
+330
+C41
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+1991.8000000000002
+ 20
+1403.3
+ 30
+0.0
+  0
+POINT
+  5
+C4E
+330
+C41
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+1991.8000000000002
+ 20
+8510.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C43
+330
+C41
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C51
+330
+C50
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D4
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D4
+  1
+
+  0
+LINE
+  5
+C53
+330
+C50
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+3054.8
+ 20
+2477.3
+ 30
+0.0
+ 11
+3054.8
+ 21
+2994.3
+ 31
+0.0
+  0
+LINE
+  5
+C54
+330
+C50
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+11420.0
+ 20
+2477.3
+ 30
+0.0
+ 11
+11420.0
+ 21
+2994.3
+ 31
+0.0
+  0
+INSERT
+  5
+C55
+330
+C50
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+3054.8
+ 20
+2919.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+180.0
+  0
+INSERT
+  5
+C57
+330
+C50
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+11420.0
+ 20
+2919.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C59
+330
+C50
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+2979.8
+ 20
+2919.3
+ 30
+0.0
+ 11
+11495.0
+ 21
+2919.3
+ 31
+0.0
+  0
+MTEXT
+  5
+C5A
+330
+C50
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+7237.400000000001
+ 20
+3021.8
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+8365
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C5B
+330
+C50
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+3054.8
+ 20
+2919.3
+ 30
+0.0
+  0
+POINT
+  5
+C5C
+330
+C50
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+3054.8
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C5D
+330
+C50
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+11420.0
+ 20
+2427.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C52
+330
+C50
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C60
+330
+C5F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D5
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D5
+  1
+
+  0
+LINE
+  5
+C62
+330
+C5F
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+13355.0
+ 20
+2477.3
+ 30
+0.0
+ 11
+13355.0
+ 21
+2994.3
+ 31
+0.0
+  0
+INSERT
+  5
+C63
+330
+C5F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+13355.0
+ 20
+2919.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C65
+330
+C5F
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+11345.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+13430.0
+ 21
+2919.3
+ 31
+0.0
+  0
+MTEXT
+  5
+C66
+330
+C5F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+12387.5
+ 20
+3021.8
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+1935
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C67
+330
+C5F
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+11420.0
+ 20
+2919.3
+ 30
+0.0
+  0
+POINT
+  5
+C68
+330
+C5F
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+11420.0
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C69
+330
+C5F
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+13355.0
+ 20
+2427.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C61
+330
+C5F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C6C
+330
+C6B
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D6
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D6
+  1
+
+  0
+LINE
+  5
+C6E
+330
+C6B
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+15610.0
+ 20
+2477.3
+ 30
+0.0
+ 11
+15610.0
+ 21
+2994.3
+ 31
+0.0
+  0
+INSERT
+  5
+C6F
+330
+C6B
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+15610.0
+ 20
+2919.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C71
+330
+C6B
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+13280.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+15685.0
+ 21
+2919.3
+ 31
+0.0
+  0
+MTEXT
+  5
+C72
+330
+C6B
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+14482.5
+ 20
+3021.8
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+2255
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C73
+330
+C6B
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+13355.0
+ 20
+2919.3
+ 30
+0.0
+  0
+POINT
+  5
+C74
+330
+C6B
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+13355.0
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C75
+330
+C6B
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+15610.0
+ 20
+2427.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C6D
+330
+C6B
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C78
+330
+C77
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D7
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D7
+  1
+
+  0
+LINE
+  5
+C7A
+330
+C77
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18107.8
+ 20
+2477.3
+ 30
+0.0
+ 11
+18107.8
+ 21
+2994.3
+ 31
+0.0
+  0
+INSERT
+  5
+C7B
+330
+C77
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+18107.8
+ 20
+2919.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+  0
+LINE
+  5
+C7D
+330
+C77
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+15535.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+18182.8
+ 21
+2919.3
+ 31
+0.0
+  0
+MTEXT
+  5
+C7E
+330
+C77
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+16858.9
+ 20
+3021.8
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+2498
+  7
+ISO_ARIAL
+  0
+POINT
+  5
+C7F
+330
+C77
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+15610.0
+ 20
+2919.3
+ 30
+0.0
+  0
+POINT
+  5
+C80
+330
+C77
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+15610.0
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C81
+330
+C77
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+2427.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+C79
+330
+C77
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C84
+330
+C83
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D8
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D8
+  1
+
+  0
+LINE
+  5
+C86
+330
+C83
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18057.8
+ 20
+2427.3
+ 30
+0.0
+ 11
+17596.8
+ 21
+2427.3
+ 31
+0.0
+  0
+LINE
+  5
+C87
+330
+C83
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18057.8
+ 20
+4420.0
+ 30
+0.0
+ 11
+17596.8
+ 21
+4420.0
+ 31
+0.0
+  0
+INSERT
+  5
+C88
+330
+C83
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+17671.8
+ 20
+2427.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+270.0
+  0
+INSERT
+  5
+C8A
+330
+C83
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+17671.8
+ 20
+4420.0
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+90.0
+  0
+LINE
+  5
+C8C
+330
+C83
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+17671.8
+ 20
+2352.3
+ 30
+0.0
+ 11
+17671.8
+ 21
+4495.0
+ 31
+0.0
+  0
+MTEXT
+  5
+C8D
+330
+C83
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+17569.3
+ 20
+3423.65
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+1993
+  7
+ISO_ARIAL
+ 50
+90.0
+  0
+POINT
+  5
+C8E
+330
+C83
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+17671.8
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C8F
+330
+C83
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+2427.3
+ 30
+0.0
+  0
+POINT
+  5
+C90
+330
+C83
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+4420.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+C85
+330
+C83
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C93
+330
+C92
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D9
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D9
+  1
+
+  0
+LINE
+  5
+C95
+330
+C92
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18057.8
+ 20
+4535.0
+ 30
+0.0
+ 11
+17596.8
+ 21
+4535.0
+ 31
+0.0
+  0
+INSERT
+  5
+C96
+330
+C92
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+17671.8
+ 20
+4535.0
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+270.0
+  0
+LINE
+  5
+C98
+330
+C92
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+17671.8
+ 20
+4345.0
+ 30
+0.0
+ 11
+17671.8
+ 21
+4610.0
+ 31
+0.0
+  0
+MTEXT
+  5
+C99
+330
+C92
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+17404.3
+ 20
+4477.5
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+115
+  7
+ISO_ARIAL
+ 50
+90.0
+  0
+POINT
+  5
+C9A
+330
+C92
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+17671.8
+ 20
+4420.0
+ 30
+0.0
+  0
+POINT
+  5
+C9B
+330
+C92
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+4420.0
+ 30
+0.0
+  0
+POINT
+  5
+C9C
+330
+C92
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+4535.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+C94
+330
+C92
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+C9F
+330
+C9E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D10
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D10
+  1
+
+  0
+LINE
+  5
+CA1
+330
+C9E
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18057.8
+ 20
+5615.0
+ 30
+0.0
+ 11
+17596.8
+ 21
+5615.0
+ 31
+0.0
+  0
+INSERT
+  5
+CA2
+330
+C9E
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+17671.8
+ 20
+5615.0
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+90.0
+  0
+LINE
+  5
+CA4
+330
+C9E
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+17671.8
+ 20
+4460.0
+ 30
+0.0
+ 11
+17671.8
+ 21
+5690.0
+ 31
+0.0
+  0
+MTEXT
+  5
+CA5
+330
+C9E
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+17569.3
+ 20
+5075.0
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+1080
+  7
+ISO_ARIAL
+ 50
+90.0
+  0
+POINT
+  5
+CA6
+330
+C9E
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+17671.8
+ 20
+4535.0
+ 30
+0.0
+  0
+POINT
+  5
+CA7
+330
+C9E
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+4535.0
+ 30
+0.0
+  0
+POINT
+  5
+CA8
+330
+C9E
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+5615.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+CA0
+330
+C9E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+CAB
+330
+CAA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*D11
+ 70
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*D11
+  1
+
+  0
+LINE
+  5
+CAD
+330
+CAA
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+18057.8
+ 20
+7674.3
+ 30
+0.0
+ 11
+17596.8
+ 21
+7674.3
+ 31
+0.0
+  0
+INSERT
+  5
+CAE
+330
+CAA
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbBlockReference
+  2
+_ARCHTICK
+ 10
+17671.8
+ 20
+7674.3
+ 30
+0.0
+ 41
+100.0
+ 42
+100.0
+ 50
+90.0
+  0
+LINE
+  5
+CB0
+330
+CAA
+100
+AcDbEntity
+  8
+0
+370
+18
+100
+AcDbLine
+ 10
+17671.8
+ 20
+5540.0
+ 30
+0.0
+ 11
+17671.8
+ 21
+7749.3
+ 31
+0.0
+  0
+MTEXT
+  5
+CB1
+330
+CAA
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbMText
+ 10
+17569.3
+ 20
+6644.65
+ 30
+0.0
+ 40
+125.0
+ 71
+5
+  1
+2059
+  7
+ISO_ARIAL
+ 50
+90.0
+  0
+POINT
+  5
+CB2
+330
+CAA
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+17671.8
+ 20
+5615.0
+ 30
+0.0
+  0
+POINT
+  5
+CB3
+330
+CAA
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+5615.0
+ 30
+0.0
+  0
+POINT
+  5
+CB4
+330
+CAA
+100
+AcDbEntity
+  8
+Defpoints
+100
+AcDbPoint
+ 10
+18107.8
+ 20
+7674.3
+ 30
+0.0
+  0
+ENDBLK
+  5
+CAC
+330
+CAA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+CB6
+330
+CB5
 100
 AcDbEntity
   8
@@ -4945,9 +7573,9 @@ AcDbBlockBegin
   0
 ENDBLK
   5
-C18
+CB7
 330
-C16
+CB5
 100
 AcDbEntity
   8
@@ -4970,8 +7598,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -4998,8 +7624,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5026,8 +7650,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5054,8 +7676,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5082,8 +7702,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5110,8 +7728,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5138,8 +7754,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5166,8 +7780,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5194,8 +7806,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5228,8 +7838,6 @@ B98
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -5256,8 +7864,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5284,8 +7890,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5312,8 +7916,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5340,8 +7942,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5368,8 +7968,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5396,8 +7994,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5424,8 +8020,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5452,8 +8046,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5480,8 +8072,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5506,8 +8096,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5534,8 +8122,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5562,8 +8148,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5590,8 +8174,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5616,8 +8198,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5642,8 +8222,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5780,8 +8358,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5806,8 +8382,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5832,8 +8406,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5860,8 +8432,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -5888,8 +8458,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5914,8 +8482,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5940,8 +8506,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5966,8 +8530,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -5998,8 +8560,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6024,8 +8584,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6050,8 +8608,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -6078,8 +8634,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6104,8 +8658,6 @@ LINE
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -6138,8 +8690,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6164,8 +8714,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6196,8 +8744,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6228,8 +8774,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6254,8 +8798,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6280,8 +8822,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6306,8 +8846,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6338,8 +8876,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6364,8 +8900,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6390,8 +8924,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6416,8 +8948,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6442,8 +8972,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6468,8 +8996,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6500,8 +9026,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6532,8 +9056,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6564,8 +9086,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6590,8 +9110,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6616,8 +9134,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6642,8 +9158,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6668,8 +9182,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6694,8 +9206,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6720,8 +9230,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6746,8 +9254,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6772,8 +9278,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6798,8 +9302,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6824,8 +9326,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6856,8 +9356,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6882,8 +9380,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6908,8 +9404,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6934,8 +9428,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6960,8 +9452,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -6986,8 +9476,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7012,8 +9500,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7038,8 +9524,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7064,8 +9548,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7096,8 +9578,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7122,8 +9602,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7148,8 +9626,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7174,8 +9650,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7200,8 +9674,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7226,8 +9698,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7252,8 +9722,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7278,8 +9746,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7304,8 +9770,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7330,8 +9794,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7356,8 +9818,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7382,8 +9842,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7408,8 +9866,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7434,8 +9890,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7466,8 +9920,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7498,8 +9950,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7524,8 +9974,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7550,8 +9998,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7576,8 +10022,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7602,8 +10046,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7628,8 +10070,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7660,8 +10100,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7686,8 +10124,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7712,8 +10148,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7738,8 +10172,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7770,8 +10202,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7796,8 +10226,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7822,8 +10250,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7848,8 +10274,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7874,8 +10298,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7900,8 +10322,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7926,8 +10346,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7952,8 +10370,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -7978,8 +10394,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8008,8 +10422,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8036,8 +10448,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8064,8 +10474,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8092,8 +10500,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8120,8 +10526,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8148,8 +10552,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8176,8 +10578,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8204,8 +10604,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8232,8 +10630,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8260,8 +10656,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8288,8 +10682,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8316,8 +10708,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8344,8 +10734,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8372,8 +10760,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8400,8 +10786,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8428,8 +10812,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8456,8 +10838,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8486,8 +10866,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8516,8 +10894,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8544,8 +10920,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8572,8 +10946,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8600,8 +10972,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8628,8 +10998,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8656,8 +11024,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8684,8 +11050,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8720,8 +11084,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8748,8 +11110,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8776,8 +11136,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8804,8 +11162,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8832,8 +11188,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8860,8 +11214,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8888,8 +11240,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8916,8 +11266,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8944,8 +11292,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -8972,8 +11318,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9000,8 +11344,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9028,8 +11370,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9056,8 +11396,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9084,8 +11422,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9112,8 +11448,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9140,8 +11474,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9168,8 +11500,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9204,8 +11534,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9240,8 +11568,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9268,8 +11594,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9296,8 +11620,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9324,8 +11646,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9352,8 +11672,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9380,8 +11698,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9408,8 +11724,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9436,8 +11750,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9464,8 +11776,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9492,8 +11802,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9520,8 +11828,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9548,8 +11854,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9584,8 +11888,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9620,8 +11922,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9656,8 +11956,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9686,8 +11984,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9716,8 +12012,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9746,8 +12040,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -9774,8 +12066,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9800,8 +12090,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9826,8 +12114,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9852,8 +12138,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9878,8 +12162,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9904,8 +12186,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9930,8 +12210,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9956,8 +12234,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -9982,8 +12258,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -10008,8 +12282,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -10034,8 +12306,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -10060,8 +12330,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -10086,8 +12354,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -10112,8 +12378,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10142,8 +12406,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10170,8 +12432,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10198,8 +12458,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10226,8 +12484,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10254,8 +12510,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10282,8 +12536,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10310,8 +12562,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10338,8 +12588,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10366,8 +12614,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10394,8 +12640,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10422,8 +12666,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10450,8 +12692,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10478,8 +12718,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10506,8 +12744,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10534,8 +12770,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10562,8 +12796,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10590,8 +12822,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10620,8 +12850,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10648,8 +12876,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10678,8 +12904,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10706,8 +12930,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10734,8 +12956,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10762,8 +12982,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10790,8 +13008,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10818,8 +13034,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10846,8 +13060,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10874,8 +13086,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10902,8 +13112,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10930,8 +13138,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10958,8 +13164,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -10986,8 +13190,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11014,8 +13216,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11042,8 +13242,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11078,8 +13276,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11106,8 +13302,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11134,8 +13328,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11162,8 +13354,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11190,8 +13380,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11218,8 +13406,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11246,8 +13432,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11274,8 +13458,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11302,8 +13484,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11330,8 +13510,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11358,8 +13536,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11386,8 +13562,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11414,8 +13588,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11442,8 +13614,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11470,8 +13640,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11498,8 +13666,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11526,8 +13692,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11554,8 +13718,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11582,8 +13744,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11610,8 +13770,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11638,8 +13796,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11666,8 +13822,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11702,8 +13856,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11730,8 +13882,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11758,8 +13908,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11794,8 +13942,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11830,8 +13976,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11866,8 +14010,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11894,8 +14036,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11922,8 +14062,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -11948,8 +14086,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -11976,8 +14112,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12004,8 +14138,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12032,8 +14164,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12060,8 +14190,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12088,8 +14216,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12116,8 +14242,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12144,8 +14268,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12172,8 +14294,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12208,8 +14328,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12236,8 +14354,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12272,8 +14388,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12308,8 +14422,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12338,8 +14450,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12368,8 +14478,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12398,8 +14506,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12426,8 +14532,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12456,8 +14560,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12484,8 +14586,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12512,8 +14612,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12540,8 +14638,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12568,8 +14664,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12596,8 +14690,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12624,8 +14716,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12652,8 +14742,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12680,8 +14768,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12708,8 +14794,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12736,8 +14820,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12764,8 +14846,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12792,8 +14872,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12820,8 +14898,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12848,8 +14924,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12876,8 +14950,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12904,8 +14976,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12934,8 +15004,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12964,8 +15032,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -12992,8 +15058,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13020,8 +15084,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13048,8 +15110,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13076,8 +15136,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13104,8 +15162,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13132,8 +15188,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13160,8 +15214,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13188,8 +15240,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13216,8 +15266,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13244,8 +15292,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13280,8 +15326,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13308,8 +15352,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13336,8 +15378,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13364,8 +15404,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13392,8 +15430,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13420,8 +15456,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13448,8 +15482,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13476,8 +15508,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13504,8 +15534,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13532,8 +15560,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13560,8 +15586,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13588,8 +15612,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13616,8 +15638,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13644,8 +15664,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13672,8 +15690,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13700,8 +15716,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13728,8 +15742,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13764,8 +15776,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13800,8 +15810,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13828,8 +15836,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13856,8 +15862,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13884,8 +15888,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13912,8 +15914,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13940,8 +15940,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13968,8 +15966,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -13996,8 +15992,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14024,8 +16018,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14052,8 +16044,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14080,8 +16070,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14108,8 +16096,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14144,8 +16130,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14180,8 +16164,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14216,8 +16198,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14246,8 +16226,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14276,8 +16254,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14306,8 +16282,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14334,8 +16308,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14364,8 +16336,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14392,8 +16362,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14420,8 +16388,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14448,8 +16414,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14476,8 +16440,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14504,8 +16466,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14532,8 +16492,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14560,8 +16518,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14588,8 +16544,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14616,8 +16570,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14644,8 +16596,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14672,8 +16622,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14700,8 +16648,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14728,8 +16674,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14756,8 +16700,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14786,8 +16728,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14816,8 +16756,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14844,8 +16782,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14872,8 +16808,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14900,8 +16834,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14928,8 +16860,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14956,8 +16886,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -14984,8 +16912,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15020,8 +16946,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15048,8 +16972,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15076,8 +16998,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15104,8 +17024,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15132,8 +17050,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15160,8 +17076,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15188,8 +17102,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15216,8 +17128,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15244,8 +17154,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15272,8 +17180,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15300,8 +17206,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15328,8 +17232,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15356,8 +17258,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15392,8 +17292,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15428,8 +17326,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15456,8 +17352,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15484,8 +17378,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15512,8 +17404,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15540,8 +17430,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15576,8 +17464,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15606,8 +17492,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15636,8 +17520,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15664,8 +17546,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15694,8 +17574,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -15720,8 +17598,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -15746,8 +17622,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15774,8 +17648,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15802,8 +17674,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15838,8 +17708,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15874,8 +17742,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -15910,8 +17776,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -15936,8 +17800,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -15962,8 +17824,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -15988,8 +17848,6 @@ LINE
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -16304,8 +18162,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16332,8 +18188,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16360,8 +18214,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16388,8 +18240,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16416,8 +18266,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16444,8 +18292,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16472,8 +18318,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16500,8 +18344,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16528,8 +18370,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16556,8 +18396,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16584,8 +18422,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16612,8 +18448,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16640,8 +18474,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16668,8 +18500,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16696,8 +18526,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16724,8 +18552,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16752,8 +18578,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16780,8 +18604,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16808,8 +18630,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16836,8 +18656,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16864,8 +18682,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16892,8 +18708,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16920,8 +18734,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16948,8 +18760,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -16976,8 +18786,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17004,8 +18812,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17032,8 +18838,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17060,8 +18864,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17088,8 +18890,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17116,8 +18916,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17144,8 +18942,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17172,8 +18968,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17200,8 +18994,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17228,8 +19020,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17256,8 +19046,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17284,8 +19072,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17312,8 +19098,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17340,8 +19124,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17368,8 +19150,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17396,8 +19176,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17424,8 +19202,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17452,8 +19228,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17480,8 +19254,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17508,8 +19280,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17536,8 +19306,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17564,8 +19332,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17592,8 +19358,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17620,8 +19384,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17648,8 +19410,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17676,8 +19436,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17704,8 +19462,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17732,8 +19488,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17760,8 +19514,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17788,8 +19540,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17816,8 +19566,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17844,8 +19592,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17872,8 +19618,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17900,8 +19644,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17928,8 +19670,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17956,8 +19696,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -17984,8 +19722,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18012,8 +19748,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18040,8 +19774,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18068,8 +19800,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18096,8 +19826,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18124,8 +19852,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18152,8 +19878,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18180,8 +19904,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18208,8 +19930,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18236,8 +19956,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18264,8 +19982,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18292,8 +20008,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18320,8 +20034,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18348,8 +20060,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18376,8 +20086,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18404,8 +20112,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18432,8 +20138,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18460,8 +20164,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18488,8 +20190,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18516,8 +20216,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18544,8 +20242,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18572,8 +20268,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18600,8 +20294,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18628,8 +20320,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18656,8 +20346,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18684,8 +20372,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18712,8 +20398,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18740,8 +20424,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18768,8 +20450,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18796,8 +20476,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18824,8 +20502,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18852,8 +20528,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18880,8 +20554,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18908,8 +20580,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18936,8 +20606,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18964,8 +20632,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -18992,8 +20658,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19020,8 +20684,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19048,8 +20710,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19076,8 +20736,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19104,8 +20762,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19132,8 +20788,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19160,8 +20814,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19188,8 +20840,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19216,8 +20866,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19244,8 +20892,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19272,8 +20918,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19300,8 +20944,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19328,8 +20970,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19356,8 +20996,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19384,8 +21022,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19412,8 +21048,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19440,8 +21074,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19468,8 +21100,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19496,8 +21126,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19524,8 +21152,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19552,8 +21178,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19580,8 +21204,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19608,8 +21230,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19636,8 +21256,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19664,8 +21282,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19692,8 +21308,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19720,8 +21334,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19748,8 +21360,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19776,8 +21386,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19804,8 +21412,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19832,8 +21438,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19860,8 +21464,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19888,8 +21490,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19916,8 +21516,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19944,8 +21542,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -19972,8 +21568,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20000,8 +21594,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20028,8 +21620,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20056,8 +21646,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20084,8 +21672,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20112,8 +21698,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20140,8 +21724,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20168,8 +21750,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20196,8 +21776,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20224,8 +21802,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20252,8 +21828,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20280,8 +21854,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20308,8 +21880,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20336,8 +21906,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20364,8 +21932,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20392,8 +21958,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20420,8 +21984,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20448,8 +22010,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20476,8 +22036,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20504,8 +22062,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20532,8 +22088,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20560,8 +22114,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20588,8 +22140,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20616,8 +22166,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20644,8 +22192,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20672,8 +22218,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20700,8 +22244,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20728,8 +22270,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20756,8 +22296,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20784,8 +22322,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20812,8 +22348,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20840,8 +22374,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20868,8 +22400,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20896,8 +22426,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20924,8 +22452,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20952,8 +22478,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -20980,8 +22504,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21008,8 +22530,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21036,8 +22556,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21064,8 +22582,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21092,8 +22608,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21120,8 +22634,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21148,8 +22660,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21176,8 +22686,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21204,8 +22712,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21232,8 +22738,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21260,8 +22764,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21288,8 +22790,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21316,8 +22816,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21344,8 +22842,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21372,8 +22868,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21400,8 +22894,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21428,8 +22920,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21456,8 +22946,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21484,8 +22972,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21512,8 +22998,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21540,8 +23024,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21568,8 +23050,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21596,8 +23076,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21624,8 +23102,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21652,8 +23128,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21680,8 +23154,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21708,8 +23180,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21736,8 +23206,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21764,8 +23232,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21792,8 +23258,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21820,8 +23284,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21848,8 +23310,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21876,8 +23336,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21904,8 +23362,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21932,8 +23388,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21960,8 +23414,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -21988,8 +23440,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22016,8 +23466,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22044,8 +23492,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22072,8 +23518,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22100,8 +23544,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22128,8 +23570,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22156,8 +23596,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22184,8 +23622,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22212,8 +23648,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22240,8 +23674,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22268,8 +23700,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22296,8 +23726,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22324,8 +23752,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22352,8 +23778,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22380,8 +23804,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22408,8 +23830,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22436,8 +23856,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22464,8 +23882,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22492,8 +23908,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22520,8 +23934,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22548,8 +23960,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22576,8 +23986,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22604,8 +24012,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22632,8 +24038,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22660,8 +24064,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22688,8 +24090,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22716,8 +24116,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22744,8 +24142,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22772,8 +24168,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22800,8 +24194,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22828,8 +24220,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22856,8 +24246,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22884,8 +24272,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22912,8 +24298,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22940,8 +24324,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22968,8 +24350,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -22996,8 +24376,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23024,8 +24402,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23052,8 +24428,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23080,8 +24454,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23108,8 +24480,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23136,8 +24506,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23164,8 +24532,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23192,8 +24558,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23220,8 +24584,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23248,8 +24610,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23276,8 +24636,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23304,8 +24662,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23332,8 +24688,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23360,8 +24714,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23388,8 +24740,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23416,8 +24766,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23444,8 +24792,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23472,8 +24818,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23500,8 +24844,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23528,8 +24870,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23556,8 +24896,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23584,8 +24922,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23612,8 +24948,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23640,8 +24974,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23668,8 +25000,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23696,8 +25026,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23724,8 +25052,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23752,8 +25078,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23780,8 +25104,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23808,8 +25130,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23836,8 +25156,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23864,8 +25182,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23892,8 +25208,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23920,8 +25234,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23948,8 +25260,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -23976,8 +25286,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24004,8 +25312,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24032,8 +25338,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24060,8 +25364,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24088,8 +25390,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24116,8 +25416,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24144,8 +25442,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24172,8 +25468,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24200,8 +25494,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24228,8 +25520,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24256,8 +25546,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24284,8 +25572,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24312,8 +25598,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24340,8 +25624,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24368,8 +25650,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24396,8 +25676,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24424,8 +25702,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24452,8 +25728,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24480,8 +25754,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24508,8 +25780,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24536,8 +25806,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24564,8 +25832,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24592,8 +25858,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24620,8 +25884,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24648,8 +25910,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24676,8 +25936,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24704,8 +25962,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24732,8 +25988,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24760,8 +26014,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24788,8 +26040,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24816,8 +26066,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24844,8 +26092,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24872,8 +26118,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24900,8 +26144,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24928,8 +26170,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24956,8 +26196,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -24984,8 +26222,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25012,8 +26248,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25040,8 +26274,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25068,8 +26300,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25096,8 +26326,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25124,8 +26352,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25152,8 +26378,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25180,8 +26404,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25208,8 +26430,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25236,8 +26456,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25264,8 +26482,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25292,8 +26508,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25320,8 +26534,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25348,8 +26560,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25376,8 +26586,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25404,8 +26612,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25432,8 +26638,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25460,8 +26664,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25488,8 +26690,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25516,8 +26716,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25544,8 +26742,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25572,8 +26768,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25600,8 +26794,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25628,8 +26820,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25656,8 +26846,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25684,8 +26872,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25712,8 +26898,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25740,8 +26924,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25768,8 +26950,6 @@ LINE
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25802,8 +26982,6 @@ B98
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -25830,8 +27008,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25866,8 +27042,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25894,8 +27068,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25922,8 +27094,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25950,8 +27120,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -25978,8 +27146,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26006,8 +27172,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26034,8 +27198,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26062,8 +27224,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26090,8 +27250,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26118,8 +27276,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26146,8 +27302,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26174,8 +27328,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26202,8 +27354,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26230,8 +27380,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26258,8 +27406,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26286,8 +27432,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26314,8 +27458,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26350,8 +27492,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26386,8 +27526,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26414,8 +27552,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26442,8 +27578,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26470,8 +27604,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26498,8 +27630,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26526,8 +27656,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26554,8 +27682,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26582,8 +27708,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26610,8 +27734,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26638,8 +27760,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26666,8 +27786,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26696,8 +27814,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26724,8 +27840,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26752,8 +27866,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26780,8 +27892,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26808,8 +27918,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26836,8 +27944,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26864,8 +27970,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26892,8 +27996,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26920,8 +28022,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26948,8 +28048,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -26976,8 +28074,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27004,8 +28100,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27032,8 +28126,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27060,8 +28152,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27088,8 +28178,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27116,8 +28204,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27144,8 +28230,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27174,8 +28258,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27204,8 +28286,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27232,8 +28312,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27260,8 +28338,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27288,8 +28364,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27316,8 +28390,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27344,8 +28416,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27372,8 +28442,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27400,8 +28468,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27428,8 +28494,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27456,8 +28520,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27484,8 +28546,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27512,8 +28572,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27542,8 +28600,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27572,8 +28628,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27602,8 +28656,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27638,8 +28690,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27674,8 +28724,6 @@ ARC
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27710,8 +28758,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27738,8 +28784,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27766,8 +28810,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27794,8 +28836,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27822,8 +28862,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27850,8 +28888,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27878,8 +28914,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27906,8 +28940,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27934,8 +28966,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27962,8 +28992,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -27990,8 +29018,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28018,8 +29044,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28046,8 +29070,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28074,8 +29096,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28102,8 +29122,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28130,8 +29148,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28158,8 +29174,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28186,8 +29200,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28214,8 +29226,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28242,8 +29252,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28270,8 +29278,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28298,8 +29304,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28326,8 +29330,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28354,8 +29356,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28382,8 +29382,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28410,8 +29408,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28438,8 +29434,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28466,8 +29460,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28494,8 +29486,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28522,8 +29512,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28550,8 +29538,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28578,8 +29564,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28606,8 +29590,6 @@ LINE
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28634,8 +29616,6 @@ A00
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28662,8 +29642,6 @@ A01
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28690,8 +29668,6 @@ A02
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28718,8 +29694,6 @@ A03
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28746,8 +29720,6 @@ A04
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28774,8 +29746,6 @@ A05
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28802,8 +29772,6 @@ A06
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28830,8 +29798,6 @@ A07
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28858,8 +29824,6 @@ A08
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28886,8 +29850,6 @@ A09
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28914,8 +29876,6 @@ A0A
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28942,8 +29902,6 @@ A0B
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28970,8 +29928,6 @@ A0C
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -28998,8 +29954,6 @@ A0D
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29026,8 +29980,6 @@ A0E
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29054,8 +30006,6 @@ A0F
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29082,8 +30032,6 @@ A10
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29110,8 +30058,6 @@ A11
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29138,8 +30084,6 @@ A12
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29166,8 +30110,6 @@ A13
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29194,8 +30136,6 @@ A14
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29222,8 +30162,6 @@ A15
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29250,8 +30188,6 @@ A16
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29278,8 +30214,6 @@ A17
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29306,8 +30240,6 @@ A18
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29334,8 +30266,6 @@ A19
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29362,8 +30292,6 @@ A1A
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29390,8 +30318,6 @@ A1B
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29418,8 +30344,6 @@ A1C
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29446,8 +30370,6 @@ A1D
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29474,8 +30396,6 @@ A1E
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29502,8 +30422,6 @@ A1F
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29530,8 +30448,6 @@ A20
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29558,8 +30474,6 @@ A21
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29586,8 +30500,6 @@ A22
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29614,8 +30526,6 @@ A23
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29642,8 +30552,6 @@ A24
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29670,8 +30578,6 @@ A25
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29698,8 +30604,6 @@ A26
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29726,8 +30630,6 @@ A27
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29754,8 +30656,6 @@ A28
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29782,8 +30682,6 @@ A29
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29810,8 +30708,6 @@ A2A
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29838,8 +30734,6 @@ A2B
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29866,8 +30760,6 @@ A2C
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29894,8 +30786,6 @@ A2D
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29922,8 +30812,6 @@ A2E
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29950,8 +30838,6 @@ A2F
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -29978,8 +30864,6 @@ A30
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -30006,8 +30890,6 @@ A31
 AcDbEntity
   8
 stiklas
- 62
-7
  48
 50.0
 100
@@ -30034,8 +30916,6 @@ A32
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -30062,8 +30942,6 @@ A33
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -30096,8 +30974,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30128,8 +31004,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30160,8 +31034,6 @@ B98
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30186,8 +31058,6 @@ A37
 AcDbEntity
   8
 0.5
- 62
-7
  48
 50.0
 100
@@ -30214,8 +31084,6 @@ A38
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30240,8 +31108,6 @@ A39
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30266,8 +31132,6 @@ A3A
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30292,8 +31156,6 @@ A3B
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30318,8 +31180,6 @@ A3C
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30344,8 +31204,6 @@ A3D
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -30372,8 +31230,6 @@ A3E
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -30406,8 +31262,6 @@ B98
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -30436,8 +31290,6 @@ AcDbEntity
 evakuacija
   6
 Continuous
- 62
-7
  48
 50.0
 100
@@ -30464,8 +31316,6 @@ A41
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30490,8 +31340,6 @@ A42
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30516,8 +31364,6 @@ A43
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30542,8 +31388,6 @@ A44
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30568,8 +31412,6 @@ A45
 AcDbEntity
   8
 evakuacija
- 62
-7
 100
 AcDbLine
  10
@@ -30594,8 +31436,6 @@ A46
 AcDbEntity
   8
 evakuacija
- 62
-7
 100
 AcDbLine
  10
@@ -30626,8 +31466,6 @@ B98
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -30654,8 +31492,6 @@ AcDbEntity
 evakuacija
   6
 Continuous
- 62
-7
  48
 50.0
 100
@@ -30684,8 +31520,6 @@ AcDbEntity
 evakuacija
   6
 Continuous
- 62
-7
  48
 50.0
 100
@@ -30714,8 +31548,6 @@ AcDbEntity
 evakuacija
   6
 Continuous
- 62
-7
  48
 50.0
 100
@@ -30744,8 +31576,6 @@ AcDbEntity
 evakuacija
   6
 Continuous
- 62
-7
  48
 50.0
 100
@@ -30765,36 +31595,6 @@ AcDbLine
   0
 LINE
   5
-A4C
-330
-1F
-100
-AcDbEntity
-  8
-asys
-  6
-DGN Style 4
- 62
-7
- 48
-100.0
-100
-AcDbLine
- 10
-1992.084278644474
- 20
-1403.096065417956
- 30
-0.0
- 11
-1996.476022097926
- 21
-7673.466821722238
- 31
-0.0
-  0
-LINE
-  5
 A4D
 330
 1F
@@ -30802,8 +31602,6 @@ A4D
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30828,8 +31626,6 @@ A4E
 AcDbEntity
   8
 Esamos sienos
- 62
-7
 100
 AcDbLine
  10
@@ -30856,8 +31652,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -30888,8 +31682,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -30926,8 +31718,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -30956,8 +31746,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -30986,8 +31774,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -31018,8 +31804,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -31056,8 +31840,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -31086,8 +31868,6 @@ AcDbEntity
 konturas
   6
 DGN Style 4
- 62
-7
  48
 30.0
 100
@@ -31114,8 +31894,6 @@ A57
 AcDbEntity
   8
 konturas
- 62
-7
 100
 AcDbLine
  10
@@ -31140,8 +31918,6 @@ A58
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31161,96 +31937,6 @@ AcDbLine
   0
 LINE
   5
-A59
-330
-1F
-100
-AcDbEntity
-  8
-asys
-  6
-DGN Style 4
- 62
-7
- 48
-100.0
-100
-AcDbLine
- 10
-13143.42456741451
- 20
-1681.035056965591
- 30
-0.0
- 11
-13143.42372679751
- 21
-1722.035056974504
- 31
-0.0
-  0
-LINE
-  5
-A5A
-330
-1F
-100
-AcDbEntity
-  8
-asys
-  6
-DGN Style 4
- 62
-7
- 48
-100.0
-100
-AcDbLine
- 10
-5143.431910947027
- 20
-1322.863830069042
- 30
-0.0
- 11
-5143.409332709449
- 21
-2424.087935153233
- 31
-0.0
-  0
-LINE
-  5
-A5B
-330
-1F
-100
-AcDbEntity
-  8
-asys
-  6
-DGN Style 4
- 62
-7
- 48
-100.0
-100
-AcDbLine
- 10
-5143.431910947027
- 20
-1322.863830069042
- 30
-0.0
- 11
-5143.409332709449
- 21
-2424.087935153233
- 31
-0.0
-  0
-LINE
-  5
 A5C
 330
 1F
@@ -31258,8 +31944,6 @@ A5C
 AcDbEntity
   8
 A-45CE--E--
- 62
-7
 100
 AcDbLine
  10
@@ -31284,8 +31968,6 @@ A5D
 AcDbEntity
   8
 A-45CE--E-N
- 62
-7
 100
 AcDbLine
  10
@@ -31310,8 +31992,6 @@ A5E
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31338,8 +32018,6 @@ A5F
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31366,8 +32044,6 @@ A60
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31400,8 +32076,6 @@ B98
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31428,8 +32102,6 @@ A62
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31456,8 +32128,6 @@ A63
 AcDbEntity
   8
 Langai
- 62
-7
  48
 50.0
 100
@@ -31490,8 +32160,6 @@ B98
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31516,8 +32184,6 @@ A65
 AcDbEntity
   8
 A-45CE--E--
- 62
-7
 100
 AcDbLine
  10
@@ -31542,8 +32208,6 @@ A66
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31570,8 +32234,6 @@ A67
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31600,8 +32262,6 @@ A68
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31628,8 +32288,6 @@ A69
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31658,8 +32316,6 @@ A6A
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbBlockReference
   2
@@ -31680,8 +32336,6 @@ A6B
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbBlockReference
   2
@@ -31710,8 +32364,6 @@ B98
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31742,8 +32394,6 @@ B98
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31774,8 +32424,6 @@ B98
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31791,36 +32439,6 @@ AcDbPolyline
  20
 7672.271805608573
   0
-LINE
-  5
-A6F
-330
-1F
-100
-AcDbEntity
-  8
-asys
-  6
-DGN Style 4
- 62
-7
- 48
-100.0
-100
-AcDbLine
- 10
-1992.084278644474
- 20
-1403.096065417956
- 30
-0.0
- 11
-18033.89960185505
- 21
-1403.077312805258
- 31
-0.0
-  0
 LWPOLYLINE
   5
 A70
@@ -31830,8 +32448,6 @@ A70
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -31856,8 +32472,6 @@ A71
 AcDbEntity
   8
 _Metalines konstr
- 62
-7
 100
 AcDbPolyline
  90
@@ -32025,126 +32639,6 @@ AcDbLine
  31
 0.0
   0
-LINE
-  5
-A7F
-102
-{ACAD_REACTORS
-330
-B98
-102
-}
-330
-1F
-100
-AcDbEntity
-  8
-0
-100
-AcDbLine
- 10
-10799.83199506247
- 20
-7673.966169839887
- 30
-0.0
- 11
-10799.83199506247
- 21
-7373.966169839888
- 31
-0.0
-  0
-LINE
-  5
-A80
-102
-{ACAD_REACTORS
-330
-B98
-102
-}
-330
-1F
-100
-AcDbEntity
-  8
-0
-100
-AcDbLine
- 10
-10799.83199506247
- 20
-7373.966169839888
- 30
-0.0
- 11
-17809.15961411965
- 21
-7381.370082526368
- 31
-0.0
-  0
-LINE
-  5
-A81
-102
-{ACAD_REACTORS
-330
-B98
-102
-}
-330
-1F
-100
-AcDbEntity
-  8
-0
-100
-AcDbLine
- 10
-18079.85000075888
- 20
-2399.368572789901
- 30
-0.0
- 11
-17779.86450251437
- 21
-2396.418853651617
- 31
-0.0
-  0
-LINE
-  5
-A82
-102
-{ACAD_REACTORS
-330
-B98
-102
-}
-330
-1F
-100
-AcDbEntity
-  8
-0
-100
-AcDbLine
- 10
-17779.86450251437
- 20
-2396.418853651617
- 30
-0.0
- 11
-17809.15961411964
- 21
-7381.370082526361
- 31
-0.0
-  0
 CIRCLE
   5
 A9C
@@ -32165,13 +32659,13 @@ AcDbEntity
 100
 AcDbCircle
  10
-11144.79104230921
+11419.550091552734
  20
-4847.996419422143
+4419.050185012818
  30
 0.0
  40
-1037.366737324162
+825.0
   0
 CIRCLE
   5
@@ -32193,13 +32687,13 @@ AcDbEntity
 100
 AcDbCircle
  10
-13461.24193383347
+13353.74990158081
  20
-5963.701864184452
+5614.605395126343
  30
 0.0
  40
-1037.366737324162
+825.0
   0
 CIRCLE
   5
@@ -32223,13 +32717,13 @@ AcDbEntity
 100
 AcDbCircle
  10
-15721.94405787124
+15609.450489807128
  20
-4532.315999829509
+4536.5802925109865
  30
 0.0
  40
-1037.366737324162
+825.0
   0
 HATCH
   5
@@ -32240,10 +32734,6 @@ B98
 AcDbEntity
   8
 0
- 62
-253
-420
-12762004
 100
 AcDbHatch
  10
@@ -32977,11 +33467,1197 @@ ACAD
 1030
 0.0
   0
-VIEWPORT
+LINE
+  5
+C16
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS
+100
+AcDbLine
+ 10
+1991.8000000000002
+ 20
+-636.7
+ 30
+0.0
+ 11
+1991.8000000000002
+ 21
+8810.3
+ 31
+0.0
+  0
+CIRCLE
+  5
+C17
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS-ZYM
+100
+AcDbCircle
+ 10
+1991.8000000000002
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  0
+TEXT
+  5
+C18
+330
+1F
+100
+AcDbEntity
+  8
+A-TEKSTAS
+100
+AcDbText
+ 10
+1991.8000000000002
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  1
+1
+  7
+ISO_ARIAL
+ 72
+1
+ 11
+1991.8000000000002
+ 21
+-886.7
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+C19
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS
+100
+AcDbLine
+ 10
+5138.8
+ 20
+-636.7
+ 30
+0.0
+ 11
+5138.8
+ 21
+8810.3
+ 31
+0.0
+  0
+CIRCLE
   5
 C1A
 330
-C16
+1F
+100
+AcDbEntity
+  8
+A-ASYS-ZYM
+100
+AcDbCircle
+ 10
+5138.8
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  0
+TEXT
+  5
+C1B
+330
+1F
+100
+AcDbEntity
+  8
+A-TEKSTAS
+100
+AcDbText
+ 10
+5138.8
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  1
+2
+  7
+ISO_ARIAL
+ 72
+1
+ 11
+5138.8
+ 21
+-886.7
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+C1C
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS
+100
+AcDbLine
+ 10
+13138.8
+ 20
+-636.7
+ 30
+0.0
+ 11
+13138.8
+ 21
+8810.3
+ 31
+0.0
+  0
+CIRCLE
+  5
+C1D
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS-ZYM
+100
+AcDbCircle
+ 10
+13138.8
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  0
+TEXT
+  5
+C1E
+330
+1F
+100
+AcDbEntity
+  8
+A-TEKSTAS
+100
+AcDbText
+ 10
+13138.8
+ 20
+-886.7
+ 30
+0.0
+ 40
+250.0
+  1
+3
+  7
+ISO_ARIAL
+ 72
+1
+ 11
+13138.8
+ 21
+-886.7
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+C1F
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS
+100
+AcDbLine
+ 10
+110.80000000000018
+ 20
+1403.3
+ 30
+0.0
+ 11
+18521.800000000003
+ 21
+1403.3
+ 31
+0.0
+  0
+CIRCLE
+  5
+C20
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS-ZYM
+100
+AcDbCircle
+ 10
+-139.19999999999982
+ 20
+1403.3
+ 30
+0.0
+ 40
+250.0
+  0
+TEXT
+  5
+C21
+330
+1F
+100
+AcDbEntity
+  8
+A-TEKSTAS
+100
+AcDbText
+ 10
+-139.19999999999982
+ 20
+1403.3
+ 30
+0.0
+ 40
+250.0
+  1
+A
+  7
+ISO_ARIAL
+ 72
+1
+ 11
+-139.19999999999982
+ 21
+1403.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+LINE
+  5
+C22
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS
+100
+AcDbLine
+ 10
+110.80000000000018
+ 20
+8510.3
+ 30
+0.0
+ 11
+18521.800000000003
+ 21
+8510.3
+ 31
+0.0
+  0
+CIRCLE
+  5
+C23
+330
+1F
+100
+AcDbEntity
+  8
+A-ASYS-ZYM
+100
+AcDbCircle
+ 10
+-139.19999999999982
+ 20
+8510.3
+ 30
+0.0
+ 40
+250.0
+  0
+TEXT
+  5
+C24
+330
+1F
+100
+AcDbEntity
+  8
+A-TEKSTAS
+100
+AcDbText
+ 10
+-139.19999999999982
+ 20
+8510.3
+ 30
+0.0
+ 40
+250.0
+  1
+B
+  7
+ISO_ARIAL
+ 72
+1
+ 11
+-139.19999999999982
+ 21
+8510.3
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+DIMENSION
+  5
+C25
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D1
+  3
+ISO-50
+ 10
+1991.8000000000002
+ 20
+-186.70000000000005
+ 30
+0.0
+ 11
+3565.3
+ 21
+-84.20000000000005
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+1991.8000000000002
+ 23
+1403.3
+ 33
+0.0
+ 14
+5138.8
+ 24
+1403.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1002
+}
+  0
+DIMENSION
+  5
+C34
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D2
+  3
+ISO-50
+ 10
+5138.8
+ 20
+-186.70000000000005
+ 30
+0.0
+ 11
+9138.8
+ 21
+-84.20000000000005
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+5138.8
+ 23
+1403.3
+ 33
+0.0
+ 14
+13138.8
+ 24
+1403.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+DIMENSION
+  5
+C40
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D3
+  3
+ISO-50
+ 10
+560.8000000000002
+ 20
+1403.3
+ 30
+0.0
+ 11
+458.3000000000002
+ 21
+4956.799999999999
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+1991.8000000000002
+ 23
+1403.3
+ 33
+0.0
+ 14
+1991.8000000000002
+ 24
+8510.3
+ 34
+0.0
+ 50
+90.0
+100
+AcDbRotatedDimension
+  0
+DIMENSION
+  5
+C4F
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D4
+  3
+ISO-50
+ 10
+3054.8
+ 20
+2919.3
+ 30
+0.0
+ 11
+7237.400000000001
+ 21
+3021.8
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+3054.8
+ 23
+2427.3
+ 33
+0.0
+ 14
+11420.0
+ 24
+2427.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1002
+}
+  0
+DIMENSION
+  5
+C5E
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D5
+  3
+ISO-50
+ 10
+11420.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+12387.5
+ 21
+3021.8
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+11420.0
+ 23
+2427.3
+ 33
+0.0
+ 14
+13355.0
+ 24
+2427.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+DIMENSION
+  5
+C6A
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D6
+  3
+ISO-50
+ 10
+13355.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+14482.5
+ 21
+3021.8
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+13355.0
+ 23
+2427.3
+ 33
+0.0
+ 14
+15610.0
+ 24
+2427.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+DIMENSION
+  5
+C76
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D7
+  3
+ISO-50
+ 10
+15610.0
+ 20
+2919.3
+ 30
+0.0
+ 11
+16858.9
+ 21
+3021.8
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+15610.0
+ 23
+2427.3
+ 33
+0.0
+ 14
+18107.8
+ 24
+2427.3
+ 34
+0.0
+ 50
+0.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+DIMENSION
+  5
+C82
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D8
+  3
+ISO-50
+ 10
+17671.8
+ 20
+2427.3
+ 30
+0.0
+ 11
+17569.3
+ 21
+3423.65
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+18107.8
+ 23
+2427.3
+ 33
+0.0
+ 14
+18107.8
+ 24
+4420.0
+ 34
+0.0
+ 50
+90.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1002
+}
+  0
+DIMENSION
+  5
+C91
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D9
+  3
+ISO-50
+ 10
+17671.8
+ 20
+4420.0
+ 30
+0.0
+ 11
+17404.3
+ 21
+4477.5
+ 31
+0.0
+ 70
+160
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+18107.8
+ 23
+4420.0
+ 33
+0.0
+ 14
+18107.8
+ 24
+4535.0
+ 34
+0.0
+ 50
+90.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1070
+279
+1070
+2
+1002
+}
+  0
+DIMENSION
+  5
+C9D
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D10
+  3
+ISO-50
+ 10
+17671.8
+ 20
+4535.0
+ 30
+0.0
+ 11
+17569.3
+ 21
+5075.0
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+18107.8
+ 23
+4535.0
+ 33
+0.0
+ 14
+18107.8
+ 24
+5615.0
+ 34
+0.0
+ 50
+90.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+DIMENSION
+  5
+CA9
+330
+1F
+100
+AcDbEntity
+  8
+A-MATMENYS
+100
+AcDbDimension
+280
+0
+  2
+*D11
+  3
+ISO-50
+ 10
+17671.8
+ 20
+5615.0
+ 30
+0.0
+ 11
+17569.3
+ 21
+6644.65
+ 31
+0.0
+ 70
+32
+ 71
+5
+  1
+<>
+100
+AcDbAlignedDimension
+ 13
+18107.8
+ 23
+5615.0
+ 33
+0.0
+ 14
+18107.8
+ 24
+7674.3
+ 34
+0.0
+ 50
+90.0
+100
+AcDbRotatedDimension
+1001
+ACAD
+1000
+DSTYLE
+1002
+{
+1070
+174
+1070
+1
+1070
+145
+1040
+0.0
+1070
+75
+1070
+1
+1002
+}
+  0
+VIEWPORT
+  5
+CB9
+330
+CB5
 100
 AcDbEntity
  67
@@ -33083,9 +34759,9 @@ AcDbViewport
   0
 LWPOLYLINE
   5
-C1B
+CBA
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33119,9 +34795,9 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-C1C
+CBB
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33153,9 +34829,9 @@ AcDbPolyline
   0
 LINE
   5
-C1D
+CBC
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33179,9 +34855,9 @@ AcDbLine
   0
 LINE
   5
-C1E
+CBD
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33205,9 +34881,9 @@ AcDbLine
   0
 LINE
   5
-C1F
+CBE
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33231,9 +34907,9 @@ AcDbLine
   0
 LINE
   5
-C20
+CBF
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33257,9 +34933,9 @@ AcDbLine
   0
 VIEWPORT
   5
-C21
+CC0
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33271,21 +34947,21 @@ AcDbViewport
  10
 215.0
  20
-190.0
+181.53
  30
 0.0
  40
-380.0
+390.1108020232278
  41
-185.0
+204.94
  68
 2
  69
 3
  12
-10705.00868079666
+9213.570050580696
  22
-4114.861555079278
+3836.8
  13
 0.0
  23
@@ -33317,7 +34993,7 @@ AcDbViewport
  44
 0.0
  45
-9250.0
+10247.0
  50
 0.0
  51
@@ -33361,9 +35037,9 @@ AcDbViewport
   0
 LWPOLYLINE
   5
-C22
+CC1
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33395,9 +35071,9 @@ AcDbPolyline
   0
 LINE
   5
-C23
+CC2
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33421,9 +35097,9 @@ AcDbLine
   0
 LINE
   5
-C24
+CC3
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33447,9 +35123,9 @@ AcDbLine
   0
 LINE
   5
-C25
+CC4
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33473,9 +35149,9 @@ AcDbLine
   0
 LINE
   5
-C26
+CC5
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33499,9 +35175,9 @@ AcDbLine
   0
 LINE
   5
-C27
+CC6
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33525,9 +35201,9 @@ AcDbLine
   0
 LINE
   5
-C28
+CC7
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33551,9 +35227,9 @@ AcDbLine
   0
 LINE
   5
-C29
+CC8
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33577,9 +35253,9 @@ AcDbLine
   0
 LINE
   5
-C2A
+CC9
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33603,9 +35279,9 @@ AcDbLine
   0
 LINE
   5
-C2B
+CCA
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33629,9 +35305,9 @@ AcDbLine
   0
 LINE
   5
-C2C
+CCB
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33655,9 +35331,9 @@ AcDbLine
   0
 LINE
   5
-C2D
+CCC
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33681,9 +35357,9 @@ AcDbLine
   0
 LINE
   5
-C2E
+CCD
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33707,9 +35383,9 @@ AcDbLine
   0
 LINE
   5
-C2F
+CCE
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33733,9 +35409,9 @@ AcDbLine
   0
 LINE
   5
-C30
+CCF
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33759,9 +35435,9 @@ AcDbLine
   0
 LINE
   5
-C31
+CD0
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33785,9 +35461,9 @@ AcDbLine
   0
 TEXT
   5
-C32
+CD1
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33821,9 +35497,9 @@ AcDbText
   0
 TEXT
   5
-C33
+CD2
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33857,9 +35533,9 @@ AcDbText
   0
 TEXT
   5
-C34
+CD3
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33893,9 +35569,9 @@ AcDbText
   0
 TEXT
   5
-C35
+CD4
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33929,9 +35605,9 @@ AcDbText
   0
 TEXT
   5
-C36
+CD5
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -33965,9 +35641,9 @@ AcDbText
   0
 TEXT
   5
-C37
+CD6
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34001,9 +35677,9 @@ AcDbText
   0
 TEXT
   5
-C38
+CD7
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34037,9 +35713,9 @@ AcDbText
   0
 TEXT
   5
-C39
+CD8
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34073,9 +35749,9 @@ AcDbText
   0
 TEXT
   5
-C3A
+CD9
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34109,9 +35785,9 @@ AcDbText
   0
 TEXT
   5
-C3B
+CDA
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34145,9 +35821,9 @@ AcDbText
   0
 TEXT
   5
-C3C
+CDB
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34181,9 +35857,9 @@ AcDbText
   0
 TEXT
   5
-C3D
+CDC
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34217,9 +35893,9 @@ AcDbText
   0
 TEXT
   5
-C3E
+CDD
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34253,9 +35929,9 @@ AcDbText
   0
 TEXT
   5
-C3F
+CDE
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34289,9 +35965,9 @@ AcDbText
   0
 TEXT
   5
-C40
+CDF
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34325,9 +36001,9 @@ AcDbText
   0
 TEXT
   5
-C41
+CE0
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34361,9 +36037,9 @@ AcDbText
   0
 TEXT
   5
-C42
+CE1
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34397,9 +36073,9 @@ AcDbText
   0
 TEXT
   5
-C43
+CE2
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34433,9 +36109,9 @@ AcDbText
   0
 TEXT
   5
-C44
+CE3
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34469,9 +36145,9 @@ AcDbText
   0
 TEXT
   5
-C45
+CE4
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34505,9 +36181,9 @@ AcDbText
   0
 TEXT
   5
-C46
+CE5
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34541,9 +36217,9 @@ AcDbText
   0
 TEXT
   5
-C47
+CE6
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34577,9 +36253,9 @@ AcDbText
   0
 TEXT
   5
-C48
+CE7
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34591,7 +36267,7 @@ AcDbText
  10
 25.0
  20
-88.0
+63.0
  30
 0.0
  40
@@ -34603,7 +36279,7 @@ ISO_ARIAL
  11
 25.0
  21
-88.0
+63.0
  31
 0.0
 100
@@ -34613,9 +36289,9 @@ AcDbText
   0
 LINE
   5
-C49
+CE8
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34627,21 +36303,21 @@ AcDbLine
  10
 25.0
  20
-86.8
+61.8
  30
 0.0
  11
 76.08687012065295
  21
-86.8
+61.8
  31
 0.0
   0
 TEXT
   5
-C4A
+CE9
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34653,7 +36329,7 @@ AcDbText
  10
 80.08687012065295
  20
-88.0
+63.0
  30
 0.0
  40
@@ -34665,7 +36341,7 @@ ISO_ARIAL
  11
 80.08687012065295
  21
-88.0
+63.0
  31
 0.0
 100
@@ -34675,9 +36351,9 @@ AcDbText
   0
 TEXT
   5
-C4B
+CEA
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34689,7 +36365,7 @@ AcDbText
  10
 27.0
  20
-77.0
+53.0
  30
 0.0
  40
@@ -34701,7 +36377,7 @@ ISO_ARIAL
  11
 27.0
  21
-77.0
+53.0
  31
 0.0
 100
@@ -34711,9 +36387,9 @@ AcDbText
   0
 LINE
   5
-C4C
+CEB
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34725,21 +36401,21 @@ AcDbLine
  10
 25.0
  20
-72.0
+48.0
  30
 0.0
  11
-220.0
+223.0
  21
-72.0
+48.0
  31
 0.0
   0
 TEXT
   5
-C4D
+CEC
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34751,11 +36427,11 @@ AcDbText
  10
 27.0
  20
-68.5
+44.25
  30
 0.0
  40
-2.0
+2.5
   1
 Žymėjimas
   7
@@ -34763,7 +36439,7 @@ ISO_ARIAL
  11
 27.0
  21
-68.5
+44.25
  31
 0.0
 100
@@ -34773,9 +36449,9 @@ AcDbText
   0
 TEXT
   5
-C4E
+CED
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34785,21 +36461,21 @@ S-TEKSTAS
 100
 AcDbText
  10
-57.0
+55.0
  20
-68.5
+44.25
  30
 0.0
  40
-2.0
+2.5
   1
 Aprašymas
   7
 ISO_ARIAL
  11
-57.0
+55.0
  21
-68.5
+44.25
  31
 0.0
 100
@@ -34809,9 +36485,9 @@ AcDbText
   0
 LINE
   5
-C4F
+CEE
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -34823,33 +36499,29 @@ AcDbLine
  10
 25.0
  20
-65.0
+40.5
  30
 0.0
  11
-220.0
+223.0
  21
-65.0
+40.5
  31
 0.0
   0
 HATCH
   5
-C50
+CEF
 330
-C16
+CB5
 100
 AcDbEntity
  67
 1
   8
 0
- 62
-253
  48
-0.011
-420
-12762004
+0.010214285714285714
 100
 AcDbHatch
  10
@@ -34881,21 +36553,21 @@ AR-SAND
  93
 4
  10
-31.75
+31.33928571428561
  20
-55.650000000000006
+31.42500000000001
  10
-48.25
+46.66071428571422
  20
-55.650000000000006
+31.42500000000001
  10
-48.25
+46.66071428571422
  20
-63.35
+38.575000000000045
  10
-31.75
+31.33928571428561
  20
-63.35
+38.575000000000045
  97
 0
  75
@@ -34905,7 +36577,7 @@ AR-SAND
  52
 0.0
  41
-0.044
+0.040857142857142856
  77
 0
  78
@@ -34913,99 +36585,99 @@ AR-SAND
  53
 37.5
  43
--1.543736313878128
+542.0535714285713
  44
-34.690295746331536
+542.1392857142857
  45
--0.070401377
+-0.0653727072
  46
-2.1534182442
+1.9996026554
  79
 6
  49
 0.0
  49
--1.698752
+-1.5774125714
  49
 0.0
  49
--1.89992
+-1.7642114286
  49
 0.0
  49
--1.8161
+-1.6863785714
  53
 7.5
  43
--1.543736313878128
+542.0535714285713
  44
-34.690295746331536
+542.1392857142857
  45
-1.9779024458
+1.8366236997
  46
-3.1540304425
+2.9287425538
  79
 6
  49
 0.0
  49
--0.916432
+-0.8509725714
  49
 0.0
  49
--1.531112
+-1.4217468571
  49
 0.0
  49
--0.58674
+-0.54483
  53
 327.5
  43
--2.9183843138781276
+540.7771125714285
  44
-34.690295746331536
+542.1392857142857
  45
-3.4803664291
+3.231768827
  46
-0.0063236126
+0.005871926
  79
 6
  49
 0.0
  49
--0.5588
+-0.5188857143
  49
 0.0
  49
--2.01168
+-1.8679885714
  49
 0.0
  49
--2.62636
+-2.4387628571
  53
 317.5
  43
--2.9183843138781276
+540.7771125714285
  44
-34.690295746331536
+542.1392857142857
  45
-3.3596483909
+3.1196735058
  46
-0.9808890223
+0.9108255207
  79
 6
  49
 0.0
  49
--0.2794
+-0.2594428571
  49
 0.0
  49
--1.318768
+-1.2245702857
  49
 0.0
  49
--1.50876
+-1.4009914286
  47
 11.80244464076825
  98
@@ -35057,9 +36729,9 @@ ACAD
   0
 LWPOLYLINE
   5
-C51
+CF0
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35067,7 +36739,7 @@ AcDbEntity
   8
 A-LENTELES
  48
-0.011
+0.010214285714285714
 100
 AcDbPolyline
  90
@@ -35075,27 +36747,27 @@ AcDbPolyline
  70
 1
  10
-31.75
+31.33928571428561
  20
-55.650000000000006
+31.42500000000001
  10
-48.25
+46.66071428571422
  20
-55.650000000000006
+31.42500000000001
  10
-48.25
+46.66071428571422
  20
-63.35
+38.575000000000045
  10
-31.75
+31.33928571428561
  20
-63.35
+38.575000000000045
   0
 TEXT
   5
-C52
+CF1
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35105,21 +36777,21 @@ S-TEKSTAS
 100
 AcDbText
  10
-57.0
+55.0
  20
-59.5
+35.0
  30
 0.0
  40
 2.5
   1
-DAŽYTOS LUBOS, RAL 1013 OYSTER WHITE
+DAŽYTOS LUBOS, RAL 1013 OYSTER WHITE, h=+4,000
   7
 ISO_ARIAL
  11
-57.0
+55.0
  21
-59.5
+35.0
  31
 0.0
 100
@@ -35129,9 +36801,9 @@ AcDbText
   0
 LINE
   5
-C53
+CF2
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35143,21 +36815,21 @@ AcDbLine
  10
 25.0
  20
-54.0
+29.5
  30
 0.0
  11
-220.0
+223.0
  21
-54.0
+29.5
  31
 0.0
   0
 HATCH
   5
-C54
+CF3
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35165,7 +36837,7 @@ AcDbEntity
   8
 0
  48
-0.011
+0.011699999999999999
 100
 AcDbHatch
  10
@@ -35197,21 +36869,21 @@ DOTS
  93
 4
  10
-31.75
+30.225000000000023
  20
-44.65
+19.105000000000132
  10
-48.25
+47.77499999999998
  20
-44.65
+19.105000000000132
  10
-48.25
+47.77499999999998
  20
-52.349999999999994
+27.295000000000073
  10
-31.75
+30.225000000000023
  20
-52.349999999999994
+27.295000000000073
  97
 0
  75
@@ -35221,7 +36893,7 @@ DOTS
  52
 0.0
  41
-0.5499999999999999
+0.585
  77
 0
  78
@@ -35229,19 +36901,19 @@ DOTS
  53
 0.0
  43
--79.43166735483554
+615.2249999999999
  44
-6.205558112441231
+604.105
  45
-0.4365625
+0.46434375
  46
-0.873125
+0.9286875
  79
 2
  49
 0.0
  49
--0.873125
+-0.9286875
  47
 19.23478148979008
  98
@@ -35277,9 +36949,9 @@ ACAD
   0
 LWPOLYLINE
   5
-C55
+CF4
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35287,7 +36959,7 @@ AcDbEntity
   8
 A-LENTELES
  48
-0.011
+0.011699999999999999
 100
 AcDbPolyline
  90
@@ -35295,27 +36967,27 @@ AcDbPolyline
  70
 1
  10
-31.75
+30.225000000000023
  20
-44.65
+19.105000000000132
  10
-48.25
+47.77499999999998
  20
-44.65
+19.105000000000132
  10
-48.25
+47.77499999999998
  20
-52.349999999999994
+27.295000000000073
  10
-31.75
+30.225000000000023
  20
-52.349999999999994
+27.295000000000073
   0
 TEXT
   5
-C56
+CF5
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35325,21 +36997,57 @@ S-TEKSTAS
 100
 AcDbText
  10
-57.0
+55.0
  20
-48.5
+25.5
  30
 0.0
  40
 2.5
   1
-NULEISTOS LUBOS (APVALŪS ELEMENTAI)
+NULEISTOS LUBOS – APVALŪS ELEMENTAI
   7
 ISO_ARIAL
  11
-57.0
+55.0
  21
-48.5
+25.5
+ 31
+0.0
+100
+AcDbText
+ 73
+2
+  0
+TEXT
+  5
+CF6
+330
+CB5
+100
+AcDbEntity
+ 67
+1
+  8
+S-TEKSTAS
+100
+AcDbText
+ 10
+55.0
+ 20
+20.9
+ 30
+0.0
+ 40
+2.5
+  1
+Ø1650, STORIS 150, h=+3,850
+  7
+ISO_ARIAL
+ 11
+55.0
+ 21
+20.9
  31
 0.0
 100
@@ -35349,9 +37057,9 @@ AcDbText
   0
 LINE
   5
-C57
+CF7
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35363,21 +37071,21 @@ AcDbLine
  10
 25.0
  20
-43.0
+16.9
  30
 0.0
  11
-220.0
+223.0
  21
-43.0
+16.9
  31
 0.0
   0
 LINE
   5
-C58
+CF8
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35387,23 +37095,23 @@ A-LENTELES
 100
 AcDbLine
  10
-55.0
+53.0
  20
-72.0
+48.0
  30
 0.0
  11
-55.0
+53.0
  21
-43.0
+16.9
  31
 0.0
   0
 LWPOLYLINE
   5
-C59
+CF9
 330
-C16
+CB5
 100
 AcDbEntity
  67
@@ -35419,19 +37127,19 @@ AcDbPolyline
  10
 25.0
  20
-82.0
+58.0
  10
-220.0
+223.0
  20
-82.0
+58.0
  10
-220.0
+223.0
  20
-43.0
+16.9
  10
 25.0
  20
-43.0
+16.9
   0
 ENDSEC
   0
@@ -35519,7 +37227,7 @@ AcDbVariableDictionary
   3
 EZDXF_META
 350
-C5C
+CFC
   0
 DICTIONARY
   5
@@ -35689,7 +37397,7 @@ Model
   3
 03_LUBU PLANAS
 350
-C19
+CB8
   0
 DICTIONARY
   5
@@ -49619,7 +51327,7 @@ CELLSTYLE_END
   0
 LAYOUT
   5
-C19
+CB8
 330
 1A
 100
@@ -49691,7 +51399,7 @@ AcDbLayout
  70
 1
  71
-3
+4
  10
 -0.0
  20
@@ -49741,13 +51449,13 @@ AcDbLayout
  76
 1
 330
-C16
+CB5
 331
-C1A
+CB9
   0
 DICTIONARY
   5
-C5C
+CFC
 330
 C
 100
@@ -49759,19 +51467,19 @@ AcDbDictionary
   3
 WRITTEN_BY_EZDXF
 350
-C5D
+CFD
   0
 DICTIONARYVAR
   5
-C5D
+CFD
 330
-C5C
+CFC
 100
 DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-17T17:37:09.444046+00:00
+1.4.5 @ 2026-11-17T18:47:43.966736+00:00
   0
 ENDSEC
   0
