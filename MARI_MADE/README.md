@@ -8,7 +8,7 @@ Interjero projekto paketas. Atliko Gabrielė Meilūnaitė, Vilniaus dizaino kole
 |---|---|
 | `01_Breziniai_su_stampu/` | 9 lapų PDF ir DXF failai su layoutais ir štampu |
 | `02_Breziniai_be_stampo/` | Tas pats komplektas be štampo (tik rėmelis ir lapo numeris) |
-| `03_Vizualizacijos/` | Fotorealistiniai renderiai: 4 interjero ir 2 fasado/vitrinos vaizdai, 1920×1080 |
+| `03_Vizualizacijos/` | Reference renderiai iš Blender (tiksli geometrija, medžiagos, šviesa): 4 interjero ir 2 fasado/vitrinos vaizdai. Juos įkelkite į ChatGPT ir naudokite su promptais iš `ChatGPT_promptai.md` |
 | `04_Vitrina/` | Vitrinos koncepcija (PDF) ir vitrinų išklotinės |
 | `ChatGPT_promptai.md` | Promptai vizualizacijoms tobulinti ChatGPT ar kitais AI įrankiais |
 | `_saltiniai_scriptai/` | Skriptai, kuriais viskas sugeneruota (kad būtų galima pakartoti ar pataisyti) |

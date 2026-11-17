@@ -1,5 +1,18 @@
 # ChatGPT / AI vaizdų promptai – MARI MADE, GO9 (Gedimino pr. 9)
 
+## Failai
+
+| Vaizdas | Reference failas (`03_Vizualizacijos/`) |
+|---|---|
+| 1 – salė nuo pakylos | `01_sale_nuo_pakylos.jpg` |
+| 2 – poilsio zona | `02_poilsio_zona.jpg` |
+| 3 – recepcija | `03_recepcija.jpg` |
+| 4 – salė į vitrinas | `04_sale_i_vitrinas.jpg` |
+| 5 – fasadas vakare | `05_fasadas_vitrinos.jpg` |
+| 6 – vitrinos detalė | `06_vitrinos_detale.jpg` |
+
+Reference vaizduose tiksliai atkurta jūsų SketchUp modelio geometrija: matmenys, baldų vietos, 6 m aukštis ir langai. Taip pat yra medžiagos ir šviestuvų vietos pagal šviestuvų planą. ChatGPT turi tik „nupoliruoti" realizmą, o ne kurti iš naujo.
+
 ## Kaip gauti geriausią rezultatą
 
 1. ChatGPT pokalbyje **įkelkite atitinkamą renderį** iš aplanko `03_Vizualizacijos`. Jis bus kompozicijos pagrindas.
