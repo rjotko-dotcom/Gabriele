@@ -29,6 +29,14 @@ Interjero projekto brėžiniai. Atliko Gabrielė Meilūnaitė, Vilniaus dizaino 
 
 **A1 lapų spausdinimas A3 popieriuje.** PDF'e A1 lapas supjaustytas į 4 A3 dalis tokia tvarka: viršus kairė, viršus dešinė, apačia kairė, apačia dešinė. Spausdinkite **100 % (Actual size)** be „Fit to page" ir sudėkite 2×2. Jei spausdintuvas nespausdina iki krašto, prie sujungimų gali dingti po kelis milimetrus. Tokiu atveju geriausia lapus 1 ir 2 atsispausdinti A1 formatu spaustuvėje iš failo `…_A1_A3.pdf`.
 
+## Langai ir durys pagal tikrą fasadą (VITRINOS_ISKLOTINE2)
+
+- **Langai:** 1370 × 3165 mm. Palangė -0,945, viršus +2,219. Virš ir po langu mūras, skersinio nėra.
+- **Įėjimo durys:** arkinė anga 1550 mm. Varčios 934 + 416 mm su 200 mm statramsčiu, durų viršus +0,665, virš jų skersinis ir arkinis viršlangis iki +1,965.
+- **Kur atnaujinta:** baldų plane (angos ir durų simboliai) ir pjūviuose 2-2, 3-3, 4-4.
+- **Lapas 9:** padarytas iš Gabrielės fasado brėžinio. Pridėti standartiniai linijų storiai, MARI MADE logotipas ant langų, matmenys ir altitudės.
+- **Gabrielės rankiniai pataisymai** (kairiosios durys, šviestuvai pjūviuose, užrašų vietos ir kt.) perkelti į naują versiją automatiškai.
+
 ## Standartai
 
 - **Linijų storiai** pagal LST EN ISO 128 (linijų grupė 0,5):

@@ -82,31 +82,65 @@ for i, (n, (cx, cy)) in enumerate(TABLES.items()):
     for dx in (-0.40, 0.40): box(f'Trosas_{i+1}', cx+dx-0.002, cx+dx+0.002, cy-0.002, cy+0.002, PEND_Z+0.06, CEIL-DISC)
 print('tables', {k: tuple(round(x, 3) for x in v) for k, v in TABLES.items()})
 
-# ---------------------------------------------------------------- 5. windows: remove opaque infill, add frames + glass + transom
+# ---------------------------------------------------------------- 5. windows per the real facade elevation (VITRINOS_ISKLOTINE2.dxf)
+# elevation y -> model z :  z = y/1000 - 0.149   (door threshold y=449 == entrance level z 0.30 / -1,700)
 WX = [(6.665, 7.857, 1.986, 2.115), (9.465, 10.654, 1.986, 2.115), (12.263, 13.465, 1.986, 2.115), (15.128, 16.303, 1.946, 2.13)]
+WIN_Z0, WIN_Z1, WIN_W, FR = 1.055, 4.219, 1.370, 0.043
 P = V[T]; nrm = np.cross(P[:, 1]-P[:, 0], P[:, 2]-P[:, 0]); nl = np.linalg.norm(nrm, axis=1)+1e-12; ny = nrm[:, 1]/nl
 infill = (O == oid('a1_erdve1')) & (np.abs(ny) > 0.9) & (P[:, :, 1].min(1) > 1.93) & (P[:, :, 1].max(1) < 2.14) & (P[:, :, 2].min(1) > 0.85) & (np.ptp(P[:, :, 2], 1) > 3)
 keep &= ~infill
-for i, (a, b, y0, y1) in enumerate(WX):
-    yc = (y0+y1)/2; t = 0.06; z0, z1 = 0.90, 6.0
-    box(f'Langas_remas_{i}', a, a+t, yc-0.035, yc+0.035, z0, z1); box(f'Langas_remas_{i}', b-t, b, yc-0.035, yc+0.035, z0, z1)
-    box(f'Langas_remas_{i}', a, b, yc-0.035, yc+0.035, z0, z0+t); box(f'Langas_remas_{i}', a, b, yc-0.035, yc+0.035, z1-t, z1)
-    box(f'Langas_remas_{i}', a, b, yc-0.035, yc+0.035, 3.60, 3.66)
-    box(f'Langas_stiklas_{i}', a+t, b-t, yc-0.006, yc+0.006, z0+t, z1-t)
-# ---------------------------------------------------------------- 6. doors: street entrance (facade) and side entrance (left wall), glass double doors + transom
-DOORS = [dict(axis='y', a=3.56, b=5.31, plane=1.80, z0=PODIUM, h=2.40),     # facade, opening x 3.56-5.31
-         dict(axis='x', a=3.326, b=5.078, plane=1.92, z0=PODIUM, h=2.40)]   # left wall, opening y 3.33-5.08
-for i, d in enumerate(DOORS):
-    a, b, pl, z0, h = d['a'], d['b'], d['plane'], d['z0'], d['h']; t = 0.06
-    def bx(nm, u0, u1, w0, w1, zz0, zz1):
-        if d['axis'] == 'y': box(nm, u0, u1, w0, w1, zz0, zz1)
-        else: box(nm, w0, w1, u0, u1, zz0, zz1)
-    for (u0, u1) in [(a, a+t), (b-t, b), ((a+b)/2-0.03, (a+b)/2+0.03)]:
-        bx(f'Durys_staktos_{i}', u0, u1, pl-0.035, pl+0.035, z0, z0+h)
-    bx(f'Durys_staktos_{i}', a, b, pl-0.035, pl+0.035, z0+h, z0+h+t)
-    bx(f'Durys_vitrina_{i}', a, b, pl-0.035, pl+0.035, 6.0-t, 6.0)
-    bx(f'Durys_vitrina_{i}', a+t, b-t, pl-0.006, pl+0.006, z0+h+t, 6.0-t)
-DOORS_2D = [dict(kind='facade', x0=3.56, x1=5.31, y=1.80, inward=+1), dict(kind='left', y0=3.326, y1=5.078, x=1.92, inward=+1)]
+WIN = []
+for i, (a0, b0, _, _) in enumerate(WX):
+    c = (a0+b0)/2; a, b = c-WIN_W/2, c+WIN_W/2; yc = 1.785; WIN.append((a, b))
+    # masonry above / below the window inside the deep reveal
+    box(f'Siena_uzpildas_{i}', c-0.70, c+0.70, 1.752, 2.706, 0.90, WIN_Z0)
+    box(f'Siena_uzpildas_{i}', c-0.70, c+0.70, 1.752, 2.706, WIN_Z1, 6.0)
+    box(f'Langas_remas_{i}', a, a+FR, yc-0.035, yc+0.035, WIN_Z0, WIN_Z1); box(f'Langas_remas_{i}', b-FR, b, yc-0.035, yc+0.035, WIN_Z0, WIN_Z1)
+    box(f'Langas_remas_{i}', a, b, yc-0.035, yc+0.035, WIN_Z0, WIN_Z0+FR); box(f'Langas_remas_{i}', a, b, yc-0.035, yc+0.035, WIN_Z1-FR, WIN_Z1)
+    box(f'Langas_stiklas_{i}', a+FR, b-FR, yc-0.006, yc+0.006, WIN_Z0+FR, WIN_Z1-FR)
+# ---------------------------------------------------------------- 6. doors
+def extrude(name, poly, tris, y0, y1):
+    """extrude a planar (x,z) polygon (boundary order) with given front triangulation, side walls on the boundary only"""
+    n = len(poly)
+    p = np.array([[x, y0, z] for x, z in poly] + [[x, y1, z] for x, z in poly], float)
+    f = [tuple(t) for t in tris] + [(a+n, c+n, b+n) for a, b, c in tris]
+    for i in range(n):
+        j = (i+1) % n; f += [(i, j, j+n), (i, j+n, i+n)]
+    NEW.append((name, p, np.array(f)))
+def strip_poly(name, pts_xz, y0, y1):
+    """extrude a convex quad strip list [(x,z)...] (4 pts each) in y"""
+    for q in pts_xz:
+        p = np.array([[x, y, z] for y in (y0, y1) for (x, z) in q], float)
+        f = [(0, 1, 2), (0, 2, 3), (4, 6, 5), (4, 7, 6), (0, 4, 5), (0, 5, 1), (1, 5, 6), (1, 6, 2), (2, 6, 7), (2, 7, 3), (3, 7, 4), (3, 4, 0)]
+        NEW.append((name, p, np.array(f)))
+# facade entrance: arched opening 1550, leaves 934 + post 200 + 416, transom, arched fanlight
+DC, DW, SPR = 4.435, 1.550, 3.190            # centre x, clear width, arch springing (z); arch radius = DW/2 -> top 3.965
+DX0, DX1, R = DC-DW/2, DC+DW/2, DW/2
+LEAF_TOP, TR_TOP = 2.665, 2.762
+box('Siena_uzpildas_d', 3.56, DX0, 1.752, 2.703, PODIUM, 6.0); box('Siena_uzpildas_d', DX1, 5.31, 1.752, 2.703, PODIUM, 6.0)
+N_ = 24; arc = [(DC - R*np.cos(np.pi*k/N_), SPR + R*np.sin(np.pi*k/N_)) for k in range(N_+1)]
+# masonry above the arch: boundary = arc (left->right), top-right, top-left ; fan from the two top corners
+poly = list(arc) + [(DX1, 6.0), (DX0, 6.0)]; iTR, iTL = N_+1, N_+2; half = N_//2
+tris = [(iTL, k+1, k) for k in range(0, half)] + [(iTR, k+1, k) for k in range(half, N_)] + [(iTL, iTR, half)]
+extrude('Siena_uzpildas_d', poly, tris, 1.752, 2.703)
+yd = 1.80; t = 0.05
+for (u0, u1) in [(DX0, DX0+t), (DX1-t, DX1), (DX0+0.934, DX0+0.934+0.200)]:
+    box('Durys_staktos_0', u0, u1, yd-0.035, yd+0.035, PODIUM, LEAF_TOP)
+box('Durys_staktos_0', DX0, DX1, yd-0.035, yd+0.035, LEAF_TOP, TR_TOP)
+for (u0, u1) in [(DX0+t, DX0+0.934), (DX0+0.934+0.200, DX1-t)]:
+    box('Durys_varcia_0', u0, u1, yd-0.006, yd+0.006, PODIUM+0.10, LEAF_TOP-0.02)
+# arched fanlight glass (convex: rectangle + half disc) -> one sheet
+fpoly = [(DX0, TR_TOP), (DX1, TR_TOP)] + list(reversed(arc))
+extrude('Durys_vitrina_0', fpoly, [(0, k, k+1) for k in range(1, len(fpoly)-1)], yd-0.006, yd+0.006)
+# side entrance (left wall) unchanged
+d = dict(a=3.326, b=5.078, plane=1.92, z0=PODIUM, h=2.40); a, b, pl, z0, h = d['a'], d['b'], d['plane'], d['z0'], d['h']; t = 0.06
+for (u0, u1) in [(a, a+t), (b-t, b), ((a+b)/2-0.03, (a+b)/2+0.03)]: box('Durys_staktos_1', pl-0.035, pl+0.035, u0, u1, z0, z0+h)
+box('Durys_staktos_1', pl-0.035, pl+0.035, a, b, z0+h, z0+h+t)
+box('Durys_vitrina_1', pl-0.035, pl+0.035, a, b, 6.0-t, 6.0)
+box('Durys_vitrina_1', pl-0.006, pl+0.006, a+t, b-t, z0+h+t, 6.0-t)
+DOORS_2D = [dict(kind='facade', x0=DX0, x1=DX1, y=yd, leaves=[0.934, 0.416], post=0.200, inward=+1),
+            dict(kind='left', y0=3.326, y1=5.078, x=1.92, inward=+1)]
+WX_OUT = [(a, b, WIN_Z0, WIN_Z1) for a, b in WIN]
 
 # ---------------------------------------------------------------- assemble
 T2 = T[keep]; O2 = O[keep]; M2 = M[keep]; Vn = [V]; off = len(V)
@@ -117,6 +151,6 @@ for nm, p, f in NEW:
     Vn.append(p); Tn.append(f+off); On.append(np.full(len(f), names2.index(nm))); Mn.append(np.zeros(len(f), int)); off += len(p)
 np.savez_compressed(S + '/geo2.npz', V=np.vstack(Vn), T=np.vstack(Tn), O=np.concatenate(On), M=np.concatenate(Mn), names=np.array(names2), mats=np.array(mats))
 import json
-json.dump(dict(tables=TABLES, podium=PODIUM, pend_z=PEND_Z, ceil=CEIL, disc=DISC, tree=dict(scale=sc, x=px, y=py), doors=DOORS_2D, windows=WX),
+json.dump(dict(tables=TABLES, podium=PODIUM, pend_z=PEND_Z, ceil=CEIL, disc=DISC, tree=dict(scale=sc, x=px, y=py), doors=DOORS_2D, windows=WX_OUT, win_z=[WIN_Z0, WIN_Z1], door=dict(x0=DX0, x1=DX1, leaf_top=LEAF_TOP, transom=TR_TOP, spring=SPR, top=SPR+R)),
           open(S + '/geo2_meta.json', 'w'), indent=1)
 print('saved geo2', off)

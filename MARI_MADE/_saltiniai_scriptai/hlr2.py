@@ -8,7 +8,7 @@ S = sys.argv[sys.argv.index('--')+1]; which = sys.argv[sys.argv.index('--')+2:]
 g = np.load(S+'/geo2.npz'); V = g['V'].astype(float); T = g['T']; O = g['O']; names = np.array(g['names'])
 on = names[O]
 cat = np.full(len(T), 'obj', dtype=object)
-cat[np.isin(on, ['a1_erdve1', 'Lubos1', 'G_1_variantas_sienele1'])] = 'shell'
+cat[np.isin(on, ['a1_erdve1', 'Lubos1', 'G_1_variantas_sienele1']) | np.char.startswith(on.astype(str), 'Siena_uzpildas')] = 'shell'
 cat[np.char.startswith(on.astype(str), 'Langas_')] = 'win'
 cat[np.char.startswith(on.astype(str), 'Durys_')] = 'door'
 cat[np.isin(on, ['Olive_Tree____Plant1', 'ARRANJO_VASOS_05_1'])] = 'blob'

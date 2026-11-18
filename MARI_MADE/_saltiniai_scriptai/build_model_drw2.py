@@ -35,7 +35,8 @@ def add_lines(k, segs, layer, merge=True):
     if not segs: return
     ls = [LineString([tuple(np.round(np.array(P(k, *a)), 1)), tuple(np.round(np.array(P(k, *b)), 1))]) for a, b in segs if math.hypot(a[0]-b[0], a[1]-b[1]) > 1e-4]
     if not ls: return
-    geom = linemerge(unary_union(ls))
+    u_ = unary_union(ls)
+    geom = u_ if u_.geom_type == 'LineString' else linemerge(u_)
     for p in (geom.geoms if hasattr(geom, 'geoms') else [geom]):
         c = list(p.coords)
         if len(c) >= 2: msp.add_lwpolyline(c, dxfattribs=L(layer))
@@ -104,8 +105,9 @@ def door_double(hinges, closed_dir, open_dir, leaf):
         s0, s1 = (a0, a1) if (a1-a0) % 360 < 180 else (a1, a0)
         msp.add_arc((cx, cy), leaf*1000, s0, s1, dxfattribs={'layer': 'A-DURYS', 'lineweight': 13})
 fd = [x for x in META['doors'] if x['kind'] == 'facade'][0]; ld = [x for x in META['doors'] if x['kind'] == 'left'][0]
-lf = (fd['x1']-fd['x0']-0.12)/2
-door_double([(fd['x0']+0.06, fd['y']+0.035), (fd['x1']-0.06, fd['y']+0.035)], [(1, 0), (-1, 0)], (0, 1), lf)
+fl, fr = fd['leaves'][0]-0.05, fd['leaves'][1]-0.05
+door_double([(fd['x0']+0.05, fd['y']+0.035)], [(1, 0)], (0, 1), fl)
+door_double([(fd['x1']-0.05, fd['y']+0.035)], [(-1, 0)], (0, 1), fr)
 lf2 = (ld['y1']-ld['y0']-0.12)/2
 door_double([(ld['x']+0.035, ld['y0']+0.06), (ld['x']+0.035, ld['y1']-0.06)], [(0, 1), (0, -1)], (1, 0), lf2)
 # room / furniture labels (2.5 mm)
@@ -134,7 +136,7 @@ lvl_box('-2,000', 13.30, 3.90 + 0.0) if False else None
 lvl_box('-2,000', 13.30, 3.95); lvl_box(fmt_level(PODIUM, FLOOR_ABS), 4.10, 4.10); lvl_box('-2,000', 7.10, 5.20)
 mtext('2×150', *P(k, 5.74, 4.95), 2.5, rot=90)
 # dimensions (inside -> out), axes outermost
-hdim(k, 1.10, [1.839, 3.560, 5.310, 6.665, 7.857, 9.465, 10.654, 12.263, 13.465, 15.128, 16.303, 17.937], 1.75)
+hdim(k, 1.10, [1.839, META['door']['x0'], META['door']['x1']] + [v for w in META['windows'] for v in w[:2]] + [17.937], 1.75)
 hdim(k, 0.60, [AXV['1'], AXV['2'], AXV['3'], 17.937], 1.75)
 hdim(k, 8.45, [2.833, 5.53, 5.949, 6.785, 10.366, 17.886], 7.955)
 hdim(k, 8.95, [2.833, 17.886], 7.955)
@@ -170,8 +172,8 @@ LEV = {   # (object or prefix, top/bot, short description)
        ('Nuleistos_lubos_1', 'bot', 'nul. lubos'), ('Pakabinamas_sviestuvas_1', 'bot', 'šviestuvai'), ('MARY_MADE_1_1', 'bot', 'logotipas'),
        ('Olive_Tree____Plant1', 'top', 'alyvmedis')],
  'B': [('Componente1', 'top', 'pakabos'), ('Staliukas1_1', 'top', 'stalai'), ('Nuleistos_lubos_1', 'bot', 'nul. lubos'),
-       ('Pakabinamas_sviestuvas_1', 'bot', 'šviestuvai'), ('G_1variantas_lentyna1', 'top', 'stelažas'), ('Langas_remas_0', 'transom', 'skersinis')],
- 'C': [('Olive_Tree____Plant1', 'top', 'alyvmedis'), ('Armchair__4_2', 'top', 'fotelis'), ('Durys_staktos_0', 'door', 'durys')],
+       ('Pakabinamas_sviestuvas_1', 'bot', 'šviestuvai'), ('G_1variantas_lentyna1', 'top', 'stelažas'), ('Langas_remas_0', 'transom', 'langų virš.')],
+ 'C': [('Olive_Tree____Plant1', 'top', 'alyvmedis'), ('Armchair__4_2', 'top', 'fotelis'), ('Durys_staktos_0', 'door', 'durys'), ('Durys_vitrina_0', 'arch', 'arka')],
  'D': [('G_1variantas_lentyna1', 'top', 'stelažas'), ('G_82716_Mirror_Curve_Round_Copper_100cm1', 'bot', 'veidrodis'),
        ('Staliukas1_1', 'top', 'stalas'), ('Nuleistos_lubos_1', 'bot', 'nul. lubos'), ('Pakabinamas_sviestuvas_1', 'bot', 'šviestuvai')],
 }
@@ -181,6 +183,23 @@ def urange(k, mn, mx):
     return (mn[ax], mx[ax]) if sg > 0 else (-mx[ax], -mn[ax])
 for k in 'ABCD':
     d = D[k]; u0, u1 = VIEWS[k]['umin'], VIEWS[k]['umax']
+    if k == 'B':   # facade seen from inside: masonry above/below openings is flush -> clip reveal corner lines to the opening height
+        clips = [(-(sum(w[:2])/2+0.76), -(sum(w[:2])/2-0.76), META['win_z'][0], META['win_z'][1]) for w in META['windows']]
+        clips.append((-(META['door']['x1']+0.16), -(META['door']['x0']-0.16), PODIUM, META['door']['spring']))
+        def clipv(lst):
+            out = []
+            for item in lst:
+                seg, dep = item
+                (u1, v1), (u2, v2) = seg
+                if abs(u1-u2) < 1e-3:
+                    hit = [c for c in clips if c[0] <= u1 <= c[1]]
+                    if hit:
+                        _, _, z0, z1 = hit[0]; lo, hi = max(min(v1, v2), z0), min(max(v1, v2), z1)
+                        if hi - lo > 0.005: out.append([[[u1, lo], [u1, hi]], dep])
+                        continue
+                out.append(item)
+            return out
+        d['vis'] = clipv(d['vis']); d['vis_win'] = clipv(d['vis_win'])
     poche(k, d['cut_shell']); add_lines(k, d['cut_obj'], 'A-PJUVIS-BALDAI')
     add_lines(k, d['cut_win'], 'A-LANGAI'); add_lines(k, [s for s, _ in d['vis_win']], 'A-LANGAI')
     add_lines(k, [s for s, dep in d['vis'] if dep < 2.6], 'A-MATOMOS-ARTI')
@@ -191,7 +210,7 @@ for k in 'ABCD':
         t = msp.add_text('MADE', height=85, dxfattribs={'layer': 'A-MATOMOS-ARTI', 'style': TXT, 'width': 1.5}); t.set_placement(P(k, 8.73, 1.795), align=TA.MIDDLE_CENTER)
     if k == 'B':   # glass indication on window panes (two short diagonals)
         for (a, b, _, _) in META['windows']:
-            for zc in (2.2, 4.6):
+            for zc in (1.9, 3.5):
                 for dd in (0, 0.12):
                     msp.add_line(P(k, -b+0.30+dd, zc-0.25), P(k, -b+0.62+dd, zc+0.15), dxfattribs={'layer': 'A-LANGAI', 'lineweight': 13})
     (x0, y0), (x1, y1) = P(k, u0, -0.30), P(k, u1, 0.0)
@@ -201,7 +220,7 @@ for k in 'ABCD':
     # ---- levels at the edges
     marks = [(0.0, 'grindys', 'L'), (6.0, 'lubos', 'L')]
     if k in 'AC': marks.append((PODIUM, 'pakyla', 'L'))
-    if k == 'B': marks.append((0.90, 'palangė', 'L'))
+    if k == 'B': marks.append((META['win_z'][0], 'palangė', 'L'))
     mid = (u0+u1)/2
     for nm, which, desc in LEV[k]:
         try: mn, mx = bb(nm)
@@ -209,9 +228,11 @@ for k in 'ABCD':
         a, b = urange(k, mn, mx)
         if b < u0 or a > u1: continue
         z = mx[2] if which == 'top' else mn[2]
-        if which == 'transom': z = 3.60
-        if which == 'door': z = PODIUM + 2.40
+        if which == 'transom': z = META['win_z'][1]
+        if which == 'door': z = META['door']['leaf_top']
+        if which == 'arch': z = META['door']['top']
         side = 'L' if (a+b)/2 < mid else 'R'
+        if which == 'transom': side = 'L'
         marks.append((z, desc, side))
     for side in 'LR':
         cols = []
