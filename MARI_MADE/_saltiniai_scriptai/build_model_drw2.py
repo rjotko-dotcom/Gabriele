@@ -108,8 +108,8 @@ fd = [x for x in META['doors'] if x['kind'] == 'facade'][0]; ld = [x for x in ME
 fl, fr = fd['leaves'][0]-0.05, fd['leaves'][1]-0.05
 door_double([(fd['x0']+0.05, fd['y']+0.035)], [(1, 0)], (0, 1), fl)
 door_double([(fd['x1']-0.05, fd['y']+0.035)], [(-1, 0)], (0, 1), fr)
-lf2 = (ld['y1']-ld['y0']-0.12)/2
-door_double([(ld['x']+0.035, ld['y0']+0.06), (ld['x']+0.035, ld['y1']-0.06)], [(0, 1), (0, -1)], (1, 0), lf2)
+door_double([(ld['x']+0.035, ld['y0']+0.05)], [(0, 1)], (1, 0), ld['leaves'][0]-0.05)
+door_double([(ld['x']+0.035, ld['y1']-0.05)], [(0, -1)], (1, 0), ld['leaves'][1]-0.05)
 # room / furniture labels (2.5 mm)
 TB = META['tables']
 for n, (cx, cy) in TB.items(): mtext('Prekių stalas\n1620×810', *P(k, cx, cy), 2.5)
@@ -163,7 +163,7 @@ def sec_marker(num, horiz, c, direction):
         hd.paths.add_polyline_path([(ax_+dv[0]*2*s, ay_+dv[1]*2*s), (ax_+px*1.1*s, ay_+py*1.1*s), (ax_-px*1.1*s, ay_-py*1.1*s)], is_closed=True)
         tx, ty = X+dv[0]*9.5*s, Y+dv[1]*9.5*s
         t = msp.add_text(num, height=5*s, dxfattribs={'layer': 'A-TEKSTAS', 'style': TXT}); t.set_placement((tx, ty), align=TA.MIDDLE_CENTER)
-sec_marker('1', True, 4.62, +1); sec_marker('2', True, 4.90, -1); sec_marker('3', False, 4.60, -1); sec_marker('4', False, 15.39, +1)
+sec_marker('1', True, 4.62, +1); sec_marker('2', True, 6.35, -1); sec_marker('3', False, 4.60, -1); sec_marker('4', False, 15.39, +1)
 
 # =============================================================== SECTIONS
 SHORT = {'top': 'viršus', 'bot': 'apačia'}
@@ -183,9 +183,13 @@ def urange(k, mn, mx):
     return (mn[ax], mx[ax]) if sg > 0 else (-mx[ax], -mn[ax])
 for k in 'ABCD':
     d = D[k]; u0, u1 = VIEWS[k]['umin'], VIEWS[k]['umax']
-    if k == 'B':   # facade seen from inside: masonry above/below openings is flush -> clip reveal corner lines to the opening height
-        clips = [(-(sum(w[:2])/2+0.76), -(sum(w[:2])/2-0.76), META['win_z'][0], META['win_z'][1]) for w in META['windows']]
-        clips.append((-(META['door']['x1']+0.16), -(META['door']['x0']-0.16), PODIUM, META['door']['spring']))
+    if k in 'BC':   # walls with openings seen from inside: masonry above/below openings is flush -> clip reveal corner lines to the opening height
+        if k == 'B':
+            clips = [(-(sum(w[:2])/2+0.76), -(sum(w[:2])/2-0.76), META['win_z'][0], META['win_z'][1]) for w in META['windows']]
+            clips.append((-(META['door']['x1']+0.16), -(META['door']['x0']-0.16), PODIUM, META['door']['spring']))
+        else:
+            lw = META['left_window']; ld_ = [x for x in META['doors'] if x['kind'] == 'left'][0]
+            clips = [(sum(lw)/2-0.76, sum(lw)/2+0.76, META['win_z'][0], META['win_z'][1]), (ld_['y0']-0.16, ld_['y1']+0.16, PODIUM, META['door']['spring'])]
         def clipv(lst):
             out = []
             for item in lst:
@@ -221,6 +225,7 @@ for k in 'ABCD':
     marks = [(0.0, 'grindys', 'L'), (6.0, 'lubos', 'L')]
     if k in 'AC': marks.append((PODIUM, 'pakyla', 'L'))
     if k == 'B': marks.append((META['win_z'][0], 'palangė', 'L'))
+    if k == 'C': marks += [(META['win_z'][0], 'palangė', 'R'), (META['win_z'][1], 'langų virš.', 'R')]
     mid = (u0+u1)/2
     for nm, which, desc in LEV[k]:
         try: mn, mx = bb(nm)

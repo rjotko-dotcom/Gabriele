@@ -3,6 +3,10 @@ import sys, collections, ezdxf
 from ezdxf import bbox
 from ezdxf.addons import Importer
 base_p, edited_p, target_p = sys.argv[1:4]
+SKIP = [tuple(map(float, b.split(','))) for b in sys.argv[4:]]   # x0,y0,x1,y1 regions that are fully regenerated
+def skipped(e):
+    b = bbox.extents([e], fast=True)
+    return b.has_data and any(x0 <= b.center.x <= x1 and y0 <= b.center.y <= y1 for x0, y0, x1, y1 in SKIP)
 def sig(e):
     b = bbox.extents([e], fast=True)
     if not b.has_data: return None
@@ -15,8 +19,8 @@ def index(doc):
     return d
 base, ed, tgt = ezdxf.readfile(base_p), ezdxf.readfile(edited_p), ezdxf.readfile(target_p)
 B, E, T = index(base), index(ed), index(tgt)
-deleted = {s: len(v) - len(E.get(s, [])) for s, v in B.items() if len(v) > len(E.get(s, []))}
-added = [e for s, v in E.items() for e in v[len(B.get(s, [])):]]
+deleted = {s: len(v) - len(E.get(s, [])) for s, v in B.items() if len(v) > len(E.get(s, [])) and not skipped(v[0])}
+added = [e for s, v in E.items() for e in v[len(B.get(s, [])):] if not skipped(e)]
 nd = 0
 for s, n in deleted.items():
     for e in T.get(s, [])[:n]: tgt.modelspace().delete_entity(e); nd += 1

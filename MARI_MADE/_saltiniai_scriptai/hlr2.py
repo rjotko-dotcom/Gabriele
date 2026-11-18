@@ -30,7 +30,7 @@ UE = E[brk]; first = F[brk]; second = np.full(gid.max()+1, -1); second[gid[~brk]
 VIEWS = {
  'PLAN': dict(axis=2, sign=-1, cut=1.2, u=lambda p: p[..., 0], v=lambda p: p[..., 1]),
  'A': dict(axis=1, sign=+1, cut=4.62, u=lambda p: p[..., 0], v=lambda p: p[..., 2]),
- 'B': dict(axis=1, sign=-1, cut=4.90, u=lambda p: -p[..., 0], v=lambda p: p[..., 2]),
+ 'B': dict(axis=1, sign=-1, cut=6.35, u=lambda p: -p[..., 0], v=lambda p: p[..., 2]),
  'C': dict(axis=0, sign=-1, cut=4.60, u=lambda p: p[..., 1], v=lambda p: p[..., 2]),
  'D': dict(axis=0, sign=+1, cut=15.39, u=lambda p: -p[..., 1], v=lambda p: p[..., 2]),
 }

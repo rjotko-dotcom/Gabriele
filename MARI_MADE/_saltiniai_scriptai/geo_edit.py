@@ -13,7 +13,7 @@ sh = verts_of('a1_erdve1')
 tall = np.unique(T[(O == oid('a1_erdve1')) & (V[T][:, :, 2].max(1) > 0.5)].ravel())
 v = V[sh]
 m = (np.abs(v[:, 0]-6.34) < 0.012) & (v[:, 2] < 0.2) & (v[:, 1] > 2.6) & (v[:, 1] < 8.0) & ~np.isin(sh, tall)
-v[m, 0] = 5.949                                                    # remove 3rd tread
+pass  # 3rd tread is simply lowered to floor level below (coplanar, no line)
 m = (v[:, 0] < 6.0) & (v[:, 2] > 0.1) & (v[:, 2] < 0.47)
 v[m, 2] = np.maximum(0.0, v[m, 2]-0.15)
 V[sh] = v
@@ -117,33 +117,56 @@ def strip_poly(name, pts_xz, y0, y1):
         p = np.array([[x, y, z] for y in (y0, y1) for (x, z) in q], float)
         f = [(0, 1, 2), (0, 2, 3), (4, 6, 5), (4, 7, 6), (0, 4, 5), (0, 5, 1), (1, 5, 6), (1, 6, 2), (2, 6, 7), (2, 7, 3), (3, 7, 4), (3, 4, 0)]
         NEW.append((name, p, np.array(f)))
-# facade entrance: arched opening 1550, leaves 934 + post 200 + 416, transom, arched fanlight
-DC, DW, SPR = sum(FAC_DOOR)/2000 + OFF, (FAC_DOOR[1]-FAC_DOOR[0])/1000, 3.190            # centre x, clear width, arch springing (z); arch radius = DW/2 -> top 3.965
-DX0, DX1, R = DC-DW/2, DC+DW/2, DW/2
-LEAF_TOP, TR_TOP = 2.665, 2.762
-box('Siena_uzpildas_d', 3.56, DX0, 1.752, 2.703, PODIUM, 6.0); box('Siena_uzpildas_d', DX1, 5.31, 1.752, 2.703, PODIUM, 6.0)
-N_ = 24; arc = [(DC - R*np.cos(np.pi*k/N_), SPR + R*np.sin(np.pi*k/N_)) for k in range(N_+1)]
-# masonry above the arch: boundary = arc (left->right), top-right, top-left ; fan from the two top corners
-poly = list(arc) + [(DX1, 6.0), (DX0, 6.0)]; iTR, iTL = N_+1, N_+2; half = N_//2
-tris = [(iTL, k+1, k) for k in range(0, half)] + [(iTR, k+1, k) for k in range(half, N_)] + [(iTL, iTR, half)]
-extrude('Siena_uzpildas_d', poly, tris, 1.752, 2.703)
-yd = 1.80; t = 0.05
-for (u0, u1) in [(DX0, DX0+t), (DX1-t, DX1), (DX0+0.934, DX0+0.934+0.200)]:
-    box('Durys_staktos_0', u0, u1, yd-0.035, yd+0.035, PODIUM, LEAF_TOP)
-box('Durys_staktos_0', DX0, DX1, yd-0.035, yd+0.035, LEAF_TOP, TR_TOP)
-for (u0, u1) in [(DX0+t, DX0+0.934), (DX0+0.934+0.200, DX1-t)]:
-    box('Durys_varcia_0', u0, u1, yd-0.006, yd+0.006, PODIUM+0.10, LEAF_TOP-0.02)
-# arched fanlight glass (convex: rectangle + half disc) -> one sheet
-fpoly = [(DX0, TR_TOP), (DX1, TR_TOP)] + list(reversed(arc))
-extrude('Durys_vitrina_0', fpoly, [(0, k, k+1) for k in range(1, len(fpoly)-1)], yd-0.006, yd+0.006)
-# side entrance (left wall) unchanged
-d = dict(a=3.326, b=5.078, plane=1.92, z0=PODIUM, h=2.40); a, b, pl, z0, h = d['a'], d['b'], d['plane'], d['z0'], d['h']; t = 0.06
-for (u0, u1) in [(a, a+t), (b-t, b), ((a+b)/2-0.03, (a+b)/2+0.03)]: box('Durys_staktos_1', pl-0.035, pl+0.035, u0, u1, z0, z0+h)
-box('Durys_staktos_1', pl-0.035, pl+0.035, a, b, z0+h, z0+h+t)
-box('Durys_vitrina_1', pl-0.035, pl+0.035, a, b, 6.0-t, 6.0)
-box('Durys_vitrina_1', pl-0.006, pl+0.006, a+t, b-t, z0+h+t, 6.0-t)
+# ---- generic opening builders: axis 'y' = wall in xz-plane (facade), axis 'x' = wall in yz-plane (left wall)
+def W(axis, u, w, z): return (u, w, z) if axis == 'y' else (w, u, z)
+def gbox(axis, name, u0, u1, w0, w1, z0, z1):
+    if axis == 'y': box(name, u0, u1, w0, w1, z0, z1)
+    else: box(name, w0, w1, u0, u1, z0, z1)
+def gextrude(axis, name, poly, tris, w0, w1):
+    n = len(poly)
+    p = np.array([W(axis, u, w0, z) for u, z in poly] + [W(axis, u, w1, z) for u, z in poly], float)
+    f = [tuple(t) for t in tris] + [(a_+n, c_+n, b_+n) for a_, b_, c_ in tris]
+    for i in range(n):
+        j = (i+1) % n; f += [(i, j, j+n), (i, j+n, i+n)]
+    NEW.append((name, p, np.array(f)))
+DW, SPR, LEAF_TOP, TR_TOP = (FAC_DOOR[1]-FAC_DOOR[0])/1000, 3.190, 2.665, 2.762
+R = DW/2; N_ = 24
+def arched_door(axis, idx, c, o0, o1, plane, w0, w1):
+    """identical copy of the facade entrance: clear width 1550, leaves 934 + post 200 + 416, transom, arched fanlight"""
+    x0, x1 = c-DW/2, c+DW/2
+    gbox(axis, f'Siena_uzpildas_d{idx}', o0, x0, w0, w1, PODIUM, 6.0); gbox(axis, f'Siena_uzpildas_d{idx}', x1, o1, w0, w1, PODIUM, 6.0)
+    arc = [(c - R*np.cos(np.pi*k/N_), SPR + R*np.sin(np.pi*k/N_)) for k in range(N_+1)]
+    poly = list(arc) + [(x1, 6.0), (x0, 6.0)]; iTR, iTL, half = N_+1, N_+2, N_//2
+    tris = [(iTL, k+1, k) for k in range(0, half)] + [(iTR, k+1, k) for k in range(half, N_)] + [(iTL, iTR, half)]
+    gextrude(axis, f'Siena_uzpildas_d{idx}', poly, tris, w0, w1)
+    t = 0.05
+    for (u0, u1) in [(x0, x0+t), (x1-t, x1), (x0+0.934, x0+1.134)]: gbox(axis, f'Durys_staktos_{idx}', u0, u1, plane-0.035, plane+0.035, PODIUM, LEAF_TOP)
+    gbox(axis, f'Durys_staktos_{idx}', x0, x1, plane-0.035, plane+0.035, LEAF_TOP, TR_TOP)
+    for (u0, u1) in [(x0+t, x0+0.934), (x0+1.134, x1-t)]: gbox(axis, f'Durys_varcia_{idx}', u0, u1, plane-0.006, plane+0.006, PODIUM+0.10, LEAF_TOP-0.02)
+    fpoly = [(x0, TR_TOP), (x1, TR_TOP)] + list(reversed(arc))
+    gextrude(axis, f'Durys_vitrina_{idx}', fpoly, [(0, k, k+1) for k in range(1, len(fpoly)-1)], plane-0.006, plane+0.006)
+    return x0, x1
+def window(axis, idx, c, plane, w0, w1, zs):
+    a_, b_ = c-WIN_W/2, c+WIN_W/2
+    gbox(axis, f'Siena_uzpildas_{idx}', c-0.70, c+0.70, w0, w1, zs, WIN_Z0)
+    gbox(axis, f'Siena_uzpildas_{idx}', c-0.70, c+0.70, w0, w1, WIN_Z1, 6.0)
+    for (u0, u1, z0, z1) in [(a_, a_+FR, WIN_Z0, WIN_Z1), (b_-FR, b_, WIN_Z0, WIN_Z1), (a_, b_, WIN_Z0, WIN_Z0+FR), (a_, b_, WIN_Z1-FR, WIN_Z1)]:
+        gbox(axis, f'Langas_remas_{idx}', u0, u1, plane-0.035, plane+0.035, z0, z1)
+    gbox(axis, f'Langas_stiklas_{idx}', a_+FR, b_-FR, plane-0.006, plane+0.006, WIN_Z0+FR, WIN_Z1-FR)
+    return a_, b_
+# facade entrance
+DC = sum(FAC_DOOR)/2000 + OFF
+DX0, DX1 = arched_door('y', 0, DC, 3.56, 5.31, 1.80, 1.752, 2.703)
+yd = 1.80
+# side entrance in the left wall – identical door (opening y 3.326-5.078, wall x 1.868-2.833)
+LD0, LD1 = arched_door('x', 1, (3.326+5.078)/2, 3.326, 5.078, 1.92, 1.868, 2.833)
+# left-wall window – identical to the facade windows; remove the opaque 13 cm infill panel first
+P = V[T]; nrm = np.cross(P[:, 1]-P[:, 0], P[:, 2]-P[:, 0]); nl = np.linalg.norm(nrm, axis=1)+1e-12; nx = nrm[:, 0]/nl
+inf2 = (O == oid('a1_erdve1')) & (np.abs(nx) > 0.9) & (P[:, :, 0].min(1) > 2.10) & (P[:, :, 0].max(1) < 2.30) & (P[:, :, 1].min(1) > 6.30) & (P[:, :, 1].max(1) < 7.60) & (np.ptp(P[:, :, 2], 1) > 3)
+keep &= ~inf2
+LW0, LW1 = window('x', 'L', 6.95, 1.93, 1.868, 2.833, PODIUM)
 DOORS_2D = [dict(kind='facade', x0=DX0, x1=DX1, y=yd, leaves=[0.934, 0.416], post=0.200, inward=+1),
-            dict(kind='left', y0=3.326, y1=5.078, x=1.92, inward=+1)]
+            dict(kind='left', y0=LD0, y1=LD1, x=1.92, leaves=[0.934, 0.416], post=0.200, inward=+1)]
 WX_OUT = [(a, b, WIN_Z0, WIN_Z1) for a, b in WIN]
 
 # ---------------------------------------------------------------- assemble
@@ -155,6 +178,6 @@ for nm, p, f in NEW:
     Vn.append(p); Tn.append(f+off); On.append(np.full(len(f), names2.index(nm))); Mn.append(np.zeros(len(f), int)); off += len(p)
 np.savez_compressed(S + '/geo2.npz', V=np.vstack(Vn), T=np.vstack(Tn), O=np.concatenate(On), M=np.concatenate(Mn), names=np.array(names2), mats=np.array(mats))
 import json
-json.dump(dict(tables=TABLES, podium=PODIUM, pend_z=PEND_Z, ceil=CEIL, disc=DISC, tree=dict(scale=sc, x=px, y=py), doors=DOORS_2D, windows=WX_OUT, win_z=[WIN_Z0, WIN_Z1], door=dict(x0=DX0, x1=DX1, leaf_top=LEAF_TOP, transom=TR_TOP, spring=SPR, top=SPR+R)),
+json.dump(dict(tables=TABLES, podium=PODIUM, pend_z=PEND_Z, ceil=CEIL, disc=DISC, tree=dict(scale=sc, x=px, y=py), doors=DOORS_2D, windows=WX_OUT, win_z=[WIN_Z0, WIN_Z1], door=dict(x0=DX0, x1=DX1, leaf_top=LEAF_TOP, transom=TR_TOP, spring=SPR, top=SPR+R), left_window=[LW0, LW1]),
           open(S + '/geo2_meta.json', 'w'), indent=1)
 print('saved geo2', off)
