@@ -90,8 +90,12 @@ P = V[T]; nrm = np.cross(P[:, 1]-P[:, 0], P[:, 2]-P[:, 0]); nl = np.linalg.norm(
 infill = (O == oid('a1_erdve1')) & (np.abs(ny) > 0.9) & (P[:, :, 1].min(1) > 1.93) & (P[:, :, 1].max(1) < 2.14) & (P[:, :, 2].min(1) > 0.85) & (np.ptp(P[:, :, 2], 1) > 3)
 keep &= ~infill
 WIN = []
-for i, (a0, b0, _, _) in enumerate(WX):
-    c = (a0+b0)/2; a, b = c-WIN_W/2, c+WIN_W/2; yc = 1.785; WIN.append((a, b))
+# exact copy of the facade elevation: x_model = x_facade/1000 + OFF (OFF = least-squares fit of the 5 opening centres)
+FAC_WIN = [(5266, 6636), (8056, 9426), (10836, 12206), (13736, 15106)]; FAC_DOOR = (2366, 3916)
+_mc = [(a+b)/2 for a, b, _, _ in WX] + [4.435]; _fc = [(a+b)/2000 for a, b in FAC_WIN] + [sum(FAC_DOOR)/2000]
+OFF = round(sum(m - f for m, f in zip(_mc, _fc))/5, 3); print('facade offset', OFF)
+for i, (fa, fb) in enumerate(FAC_WIN):
+    a, b = fa/1000 + OFF, fb/1000 + OFF; c = (a+b)/2; yc = 1.785; WIN.append((a, b))
     # masonry above / below the window inside the deep reveal
     box(f'Siena_uzpildas_{i}', c-0.70, c+0.70, 1.752, 2.706, 0.90, WIN_Z0)
     box(f'Siena_uzpildas_{i}', c-0.70, c+0.70, 1.752, 2.706, WIN_Z1, 6.0)
@@ -114,7 +118,7 @@ def strip_poly(name, pts_xz, y0, y1):
         f = [(0, 1, 2), (0, 2, 3), (4, 6, 5), (4, 7, 6), (0, 4, 5), (0, 5, 1), (1, 5, 6), (1, 6, 2), (2, 6, 7), (2, 7, 3), (3, 7, 4), (3, 4, 0)]
         NEW.append((name, p, np.array(f)))
 # facade entrance: arched opening 1550, leaves 934 + post 200 + 416, transom, arched fanlight
-DC, DW, SPR = 4.435, 1.550, 3.190            # centre x, clear width, arch springing (z); arch radius = DW/2 -> top 3.965
+DC, DW, SPR = sum(FAC_DOOR)/2000 + OFF, (FAC_DOOR[1]-FAC_DOOR[0])/1000, 3.190            # centre x, clear width, arch springing (z); arch radius = DW/2 -> top 3.965
 DX0, DX1, R = DC-DW/2, DC+DW/2, DW/2
 LEAF_TOP, TR_TOP = 2.665, 2.762
 box('Siena_uzpildas_d', 3.56, DX0, 1.752, 2.703, PODIUM, 6.0); box('Siena_uzpildas_d', DX1, 5.31, 1.752, 2.703, PODIUM, 6.0)
