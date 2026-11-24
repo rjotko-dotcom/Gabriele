@@ -92,6 +92,7 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 
   <!-- marquee band -->
   <div class="band" id="band" style="top:1402px"><div id="bandt"></div></div>
+  <div id="fine" class="abs" style="left:60px;right:60px;top:1548px;text-align:center;font-weight:400;font-size:22px;line-height:31px;color:rgba(255,255,255,.62)">Pasiūlymas galioja iki 2026 m. lapkričio 30 d. Pasiūlymo sąlygos – salone.<br>Nuotrauka iliustracinė.</div>
  </div>
 
  <!-- outro -->
@@ -110,7 +111,7 @@ const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),P=(t,a,b)=>cl((t-a)/(b-a)),L=(a,b,x)=>a+(b-a)*x;
 const eo=x=>1-Math.pow(1-x,3),eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,q5=x=>1-Math.pow(1-x,5);
 const op=(id,v)=>$(id).style.opacity=v;
-const unit='BLACK FRIDAY  •  -20 %  •  NISSAN QASHQAI  •  RIBOTAS PASIŪLYMAS  •  ';
+const unit='BLACK FRIDAY  •  -20 %  •  NISSAN QASHQAI  •  TIK IKI LAPKRIČIO 30 D.  •  ';
 $('bandt').textContent=unit.repeat(5);const bu=document.createElement('span');bu.textContent=unit;bu.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;font:800 40px M;letter-spacing:.14em';document.body.appendChild(bu);
 const gc=$('grain').getContext('2d');const grains=[];
 for(let k=0;k<6;k++){const id=gc.createImageData(540,960);let seed=k*99991+7;
@@ -142,30 +143,33 @@ window.renderI=function(t,frame){
   // ---- header
   op('hdr',eo(P(t,1.35,1.75))*(1-eio(P(t,7.25,7.6))));
   // ---- S2 -20%
-  const pin=q5(P(t,1.38,1.9));
+  const VB=location.hash==='#B';
+  const k2=VB?3.0:0;  // B: -20% block appears 3 s later
+  const pin=q5(P(t,1.38+k2,1.9+k2));
   $('pc').style.transform=`translateY(${L(300,0,pin)}px)`;
-  $('slash').style.height=L(0,190,eio(P(t,1.45,1.8)))+'px';
-  glint($('pct'),t,2.4,3.2);
-  const s2out=eio(P(t,4.25,4.55));
+  $('slash').style.height=L(0,190,eio(P(t,1.45+k2,1.8+k2)))+'px';
+  glint($('pct'),t,2.4+k2,3.2+k2);
+  const s2out=VB?0:eio(P(t,4.25,4.55));
   $('pc').style.opacity=1-s2out; if(t>4.25)$('pc').style.transform=`translateY(${L(0,-300,s2out)}px)`;
   // model name
   $('mdl').style.transform=`translateY(${L(140,0,q5(P(t,1.7,2.2)))}px)`;
   op('mdl',1-eio(P(t,7.25,7.6)));
   // ---- S3 price
-  op('old',eo(P(t,4.4,4.75)));$('old').style.transform=`translateY(${L(30,0,eo(P(t,4.4,4.75)))}px)`;
-  $('strike').style.width=L(0,268,eio(P(t,4.85,5.15)))+'px';
-  const np=P(t,4.95,5.95);op('new',eo(P(t,4.9,5.2)));
+  const k3=VB?-3.25:0;  // B: price block first
+  op('old',eo(P(t,4.4+k3,4.75+k3)));$('old').style.transform=`translateY(${L(30,0,eo(P(t,4.4+k3,4.75+k3)))}px)`;
+  $('strike').style.width=L(0,268,eio(P(t,4.85+k3,5.15+k3)))+'px';
+  const np=VB?P(t,1.6,2.45):P(t,4.95,5.95);op('new',eo(P(t,4.9+k3,5.2+k3)));
   const v=Math.round(L(38190,30070,eio(np))/10)*10;
   $('num').textContent=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' €';
-  glint($('num'),t,6.3,7.0);
-  $('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,5.95,6.3))):1})`;
-  const pp=P(t,6.05,6.4);op('pill',pp>0?eo(pp):0);$('pill').style.transform=`scale(${L(.85,1,q5(pp))})`;
-  op('s3',1-eio(P(t,7.25,7.6)));
+  glint($('num'),t,VB?3.0:6.3,VB?3.7:7.0);
+  const ne=VB?2.45:5.95;$('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,ne,ne+.35))):1})`;
+  const pp=VB?P(t,2.55,2.9):P(t,6.05,6.4);op('pill',pp>0?eo(pp):0);$('pill').style.transform=`scale(${L(.85,1,q5(pp))})`;
+  const s3o=VB?eio(P(t,4.15,4.45)):eio(P(t,7.25,7.6));op('s3',1-s3o);$('s3').style.transform=VB?`translateY(${L(0,-120,s3o)}px)`:'';
   // ---- band
   const bi=q5(P(t,1.5,1.95));
   $('band').style.transform=`translateX(${L(-1300,0,bi)}px) rotate(-4deg)`;
   $('bandt').style.transform=`translateX(${-((t*150)%bu.getBoundingClientRect().width)}px)`;
-  op('band',1-eio(P(t,7.25,7.6)));
+  op('band',1-eio(P(t,7.25,7.6)));op('fine',eo(P(t,1.9,2.4))*(1-eio(P(t,7.25,7.6))));
   // ---- main fade, outro
   const mo=eio(P(t,7.25,7.65));$('main').style.opacity=1-mo;
   op('out',mo);
