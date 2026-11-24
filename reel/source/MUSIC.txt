@@ -1,5 +1,2 @@
-Music (all from FreePD.com, public domain / CC0, mirror https://archive.org/details/freepd):
-- Main: "Inspiration" (start 2.33 s, +2.13% to 120 BPM)
-- Alt B: "Motions" (start 0.24 s, -2.44% to 120 BPM)
-- Alt C: "Advertime" (start 0.23 s)
-Sound design synthesized in sfx_mix.py. Mastered to about -14.5 LUFS / -1.5 dBTP.
+Main video audio: synthesized in audio.py (original, no third-party music), mastered to -16 LUFS / -1.5 dBTP.
+Alternatives in reel/alternatives use FreePD.com tracks (public domain / CC0, https://archive.org/details/freepd): "Motions", "Advertime".
