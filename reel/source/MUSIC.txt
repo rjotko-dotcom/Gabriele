@@ -1,2 +1,4 @@
 Main video audio: synthesized in audio.py (original, no third-party music), mastered to -16 LUFS / -1.5 dBTP.
 Alternatives in reel/alternatives use FreePD.com tracks (public domain / CC0, https://archive.org/details/freepd): "Motions", "Advertime".
+
+Outros (reel/outros): sound designed in reel/source/outro_audio.py (original). Logos: Nissan from the supplied poster; Citroën and Hyundai from Simple Icons (simple-icons@13.21.0), trademarks of their owners.

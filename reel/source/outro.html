@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:M;src:url(fonts/montl-700.woff2);font-weight:700}
+@font-face{font-family:M;src:url(fonts/montl-600.woff2);font-weight:600}
+html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
+#stage{position:absolute;inset:0;overflow:hidden;font-family:M,sans-serif;color:#fff;
+  background:radial-gradient(90% 55% at 50% 48%,#141414 0,#070707 60%,#000 100%)}
+.row{position:absolute;left:0;right:0;display:flex;justify-content:center;align-items:center}
+.fa{font-weight:700;font-size:104px;line-height:128px;white-space:nowrap;letter-spacing:-.01em;
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.div{width:3px;height:0;background:rgba(255,255,255,.75)}
+.logo{display:block}
+.wh{filter:invert(1)}
+.vig{position:absolute;inset:0;background:radial-gradient(130% 85% at 50% 50%,transparent 55%,rgba(0,0,0,.6) 100%)}
+#grain{position:absolute;inset:0;mix-blend-mode:overlay;opacity:.05;width:1080px;height:1920px}
+</style></head>
+<body><div id="stage">
+  <!-- single brand lockup -->
+  <div id="single" class="row" style="top:830px;height:260px">
+    <div style="height:128px;overflow:hidden"><div id="fa1" class="fa">Fakto Auto</div></div>
+    <div id="d1" class="div" style="margin:0 44px"></div>
+    <div id="lg1"></div>
+  </div>
+  <!-- multi brand lockup -->
+  <div id="multi" style="position:absolute;inset:0">
+    <div class="row" style="top:770px;height:128px"><div style="height:128px;overflow:hidden"><div id="fa2" class="fa">Fakto Auto</div></div></div>
+    <div class="row" style="top:950px;height:2px"><div id="hl" style="height:2px;width:0;background:rgba(255,255,255,.55)"></div></div>
+    <div class="row" style="top:1000px;height:150px;gap:0">
+      <div id="m0" style="width:240px;display:flex;justify-content:center"><img class="logo" src="logo_hd.png" style="height:112px"></div>
+      <div id="v0" class="div" style="height:0;width:2px;background:rgba(255,255,255,.5)"></div>
+      <div id="m1" style="width:240px;display:flex;justify-content:center"><img class="logo wh" src="citroen.svg" style="height:116px"></div>
+      <div id="v1" class="div" style="height:0;width:2px;background:rgba(255,255,255,.5)"></div>
+      <div id="m2" style="width:240px;display:flex;justify-content:center"><img class="logo wh" src="hyundai.svg" style="height:150px;width:150px;object-fit:contain"></div>
+    </div>
+  </div>
+  <div class="vig"></div>
+  <canvas id="grain" width="540" height="960"></canvas>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), P=(t,a,b)=>cl((t-a)/(b-a)), L=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, q5=x=>1-Math.pow(1-x,5);
+const LOGOS={nissan:'<img class="logo" src="logo_hd.png" style="height:132px">',
+  citroen:'<img class="logo wh" src="citroen.svg" style="height:150px">',
+  hyundai:'<img class="logo wh" src="hyundai.svg" style="height:190px;width:190px;object-fit:contain">'};
+const brand=(location.hash||'#nissan').slice(1);
+const multi=brand==='all';
+$('single').style.display=multi?'none':'flex';$('multi').style.display=multi?'block':'none';
+if(!multi)$('lg1').innerHTML=LOGOS[brand];
+const gc=$('grain').getContext('2d');const grains=[];
+for(let k=0;k<6;k++){const id=gc.createImageData(540,960);let seed=k*99991+7;
+  for(let i=0;i<id.data.length;i+=4){seed=(seed*1103515245+12345)&0x7fffffff;const v=(seed>>8)&255;id.data[i]=id.data[i+1]=id.data[i+2]=v;id.data[i+3]=255}grains.push(id)}
+function glint(el,t,a,b){const g=L(-30,130,eio(P(t,a,b)));el.style.backgroundImage=`linear-gradient(100deg,#e6e6e6 ${g-12}%,#ffffff ${g}%,#e6e6e6 ${g+12}%)`}
+window.render=function(t,frame){
+  const zoom=L(1,1.03,eo(P(t,0.15,4.0)));
+  if(!multi){
+    $('single').style.transform=`scale(${zoom})`;
+    $('fa1').style.transform=`translateY(${L(130,0,q5(P(t,0.15,0.65)))}px)`;
+    glint($('fa1'),t,1.0,1.85);
+    $('d1').style.height=L(0,120,eio(P(t,0.35,0.7)))+'px';
+    const lp=eo(P(t,0.45,0.95));$('lg1').style.opacity=lp;$('lg1').style.transform=`translateX(${L(-30,0,lp)}px)`;
+  }else{
+    $('multi').style.transform=`scale(${zoom})`;$('multi').style.transformOrigin='50% 50%';
+    $('fa2').style.transform=`translateY(${L(130,0,q5(P(t,0.15,0.65)))}px)`;
+    glint($('fa2'),t,1.25,2.1);
+    $('hl').style.width=L(0,620,eio(P(t,0.35,0.8)))+'px';
+    [0,1,2].forEach(i=>{const p=eo(P(t,0.55+i*0.15,1.0+i*0.15));const m=$('m'+i);m.style.opacity=p;m.style.transform=`translateY(${L(26,0,p)}px)`});
+    [0,1].forEach(i=>$('v'+i).style.height=L(0,96,eio(P(t,0.75+i*0.15,1.05+i*0.15)))+'px');
+  }
+  $('stage').style.filter=`brightness(${1-eio(P(t,3.5,4.0))})`;
+  gc.putImageData(grains[frame%6],0,0);
+};
+window.render(0,0);
+</script></body></html>
