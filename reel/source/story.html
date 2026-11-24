@@ -33,15 +33,15 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 .hero{font-weight:800;line-height:.86;letter-spacing:-.02em;white-space:nowrap;-webkit-background-clip:text;background-clip:text;color:transparent}
 .band{position:absolute;left:-100px;width:1280px;height:84px;background:#e30613;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.5)}
 .band div{position:absolute;top:0;left:0;height:84px;line-height:84px;white-space:nowrap;font-weight:800;font-size:40px;letter-spacing:.14em}
-.vig{position:absolute;inset:0;z-index:18;background:radial-gradient(130% 85% at 50% 50%,transparent 55%,rgba(0,0,0,.6) 100%);pointer-events:none}
+.vig{position:absolute;inset:0;z-index:18;background:radial-gradient(140% 90% at 50% 50%,transparent 65%,rgba(0,0,0,.28) 100%);pointer-events:none}
 #grain{position:absolute;inset:0;z-index:19;mix-blend-mode:overlay;opacity:.05;width:1080px;height:1920px}
 .fa{font-weight:700;font-size:104px;line-height:128px;white-space:nowrap;letter-spacing:-.01em;-webkit-background-clip:text;background-clip:text;color:transparent}
 </style></head>
 <body><div id="stage">
  <div class="layer" id="main">
   <div class="beam" id="beam" style="display:none"></div>
-  <div class="carwrap" id="cbg"><img src="bgfull.jpg" style="left:-120px;top:-1035px;width:1362px;height:2302px"></div>
-  <div class="carwrap" id="car"><img src="carcut.png">
+  <img id="cbg" src="bg9x16.jpg" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+  <div class="carwrap" id="car">
     <div class="sweep"><i id="sw"></i></div>
     <div class="flare" id="fa" style="left:648px;top:240px"><b></b><s></s></div>
     <div class="flare" id="fb" style="left:985px;top:226px"><b></b><s></s></div>
@@ -121,8 +121,8 @@ window.renderI=function(t,frame){
   // ---- car + parallax (whole main section 0..7.6)
   const e=eo(P(t,0,7.6));
   const carY=1150;
-  const s=0.9;
-  cam($('car'),566,330,s,540,carY); cam($('cbg'),566,330,s,540,carY);
+  const s=0.97;
+  cam($('car'),561,330,s,540,1190);
   const lit=1;
   $('car').style.filter=$('cbg').style.filter=`brightness(${lit})`;
   $('beam').style.transform=`translateX(${L(-500,900,P(t,0,7.6))}px) rotate(28deg)`;
