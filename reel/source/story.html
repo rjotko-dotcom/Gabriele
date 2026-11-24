@@ -8,6 +8,9 @@
 @font-face{font-family:M;src:url(fonts/montl-800.woff2);font-weight:800}
 @font-face{font-family:M;src:url(fonts/mont-500.woff2);font-weight:500;unicode-range:U+0100-024F}
 @font-face{font-family:M;src:url(fonts/mont-700.woff2);font-weight:700;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-800.woff2);font-weight:800;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-600.woff2);font-weight:600;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-400.woff2);font-weight:400;unicode-range:U+0100-024F}
 html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 *{box-sizing:border-box}
 #stage{position:absolute;inset:0;overflow:hidden;font-family:M,sans-serif;color:#fff;background:#000}
@@ -37,8 +40,7 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 <body><div id="stage">
  <div class="layer" id="main">
   <div class="beam" id="beam" style="display:none"></div>
-  <div class="spot" id="spot"></div>
-  <div class="carwrap plate" id="cbg"><img src="bgplate.png"></div>
+  <div class="carwrap" id="cbg"><img src="bgfull.jpg" style="left:-120px;top:-1035px;width:1362px;height:2302px"></div>
   <div class="carwrap" id="car"><img src="carcut.png">
     <div class="sweep"><i id="sw"></i></div>
     <div class="flare" id="fa" style="left:648px;top:240px"><b></b><s></s></div>
