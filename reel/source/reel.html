@@ -14,7 +14,7 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 .abs{position:absolute}
 .layer{position:absolute;inset:0;overflow:hidden}
 /* backgrounds */
-.wall{position:absolute;inset:-60px;background:url(car.png) center/cover;filter:blur(48px) brightness(.32) contrast(1.1)}
+.wall{position:absolute;inset:-60px;background:url(bgplate.png) center/cover;filter:blur(48px) brightness(.32) contrast(1.1)}
 .wallgrad{position:absolute;inset:0;background:
   radial-gradient(120% 60% at 50% 55%,transparent 0,rgba(0,0,0,.55) 70%,#000 100%),
   linear-gradient(180deg,#000 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.1) 60%,#000 100%)}
@@ -66,8 +66,9 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
   <div class="layer" id="s4">
     <div class="wall"></div><div class="wallgrad"></div>
     <div class="beam" id="b4"></div>
-    <div class="carwrap feather" id="c4"><img src="car.png">
-      <div class="sweep"><i id="sw4"></i></div>
+    <div class="carwrap feather" id="c4bg"><img src="bgplate.png"></div>
+    <div class="carwrap" id="c4"><img src="carcut.png">
+      <div class="sweep" style="-webkit-mask-image:url(lumcar.png)"><i id="sw4"></i></div>
       <div class="flare" id="f4a" style="left:648px;top:240px"><b></b><s></s></div>
       <div class="flare" id="f4b" style="left:985px;top:226px"><b></b><s></s></div>
     </div>
@@ -92,14 +93,14 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
       </div>
     </div>
     <!-- price -->
-    <div id="price" class="abs" style="left:92px;top:1345px;width:900px;height:220px">
+    <div id="price" class="abs" style="left:92px;top:1222px;width:900px;height:220px">
       <div class="abs red" id="pbar" style="left:0;top:10px;width:9px;height:0"></div>
       <div class="abs" id="old" style="left:44px;top:0;font-weight:500;font-size:58px;color:#cfcfcf">38&nbsp;190&nbsp;€
         <div class="abs" id="strike" style="left:-4px;top:33px;height:4px;width:0;background:#ddd"></div></div>
-      <div class="abs" id="new" style="left:44px;top:78px;white-space:nowrap"><span style="font-weight:700;font-size:72px">Nuo </span><span id="num" style="font-weight:700;font-size:124px;letter-spacing:-.01em">30&nbsp;070&nbsp;€</span></div>
+      <div class="abs" id="new" style="left:44px;top:78px;white-space:nowrap"><span style="font-weight:700;font-size:72px">Nuo </span><span id="num" style="font-weight:700;font-size:124px;letter-spacing:-.01em">30&nbsp;670&nbsp;€</span></div>
     </div>
     <!-- CTA -->
-    <div id="cta" class="abs" style="left:0;right:0;top:1585px;text-align:center">
+    <div id="cta" class="abs" style="left:0;right:0;top:1468px;text-align:center">
       <div style="display:inline-block;padding:20px 46px;border:2px solid rgba(255,255,255,.85);font-weight:600;font-size:32px;letter-spacing:.12em">APSILANKYKITE SALONE</div>
       <div style="margin-top:18px;font-weight:500;font-size:24px;letter-spacing:.3em;color:#bbb">RIBOTAS PASIŪLYMAS</div>
     </div>
@@ -175,38 +176,40 @@ window.renderOld=function(t,frame){
   // ---------- S4 hero
   {const p=P(t,6.5,15);
    // car: reveal from dark with push-in
-   const s=L(1.18,1.0,eo(P(t,6.5,9.5)))+L(0,.03,P(t,9.5,15));
-   cam($('c4'),566,330,s,540,1112);
-   const rv=eo(P(t,6.5,7.3));$('c4').style.filter=`brightness(${L(.15,1,rv)})`;
+   const e1=eo(P(t,6.3,9.3)), e2=P(t,9.3,15);
+   const s=L(1.05,0.9,e1)+L(0,.035,e2), sb=L(0.985,0.92,e1)+L(0,.012,e2);
+   cam($('c4'),566,330,s,540+L(28,0,e1)-20*e2,1075);
+   cam($('c4bg'),566,330,sb,540+L(-12,0,e1)+8*e2,1075);
+   const rv=eo(P(t,6.3,6.8));$('c4').style.filter=$('c4bg').style.filter=`brightness(${L(.8,1,rv)})`;
    $('sw4').style.transform=`translateX(${L(-400,1500,eio(P(t,7.0,8.4)))}px) skewX(-22deg)`;
    $('sw4').style.opacity=P(t,7.0,7.1);
    const sw2=P(t,12.9,14.1);if(t>12.9){$('sw4').style.transform=`translateX(${L(-400,1500,eio(sw2))}px) skewX(-22deg)`}
-   const g1=Math.max(0,1-Math.abs(t-8.3)/.8)**1.5*.8, g2=Math.max(0,1-Math.abs(t-13.6)/.8)**1.5*.8;
+   const g1=Math.max(0,1-Math.abs(t-6.95)/.6)**1.5*.8, g2=Math.max(0,1-Math.abs(t-13.6)/.8)**1.5*.8;
    const g=Math.max(g1,g2);['f4a','f4b'].forEach((id,i)=>{$(id).style.opacity=g*(i?0.8:1);$(id).style.transform=`scale(${(.5+g*1.3)/s})`});
    $('b4').style.transform=`translateX(${L(200,760,p)}px) rotate(30deg)`;
    // header
-   op('hdr',eo(P(t,6.7,7.3)));$('hdr').style.transform=`translateY(${L(-30,0,eo(P(t,6.7,7.3)))}px)`;
+   op('hdr',eo(P(t,6.55,7.0)));$('hdr').style.transform=`translateY(${L(-30,0,eo(P(t,6.55,7.0)))}px)`;
    // title
-   $('t4a').style.transform=`translateY(${L(190,0,eio(P(t,6.9,7.6)))}px)`;
-   $('t4b').style.transform=`translateY(${L(190,0,eio(P(t,7.1,7.8)))}px)`;
+   $('t4a').style.transform=`translateY(${L(190,0,eio(P(t,6.75,7.35)))}px)`;
+   $('t4b').style.transform=`translateY(${L(190,0,eio(P(t,6.9,7.5)))}px)`;
    $('r4').style.width='0px';
    // -20%
-   $('slash').style.height=L(0,132,eio(P(t,7.9,8.4)))+'px';
-   const pp=P(t,8.05,8.75);op('pctt',eo(pp));
-   $('pctt').style.transform=`skewX(-8deg) translateX(${L(40,0,eo(pp))}px) scale(${L(1.08,1,eo(pp))})`;
+   $('slash').style.height=L(60,132,eio(P(t,6.3,6.6)))+'px';
+   const pp=P(t,6.32,6.85);op('pctt',t<6.3?0:1);
+   $('pctt').style.transform=`skewX(-8deg) translateX(${L(30,0,eo(pp))}px) scale(${L(1.3,1,eo(pp))})`;
    $('pctt').style.transformOrigin='30% 60%';
    // model name
-   $('mdl').style.transform=`translateY(${L(150,0,eio(P(t,8.6,9.3)))}px)`;
+   $('mdl').style.transform=`translateY(${L(150,0,eio(P(t,7.45,8.05)))}px)`;
    // price
-   $('pbar').style.height=L(0,190,eio(P(t,9.6,10.2)))+'px';
-   op('old',eo(P(t,9.7,10.1)));$('old').style.transform=`translateX(${L(-40,0,eo(P(t,9.7,10.1)))}px)`;
-   $('strike').style.width=L(0,262,eio(P(t,10.3,10.7)))+'px';
-   const np=P(t,10.6,11.9);op('new',np>0?eo(P(t,10.6,10.9)):0);
-   const v=Math.round(L(38190,30070,eio(np))/10)*10;
+   $('pbar').style.height=L(0,190,eio(P(t,8.8,9.4)))+'px';
+   op('old',eo(P(t,8.9,9.3)));$('old').style.transform=`translateX(${L(-40,0,eo(P(t,8.9,9.3)))}px)`;
+   $('strike').style.width=L(0,262,eio(P(t,9.5,9.9)))+'px';
+   const np=P(t,9.8,11.1);op('new',np>0?eo(P(t,9.8,10.1)):0);
+   const v=Math.round(L(38190,30670,eio(np))/10)*10;
    $('num').textContent=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' €';
-   $('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,11.9,12.3))):1})`;$('new').style.transformOrigin='0 50%';
+   $('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,11.1,11.5))):1})`;$('new').style.transformOrigin='0 50%';
    // CTA
-   op('cta',eo(P(t,12.6,13.2)));$('cta').style.transform=`translateY(${L(30,0,eo(P(t,12.6,13.2)))}px)`;
+   op('cta',eo(P(t,11.8,12.4)));$('cta').style.transform=`translateY(${L(30,0,eo(P(t,11.8,12.4)))}px)`;
    
   }
   // ---------- flashes at cuts and fade out
@@ -219,7 +222,7 @@ window.render=function(t,frame){
   renderOld(t+6.3,frame);
   op('s1',0);op('s2',0);op('s3',0);op('cap1',0);op('cap2',0);
   const ho=eo(P(t,0.4,1.0)), oo=eio(P(t,7.75,8.12));
-  $('s4').style.opacity=eo(P(t,0,0.7))*(1-oo);
+  $('s4').style.opacity=1-oo;
   $('stage').style.filter=`brightness(${1-eio(P(t,11.0,11.5))})`;
   // end card: Fakto Auto (primary) | Nissan (secondary)
   op('biglogo',0);op('outtxt',0);

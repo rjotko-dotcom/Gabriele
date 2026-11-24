@@ -66,7 +66,7 @@ add(np.sin(2*np.pi*36.71*x)*np.minimum(1,x/0.25)*np.exp(-x*1.4),8.05,0.11)
 for f,dt,p in ((1174.66,0,-.2),(1760.0,0.12,.2),(2349.3,0.24,0)):
     xb=x; add((np.sin(2*np.pi*f*xb)+.3*np.sin(2*np.pi*f*2.01*xb)*np.exp(-xb*4))*np.exp(-xb*1.8),8.05+dt,0.022,p)
 # price ticks
-for tt in np.linspace(4.3,5.5,13):
+for tt in np.linspace(3.5,4.7,13):
     Ls=int(.02*sr); x2=np.arange(Ls)/sr; add(np.sin(2*np.pi*3600*x2)*np.exp(-x2*250),tt,0.022)
 # reverb
 def rev(x,seed,dec=2.2):
