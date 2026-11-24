@@ -75,7 +75,7 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
     <div id="hdr" class="abs" style="left:0;right:0;top:130px;height:150px">
       <div class="abs" style="left:96px;top:46px;font-weight:600;font-size:56px;letter-spacing:-.01em">Fakto Auto</div>
       <div class="abs" id="hdrline" style="left:458px;top:30px;width:3px;height:96px;background:rgba(255,255,255,.75)"></div>
-      <img class="abs logo" src="logo.png" style="left:510px;top:0;height:150px;opacity:0">
+      <img class="abs logo" src="logo.png" style="left:510px;top:0;height:150px">
     </div>
     <!-- title -->
     <div class="mask" style="left:86px;top:300px;width:950px;height:150px"><div class="abs big" id="t4a" style="font-size:150px;left:0;top:10px">BLACK</div></div>
@@ -112,6 +112,14 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
   <div id="outtxt" class="abs" style="left:0;right:0;top:1150px;text-align:center;z-index:7;opacity:0">
     <div id="outline" style="width:0;height:2px;background:#e30613;margin:0 auto 34px"></div>
     <div style="font-weight:600;font-size:44px;letter-spacing:.32em;text-indent:.32em">FAKTO AUTO</div>
+  </div>
+  <div id="endlock" style="position:absolute;left:0;right:0;top:800px;height:260px;display:flex;justify-content:center;align-items:center;z-index:7;opacity:0">
+    <div style="position:relative">
+      <div style="height:128px;overflow:hidden"><div id="eFA" style="font-weight:700;font-size:104px;line-height:128px;white-space:nowrap;letter-spacing:-.01em;-webkit-background-clip:text;background-clip:text;color:transparent">Fakto Auto</div></div>
+      <div id="eRed" style="position:absolute;left:4px;top:146px;height:10px;width:0;background:#e30613"></div>
+    </div>
+    <div id="eDiv" style="width:3px;height:0;background:rgba(255,255,255,.75);margin:0 44px"></div>
+    <img id="eLogo" src="logo_hd.png" style="height:132px">
   </div>
   <div class="bars" id="barT" style="top:0"></div><div class="bars" id="barB" style="bottom:0"></div>
   <div class="cap" id="cap1" style="top:1500px">NISSAN&nbsp;QASHQAI</div>
@@ -213,16 +221,17 @@ window.render=function(t,frame){
   const ho=eo(P(t,0.4,1.0)), oo=eio(P(t,7.75,8.12));
   $('s4').style.opacity=eo(P(t,0,0.7))*(1-oo);
   $('stage').style.filter=`brightness(${1-eio(P(t,11.0,11.5))})`;
-  // logo travels from header to centre
-  const q=P(t,8.0,8.55), p=1-Math.pow(1-q,5), s0=124/360;
-  const sc=L(s0,1,p)*L(1,1.035,eo(P(t,8.55,11.5)));
-  const lg=$('biglogo');lg.style.opacity=t<8?ho:1;
-  lg.style.transform=`translate(${L(58.5,0,p)}px,${L(-695,0,p)}px) scale(${sc})`;
-  lg.style.filter=`drop-shadow(0 0 ${L(0,40,eio(P(t,8.4,9.2)))}px rgba(255,255,255,${L(0,.28,eio(P(t,8.4,9.2)))}))`;
-  $('lgl').style.transform=`translateX(${L(-300,700,eio(P(t,8.6,9.4)))}px) skewX(-22deg)`;
-  $('lgl').style.opacity=t>8.6&&t<9.4?1:0;
-  op('outtxt',eo(P(t,8.75,9.35)));$('outtxt').style.transform=`translateY(${L(24,0,eo(P(t,8.75,9.35)))}px)`;
-  $('outline').style.width=L(0,90,eio(P(t,8.75,9.45)))+'px';
+  // end card: Fakto Auto (primary) | Nissan (secondary)
+  op('biglogo',0);op('outtxt',0);
+  const el=$('endlock');el.style.opacity=t<7.9?0:1;
+  el.style.transform=`scale(${L(1,1.03,eo(P(t,8.0,11.5)))})`;
+  const fa=1-Math.pow(1-P(t,8.0,8.5),5);
+  $('eFA').style.transform=`translateY(${L(130,0,fa)}px)`;
+  const g=L(-30,130,eio(P(t,8.85,9.7)));
+  $('eFA').style.backgroundImage=`linear-gradient(100deg,#e6e6e6 ${g-12}%,#ffffff ${g}%,#e6e6e6 ${g+12}%)`;
+  $('eDiv').style.height=L(0,120,eio(P(t,8.2,8.55)))+'px';
+  const lp=eo(P(t,8.3,8.8));$('eLogo').style.opacity=lp;$('eLogo').style.transform=`translateX(${L(-30,0,lp)}px)`;
+  $('eRed').style.width=L(0,150,eio(P(t,8.55,9.05)))+'px';
 };
 window.render(0,0);
 </script></body></html>
