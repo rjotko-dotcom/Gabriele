@@ -210,19 +210,19 @@ window.renderOld=function(t,frame){
 window.render=function(t,frame){
   renderOld(t+6.3,frame);
   op('s1',0);op('s2',0);op('s3',0);op('cap1',0);op('cap2',0);
-  const ho=eo(P(t,0.4,1.0)), oo=eio(P(t,8.9,9.8));
+  const ho=eo(P(t,0.4,1.0)), oo=eio(P(t,7.75,8.12));
   $('s4').style.opacity=eo(P(t,0,0.7))*(1-oo);
-  $('stage').style.filter=`brightness(${1-eio(P(t,12.9,13.5))})`;
+  $('stage').style.filter=`brightness(${1-eio(P(t,11.0,11.5))})`;
   // logo travels from header to centre
-  const p=eio(P(t,9.0,10.4)), s0=124/360;
-  const sc=L(s0,1,p)*L(1,1.04,P(t,10.4,13.5));
-  const lg=$('biglogo');lg.style.opacity=t<9?ho:1;
+  const q=P(t,8.0,8.55), p=1-Math.pow(1-q,5), s0=124/360;
+  const sc=L(s0,1,p)*L(1,1.035,eo(P(t,8.55,11.5)));
+  const lg=$('biglogo');lg.style.opacity=t<8?ho:1;
   lg.style.transform=`translate(${L(58.5,0,p)}px,${L(-695,0,p)}px) scale(${sc})`;
-  lg.style.filter=`drop-shadow(0 0 ${L(0,40,eio(P(t,10.2,11.2)))}px rgba(255,255,255,${L(0,.28,eio(P(t,10.2,11.2)))}))`;
-  $('lgl').style.transform=`translateX(${L(-300,700,eio(P(t,10.5,11.6)))}px) skewX(-22deg)`;
-  $('lgl').style.opacity=t>10.5&&t<11.6?1:0;
-  op('outtxt',eo(P(t,10.9,11.7)));$('outtxt').style.transform=`translateY(${L(24,0,eo(P(t,10.9,11.7)))}px)`;
-  $('outline').style.width=L(0,90,eio(P(t,10.9,11.8)))+'px';
+  lg.style.filter=`drop-shadow(0 0 ${L(0,40,eio(P(t,8.4,9.2)))}px rgba(255,255,255,${L(0,.28,eio(P(t,8.4,9.2)))}))`;
+  $('lgl').style.transform=`translateX(${L(-300,700,eio(P(t,8.6,9.4)))}px) skewX(-22deg)`;
+  $('lgl').style.opacity=t>8.6&&t<9.4?1:0;
+  op('outtxt',eo(P(t,8.75,9.35)));$('outtxt').style.transform=`translateY(${L(24,0,eo(P(t,8.75,9.35)))}px)`;
+  $('outline').style.width=L(0,90,eio(P(t,8.75,9.45)))+'px';
 };
 window.render(0,0);
 </script></body></html>

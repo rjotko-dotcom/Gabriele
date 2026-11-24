@@ -1,0 +1,2 @@
+Music: "Chronos" from FreePD.com (public domain / CC0), mirror https://archive.org/details/freepd
+Cut from 22.314 s, sped up 2.17% to 120 BPM, mixed with audio_mix.py, mastered to -14 LUFS / -1.5 dBTP.
