@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:M;src:url(fonts/montl-400.woff2);font-weight:400}
+@font-face{font-family:M;src:url(fonts/montl-500.woff2);font-weight:500}
+@font-face{font-family:M;src:url(fonts/montl-600.woff2);font-weight:600}
+@font-face{font-family:M;src:url(fonts/montl-700.woff2);font-weight:700}
+@font-face{font-family:M;src:url(fonts/montl-800.woff2);font-weight:800}
+@font-face{font-family:M;src:url(fonts/mont-500.woff2);font-weight:500;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-700.woff2);font-weight:700;unicode-range:U+0100-024F}
+html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
+*{box-sizing:border-box}
+#stage{position:absolute;inset:0;overflow:hidden;font-family:M,sans-serif;color:#fff;background:#060606}
+.abs{position:absolute}
+.layer{position:absolute;inset:0;overflow:hidden}
+/* backgrounds */
+.wall{position:absolute;inset:-60px;background:url(car.png) center/cover;filter:blur(48px) brightness(.32) contrast(1.1)}
+.wallgrad{position:absolute;inset:0;background:
+  radial-gradient(120% 60% at 50% 55%,transparent 0,rgba(0,0,0,.55) 70%,#000 100%),
+  linear-gradient(180deg,#000 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.1) 60%,#000 100%)}
+.beam{position:absolute;width:560px;height:3200px;left:0;top:-700px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.10) 30%,rgba(255,255,255,.17) 50%,rgba(255,255,255,.10) 70%,transparent);
+  filter:blur(30px);transform-origin:center;mix-blend-mode:screen}
+.carwrap{position:absolute;left:0;top:0;width:1122px;height:590px;transform-origin:0 0}
+.carwrap img{position:absolute;left:0;top:0;width:1122px;height:590px}
+.feather{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 80%,transparent 100%),linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.sweep{position:absolute;inset:0;-webkit-mask-image:url(lum.png);-webkit-mask-size:100% 100%}
+.sweep i{position:absolute;top:-50%;height:200%;width:260px;left:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-22deg)}
+.flare{position:absolute;width:0;height:0}
+.flare b{position:absolute;left:-90px;top:-90px;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,1) 0,rgba(220,235,255,.6) 12%,rgba(180,210,255,.15) 40%,transparent 70%)}
+.flare s{position:absolute;left:-420px;top:-3px;width:840px;height:6px;
+  background:linear-gradient(90deg,transparent,rgba(200,225,255,.85),transparent);filter:blur(1.5px)}
+.bars{position:absolute;left:0;right:0;height:0;background:#000;z-index:5}
+.cap{position:absolute;left:0;right:0;text-align:center;font-weight:500;letter-spacing:.55em;font-size:30px;text-indent:.55em;color:#e8e8e8}
+.red{background:#e30613}
+.big{font-weight:700;line-height:.9;letter-spacing:-.01em}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:20;pointer-events:none}
+.vig{position:absolute;inset:0;z-index:18;background:radial-gradient(130% 85% at 50% 50%,transparent 55%,rgba(0,0,0,.6) 100%)}
+#grain{position:absolute;inset:0;z-index:19;mix-blend-mode:overlay;opacity:.13;width:1080px;height:1920px}
+.mask{overflow:hidden;position:absolute}
+.logo{height:150px}
+</style></head>
+<body>
+<div id="stage">
+  <!-- S1: headlight close-up -->
+  <div class="layer" id="s1">
+    <div class="carwrap" id="c1"><img src="car.png"><div class="flare" id="f1" style="left:640px;top:240px"><b></b><s></s></div></div>
+    <div class="beam" id="b1"></div>
+  </div>
+  <!-- S2: wheel close-up -->
+  <div class="layer" id="s2">
+    <div class="carwrap" id="c2"><img src="car.png"></div>
+  </div>
+  <!-- S3: typography slam -->
+  <div class="layer" id="s3" style="background:#050505">
+    <div class="wall" id="w3"></div><div class="wallgrad"></div>
+    <div class="beam" id="b3"></div>
+    <div class="mask" style="left:70px;top:640px;width:960px;height:220px"><div class="abs big" id="t3a" style="font-size:228px;left:0;top:10px">BLACK</div></div>
+    <div class="mask" style="left:70px;top:860px;width:1000px;height:230px"><div class="abs big" id="t3b" style="font-size:228px;left:0;top:10px">FRIDAY</div></div>
+    <div class="abs red" id="r3" style="left:76px;top:1120px;height:14px;width:0"></div>
+  </div>
+  <!-- S4+: hero composition -->
+  <div class="layer" id="s4">
+    <div class="wall"></div><div class="wallgrad"></div>
+    <div class="beam" id="b4"></div>
+    <div class="carwrap feather" id="c4"><img src="car.png">
+      <div class="sweep"><i id="sw4"></i></div>
+      <div class="flare" id="f4a" style="left:648px;top:240px"><b></b><s></s></div>
+      <div class="flare" id="f4b" style="left:985px;top:226px"><b></b><s></s></div>
+    </div>
+    <!-- header -->
+    <div id="hdr" class="abs" style="left:0;right:0;top:130px;height:150px">
+      <div class="abs" style="left:96px;top:46px;font-weight:600;font-size:56px;letter-spacing:-.01em">Fakto Auto</div>
+      <div class="abs" id="hdrline" style="left:458px;top:30px;width:3px;height:96px;background:rgba(255,255,255,.75)"></div>
+      <img class="abs logo" src="logo.png" style="left:510px;top:0;height:150px">
+    </div>
+    <!-- title -->
+    <div class="mask" style="left:86px;top:300px;width:950px;height:150px"><div class="abs big" id="t4a" style="font-size:150px;left:0;top:10px">BLACK</div></div>
+    <div class="mask" style="left:86px;top:438px;width:950px;height:150px"><div class="abs big" id="t4b" style="font-size:150px;left:0;top:10px">FRIDAY</div></div>
+    <div class="abs red" id="r4" style="left:92px;top:604px;height:12px;width:0"></div>
+    <div id="pct" class="abs" style="left:0;top:0">
+      <div class="abs red" id="slash" style="left:640px;top:636px;width:10px;height:0;transform:skewX(-16deg);transform-origin:top"></div>
+      <div class="abs" id="pctt" style="left:676px;top:640px;font-weight:700;font-style:italic;font-size:112px;letter-spacing:-.03em;white-space:nowrap;transform:skewX(-8deg)">-20&#8239;%</div>
+    </div>
+    <div class="mask" style="left:92px;top:640px;width:540px;height:140px">
+      <div id="mdl" class="abs" style="left:0;top:0">
+        <div style="font-weight:700;font-size:54px;line-height:1.15">Nissan Qashqai</div>
+        <div style="font-weight:400;font-size:46px;line-height:1.2;color:#ddd">N-Design</div>
+      </div>
+    </div>
+    <!-- price -->
+    <div id="price" class="abs" style="left:92px;top:1345px;width:900px;height:220px">
+      <div class="abs red" id="pbar" style="left:0;top:10px;width:9px;height:0"></div>
+      <div class="abs" id="old" style="left:44px;top:0;font-weight:500;font-size:58px;color:#cfcfcf">38&nbsp;190&nbsp;€
+        <div class="abs" id="strike" style="left:-4px;top:33px;height:4px;width:0;background:#ddd"></div></div>
+      <div class="abs" id="new" style="left:44px;top:78px;white-space:nowrap"><span style="font-weight:700;font-size:72px">Nuo </span><span id="num" style="font-weight:700;font-size:124px;letter-spacing:-.01em">30&nbsp;070&nbsp;€</span></div>
+    </div>
+    <!-- CTA -->
+    <div id="cta" class="abs" style="left:0;right:0;top:1585px;text-align:center">
+      <div style="display:inline-block;padding:20px 46px;border:2px solid rgba(255,255,255,.85);font-weight:600;font-size:32px;letter-spacing:.12em">APSILANKYKITE SALONE</div>
+      <div style="margin-top:18px;font-weight:500;font-size:24px;letter-spacing:.3em;color:#bbb">RIBOTAS PASIŪLYMAS</div>
+    </div>
+  </div>
+  <div class="bars" id="barT" style="top:0"></div><div class="bars" id="barB" style="bottom:0"></div>
+  <div class="cap" id="cap1" style="top:1500px">NISSAN&nbsp;QASHQAI</div>
+  <div class="cap" id="cap2" style="top:1500px">N-DESIGN</div>
+  <div class="vig"></div>
+  <canvas id="grain" width="540" height="960"></canvas>
+  <div class="flash" id="flash"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const P=(t,a,b)=>cl((t-a)/(b-a));                 // progress
+const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eExpo=x=>x>=1?1:1-Math.pow(2,-10*x);
+const back=x=>{const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const L=(a,b,x)=>a+(b-a)*x;
+function rnd(i){const s=Math.sin(i*127.1+311.7)*43758.5453;return s-Math.floor(s)}
+// grain frames
+const gc=$('grain').getContext('2d');const grains=[];
+for(let k=0;k<6;k++){const id=gc.createImageData(540,960);let seed=k*99991+7;
+  for(let i=0;i<id.data.length;i+=4){seed=(seed*1103515245+12345)&0x7fffffff;const v=(seed>>8)&255;id.data[i]=id.data[i+1]=id.data[i+2]=v;id.data[i+3]=255}grains.push(id)}
+function cam(el,cx,cy,s,fx=540,fy=960){ // place point (cx,cy) of strip at (fx,fy) with scale s
+  el.style.transform=`translate(${fx-cx*s}px,${fy-cy*s}px) scale(${s})`;}
+function shake(t,t0,amp,dur){const p=(t-t0)/dur;if(p<0||p>1)return[0,0];const d=amp*Math.pow(1-p,2);
+  return[(rnd(Math.floor(t*60))-.5)*2*d,(rnd(Math.floor(t*60)+50)-.5)*2*d]}
+function op(id,v){$(id).style.opacity=v}
+const CUTS=[2,4,6.5,12.5];
+window.render=function(t,frame){
+  // ---------- visibility
+  op('s1',t<2.05?1:0); op('s2',t>=2&&t<4.05?1:0); op('s3',t>=4&&t<6.6?1:0); op('s4',t>=6.5?1:0);
+  // letterbox in scenes 1-2
+  const lb=t<4?L(0,250,eo(P(t,0,.6))):L(250,0,eo(P(t,4,4.3)));
+  $('barT').style.height=$('barB').style.height=lb+'px';
+  // ---------- S1 headlight
+  {const p=P(t,0,2.05);cam($('c1'),L(700,640,p),L(232,245,p),L(3.4,3.0,eio(p)));
+   $('s1').style.filter=`brightness(${L(0,1,eo(P(t,0,.7)))})`;
+   const g=Math.max(0,1-Math.abs(t-1.15)/.5);$('f1').style.opacity=g;$('f1').style.transform=`scale(${.6+g*1.2})`;
+   $('b1').style.transform=`translateX(${L(-700,1400,P(t,0,2))}px) rotate(28deg)`;
+   op('cap1',cl(P(t,.5,.9))*cl(1-P(t,1.7,2)));$('cap1').style.letterSpacing=L(.4,.7,P(t,0,2))+'em';}
+  // ---------- S2 wheel pan
+  {const p=P(t,2,4.05);cam($('c2'),L(560,430,eio(p)),L(400,385,p),L(2.6,2.85,p));
+   $('s2').style.filter=`contrast(1.08)`;
+   op('cap2',cl(P(t,2.4,2.8))*cl(1-P(t,3.6,3.95)));$('cap2').style.letterSpacing=L(.4,.7,P(t,2,4))+'em';}
+  // ---------- S3 type slam
+  {$('t3a').style.transform=`translateY(${L(240,0,eExpo(P(t,4,4.35)))}px)`;
+   $('t3b').style.transform=`translateY(${L(240,0,eExpo(P(t,4.5,4.85)))}px)`;
+   $('r3').style.width=L(0,300,eExpo(P(t,5,5.5)))+'px';
+   const z=L(1.0,1.08,P(t,4,6.5));const [sx,sy]=t<4.5?shake(t,4,16,.35):shake(t,4.5,18,.4);
+   $('s3').style.transform=`translate(${sx}px,${sy}px) scale(${z})`;
+   $('b3').style.transform=`translateX(${L(-400,900,P(t,4,6.5))}px) rotate(28deg)`;
+   $('w3').style.transform=`scale(${L(1.1,1.25,P(t,4,6.5))})`;
+   const out=P(t,6.2,6.5);$('s3').style.opacity=t>=4&&t<6.6?1-out*0:0;}
+  // ---------- S4 hero
+  {const p=P(t,6.5,15);
+   // car: reveal from dark with push-in
+   const s=L(1.18,1.0,eo(P(t,6.5,9.5)))+L(0,.03,P(t,9.5,15));
+   cam($('c4'),566,330,s,540,1112);
+   const rv=eo(P(t,6.5,7.3));$('c4').style.filter=`brightness(${L(.15,1,rv)})`;
+   $('sw4').style.transform=`translateX(${L(-400,1500,eio(P(t,7.0,8.4)))}px) skewX(-22deg)`;
+   $('sw4').style.opacity=P(t,7.0,7.1);
+   const sw2=P(t,12.9,14.1);if(t>12.9){$('sw4').style.transform=`translateX(${L(-400,1500,eio(sw2))}px) skewX(-22deg)`}
+   const g1=Math.max(0,1-Math.abs(t-8.0)/.45), g2=Math.max(0,1-Math.abs(t-13.6)/.45);
+   const g=Math.max(g1,g2);['f4a','f4b'].forEach((id,i)=>{$(id).style.opacity=g*(i?0.8:1);$(id).style.transform=`scale(${(.5+g*1.3)/s})`});
+   $('b4').style.transform=`translateX(${L(200,760,p)}px) rotate(30deg)`;
+   // header
+   op('hdr',eo(P(t,6.7,7.3)));$('hdr').style.transform=`translateY(${L(-30,0,eo(P(t,6.7,7.3)))}px)`;
+   // title
+   $('t4a').style.transform=`translateY(${L(190,0,eExpo(P(t,7.0,7.45)))}px)`;
+   $('t4b').style.transform=`translateY(${L(190,0,eExpo(P(t,7.15,7.6)))}px)`;
+   $('r4').style.width=L(0,170,eExpo(P(t,7.5,8.0)))+'px';
+   // -20%
+   $('slash').style.height=L(0,132,eExpo(P(t,7.9,8.15)))+'px';
+   const pp=P(t,8.0,8.35);op('pctt',pp>0?1:0);
+   $('pctt').style.transform=`skewX(-8deg) scale(${pp>0?L(1.9,1,back(pp)):1.9})`;
+   $('pctt').style.transformOrigin='30% 60%';
+   // model name
+   $('mdl').style.transform=`translateY(${L(150,0,eExpo(P(t,8.6,9.1)))}px)`;
+   // price
+   $('pbar').style.height=L(0,190,eExpo(P(t,9.6,10.0)))+'px';
+   op('old',eo(P(t,9.7,10.1)));$('old').style.transform=`translateX(${L(-40,0,eo(P(t,9.7,10.1)))}px)`;
+   $('strike').style.width=L(0,262,eio(P(t,10.3,10.7)))+'px';
+   const np=P(t,10.6,11.9);op('new',np>0?eo(P(t,10.6,10.9)):0);
+   const v=Math.round(L(38190,30070,eExpo(np))/10)*10;
+   $('num').textContent=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' €';
+   $('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,11.9,12.3))):1})`;$('new').style.transformOrigin='0 50%';
+   // CTA
+   op('cta',eo(P(t,12.6,13.2)));$('cta').style.transform=`translateY(${L(30,0,eo(P(t,12.6,13.2)))}px)`;
+   const [sx,sy]=shake(t,8.0,12,.35);$('s4').style.transform=`translate(${sx}px,${sy}px)`;
+  }
+  // ---------- flashes at cuts and fade out
+  let f=0;[[2,.55],[4,.9],[6.5,.8],[8.0,.35],[12.5,.25]].forEach(([c,a])=>{const d=t-c;if(d>=-.04&&d<.3)f=Math.max(f,a*(d<0?1:1-d/.3))});
+  $('flash').style.opacity=f;
+  $('stage').style.filter=`brightness(${1-P(t,14.55,15)})`;
+  gc.putImageData(grains[frame%6],0,0);
+};
+window.render(0,0);
+</script></body></html>
