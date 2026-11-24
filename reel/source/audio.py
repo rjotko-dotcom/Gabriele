@@ -1,75 +1,82 @@
-# Calm, premium automotive bed: pads + soft bass arp + light plucks, no impacts.
+# Modern, fluid automotive bed (13.5 s): pulsing filtered pad, sub, arp, soft hats,
+# reverse swell into a clean shimmering logo sting. No impacts.
 import numpy as np, wave, sys
-sr=44100; T=15.0; n=int(sr*T); t=np.arange(n)/sr
-rng=np.random.default_rng(7)
+sr=44100; T=13.5; n=int(sr*T); t=np.arange(n)/sr
+rng=np.random.default_rng(11)
 L_=np.zeros(n); R_=np.zeros(n)
 def add(sig,at,g=1.0,pan=0.0):
     i=int(at*sr); j=min(n,i+len(sig)); s=sig[:j-i]*g
     L_[i:j]+=s*(1-pan); R_[i:j]+=s*(1+pan)
-def lp(x,k):
-    y=np.empty_like(x); c=0.0
-    for i in range(len(x)): c+=k*(x[i]-c); y[i]=c
+def lpv(x,k):
+    k=np.broadcast_to(k,x.shape); y=np.empty_like(x); c=0.0
+    for i in range(len(x)): c+=k[i]*(x[i]-c); y[i]=c
     return y
-def saw(f,L): x=np.arange(L)/sr; return 2*((f*x)%1)-1
-chords=[ # (start, bass, notes)
- (0,73.42,[146.83,174.61,220.00]),(2,58.27,[146.83,174.61,233.08]),
- (4,87.31,[174.61,220.00,261.63]),(6,65.41,[164.81,196.00,261.63]),
- (8,73.42,[146.83,174.61,220.00,293.66]),(10,58.27,[146.83,174.61,233.08,293.66]),
- (12,87.31,[174.61,220.00,261.63,349.23]),(14,73.42,[146.83,220.00,293.66])]
-# pads (overlapping, slow attack)
+def saw(f,L,ph=0): x=np.arange(L)/sr; return 2*((f*x+ph)%1)-1
+beat=0.5
+duck=1-0.55*np.exp(-((t%beat))*9)          # sidechain-style pump
+duck=np.where(t<8.9,duck,1)
+groove=np.clip((8.9-t)/0.5,0,1)            # groove ends into outro
+chords=[(0,73.42,[146.83,174.61,220.0,261.63]),(2,58.27,[146.83,174.61,233.08,261.63]),
+        (4,87.31,[174.61,220.0,261.63,329.63]),(6,65.41,[164.81,196.0,246.94,293.66]),
+        (8,58.27,[174.61,233.08,293.66])]
+pad=np.zeros(n); sub=np.zeros(n)
 for i,(st,b,notes) in enumerate(chords):
-    dur=(chords[i+1][0]-st if i+1<len(chords) else T-st)+0.8
-    Ls=int(dur*sr); x=np.arange(Ls)/sr; y=np.zeros(Ls)
+    en=chords[i+1][0] if i+1<len(chords) else 9.4
+    a=int(st*sr); e=int(min(T,en+0.3)*sr); Ls=e-a; x=np.arange(Ls)/sr
+    y=np.zeros(Ls)
     for f in notes:
-        for d in (-0.6,0,0.6): y+=saw(f+d*f/440,Ls)*0.5+np.sin(2*np.pi*(f+d)*x)
-    y=lp(y,0.035)
-    e=np.minimum(1,x/0.7)*np.minimum(1,np.maximum(0,(dur-x)/0.8))
-    add(y*e,st,0.035 if st<6 else 0.04)
-# soft bass arp eighths from 2s
-for i,(st,b,notes) in enumerate(chords):
-    for k in range(4 if st<14 else 2):
-        at=st+k*0.5
-        if at<2.0: continue
-        Ls=int(.48*sr); x=np.arange(Ls)/sr
-        y=lp(saw(b,Ls)+0.5*np.sin(2*np.pi*b*x),0.06)*np.exp(-x*5)*np.minimum(1,x/0.005)
-        add(y,at,0.22 if at<6.5 else 0.3)
-# light plucks from 6.5 (arpeggio up an octave)
-for i,(st,b,notes) in enumerate(chords):
-    if st<6: continue
-    seq=[notes[0]*2,notes[1]*2,notes[2]*2,notes[1]*2]
-    for k in range(8 if st<14 else 2):
-        at=st+k*0.25+(0.5 if st==6 else 0)
-        if at>=14.6 or (st==6 and k>=6): continue
-        f=seq[k%4]; Ls=int(.6*sr); x=np.arange(Ls)/sr
-        y=(np.sin(2*np.pi*f*x)+0.3*np.sin(4*np.pi*f*x))*np.exp(-x*7)*np.minimum(1,x/0.003)
-        add(y,at,0.045,0.35 if k%2 else -0.35)
-# very soft shaker on offbeats from 6.5
-for at in np.arange(6.75,14.5,0.5):
-    Ls=int(.06*sr); w=rng.standard_normal(Ls); w=w-lp(w,.5)
-    add(w*np.exp(-np.arange(Ls)/sr*60),at,0.05,0.2)
-# gentle swells into transitions (quiet filtered air)
-def swell(d):
-    Ls=int(d*sr); w=rng.standard_normal(Ls); k=np.linspace(.005,.06,Ls); y=np.empty(Ls); c=0
-    for i in range(Ls): c+=k[i]*(w[i]-c); y[i]=c
-    return y*np.linspace(0,1,Ls)**2*np.linspace(1,0.2,Ls)**0.3
-add(swell(1.6),2.6,0.35); add(swell(1.6),5.0,0.35)
-# chimes on -20% and final price
-def bell(f):
-    Ls=int(2.5*sr); x=np.arange(Ls)/sr
-    return (np.sin(2*np.pi*f*x)+.4*np.sin(2*np.pi*f*2.76*x)*np.exp(-x*3))*np.exp(-x*1.5)
-add(bell(880),8.1,0.06,-0.2); add(bell(1174.66),8.35,0.045,0.2)
-add(bell(1046.5),11.9,0.06); add(bell(1318.5),12.1,0.04,0.25)
-# price ticks (soft)
-for tt in np.linspace(10.6,11.8,13):
-    Ls=int(.025*sr); x=np.arange(Ls)/sr; add(np.sin(2*np.pi*3200*x)*np.exp(-x*220),tt,0.05)
-# simple stereo reverb (FFT convolution)
-def rev(x,seed):
-    Li=int(2.2*sr); ir=np.random.default_rng(seed).standard_normal(Li)*np.exp(-np.arange(Li)/sr*2.6); ir[0]=0
+        for d,ph in ((-0.25,.1),(0,.5),(0.25,.8)): y+=saw(f*(1+d/100),Ls,ph)
+    w=np.minimum(1,x/0.25)*np.minimum(1,np.maximum(0,(Ls/sr-x)/0.3))
+    pad[a:e]+=y*w
+    sub[a:e]+=np.sin(2*np.pi*b*x)*w
+cut=np.interp(t,[0,7.5,8.9,9.4],[0.012,0.07,0.09,0.02])
+pad=lpv(pad,cut)*duck
+L_+=pad*0.05; R_+=pad*0.05
+sub*=duck*groove; L_+=sub*0.16; R_+=sub*0.16
+# arp (16ths) with opening filter
+for i,(st,b,notes) in enumerate(chords[:4]+[chords[4]]):
+    seq=[notes[0]*2,notes[1]*2,notes[2]*2,notes[-1]*2]
+    for k in range(8 if st<8 else 4):
+        at=st+k*0.25
+        if at<0.5 or at>=8.9: continue
+        f=seq[[0,1,2,3,2,1,3,2][k%8]]; Ls=int(.35*sr); x=np.arange(Ls)/sr
+        y=saw(f,Ls)*0.6+np.sin(2*np.pi*f*x)
+        y=lpv(y,np.interp(at,[0,8],[0.05,0.18]))*np.exp(-x*11)*np.minimum(1,x/0.002)
+        add(y,at,0.05*min(1,at/2+0.4),0.4 if k%2 else -0.4)
+# soft hats 16ths from 2s, gentle
+for at in np.arange(2.0,8.9,0.25):
+    Ls=int(.05*sr); w=rng.standard_normal(Ls); w=w-lpv(w,.6)
+    g=0.035 if (at*4)%2 else 0.02
+    add(w*np.exp(-np.arange(Ls)/sr*90),at,g,0.25 if (at*4)%2 else -0.25)
+for at in np.arange(4.25,8.9,0.5):   # offbeat open hat
+    Ls=int(.22*sr); w=rng.standard_normal(Ls); w=w-lpv(w,.5)
+    add(w*np.exp(-np.arange(Ls)/sr*14),at,0.022)
+# riser/swell into logo (smooth air + rising tone)
+Ls=int(1.5*sr); x=np.arange(Ls)/sr; w=rng.standard_normal(Ls)
+air=lpv(w,np.linspace(.01,.25,Ls))*(x/1.5)**2.5
+tone=np.sin(2*np.pi*np.cumsum(np.linspace(220,880,Ls))/sr)*(x/1.5)**3*0.25
+add(air*0.5+tone*0.2,8.7)
+# logo sting at 10.2: Dm9 shimmer, slow-bloom sub, bell
+Ls=int(3.3*sr); x=np.arange(Ls)/sr
+y=np.zeros(Ls)
+for f in (146.83,220.0,261.63,329.63,440.0,587.33):
+    for d in (-0.3,0.3): y+=np.sin(2*np.pi*f*(1+d/100)*x)+0.25*saw(f*(1+d/100),Ls)
+y=lpv(y,0.08)*np.minimum(1,x/0.08)*np.exp(-x*0.9)
+add(y,10.2,0.045)
+add(np.sin(2*np.pi*36.71*x)*np.minimum(1,x/0.25)*np.exp(-x*1.4),10.2,0.25)
+for f,dt,p in ((1174.66,0,-.2),(1760.0,0.12,.2),(2349.3,0.24,0)):
+    xb=x; add((np.sin(2*np.pi*f*xb)+.3*np.sin(2*np.pi*f*2.01*xb)*np.exp(-xb*4))*np.exp(-xb*1.8),10.2+dt,0.03,p)
+# price ticks
+for tt in np.linspace(4.3,5.5,13):
+    Ls=int(.02*sr); x2=np.arange(Ls)/sr; add(np.sin(2*np.pi*3600*x2)*np.exp(-x2*250),tt,0.035)
+# reverb
+def rev(x,seed,dec=2.2):
+    Li=int(3.0*sr); ir=np.random.default_rng(seed).standard_normal(Li)*np.exp(-np.arange(Li)/sr*dec); ir[:int(.02*sr)]=0
+    ir/=np.sqrt((ir**2).sum())
     N=1<<int(np.ceil(np.log2(len(x)+Li)))
     return np.fft.irfft(np.fft.rfft(x,N)*np.fft.rfft(ir,N),N)[:len(x)]
-wl=rev(L_,1); wr=rev(R_,2)
-m=np.stack([L_+wl*0.012,R_+wr*0.012],1)
-m*=np.minimum(1,t/0.4)[:,None]*np.minimum(1,(T-t)/0.9)[:,None]
-m=np.tanh(m/np.max(np.abs(m))*1.1); m=(m/np.max(np.abs(m))*0.85*32767).astype('<i2')
+m=np.stack([L_+rev(L_,1)*0.35,R_+rev(R_,2)*0.35],1)
+m*=np.minimum(1,t/0.3)[:,None]*np.minimum(1,(T-t)/0.6)[:,None]
+m/=np.max(np.abs(m)); m=np.tanh(m*1.2); m=(m/np.max(np.abs(m))*0.85*32767).astype('<i2')
 with wave.open(sys.argv[1],'wb') as w:
     w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes(m.tobytes())
