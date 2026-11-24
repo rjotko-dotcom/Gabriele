@@ -80,10 +80,7 @@ def sparkle(d=.8,seed=0):
     y*=np.sin(np.pi*x/d); return y/np.abs(y).max()
 def pluck(f):
     Ls=int(1.0*sr); x=np.arange(Ls)/sr; return (np.sin(2*np.pi*f*x)+.25*np.sin(4*np.pi*f*x))*np.exp(-x*5)*np.minimum(1,x/.003)
-add(swish(.35,600,5000,1),0.0,.05,-.5); add(swish(.35,700,6000,2),0.08,.05,.5)     # BLACK / FRIDAY slide in
-add(sparkle(.8,1),0.65,.022)                                                     # glint on title
-add(swish(.5,300,4000,3),1.3,.06)                                                # zoom-through into car
-add(swish(.3,1200,7000,4),1.65,.05,.3); add(pluck(1174.66),1.75,.035)          # -20 %
+add(swish(.3,1200,7000,4),1.5,.05,.3); add(pluck(1174.66),1.75,.035)          # -20 %
 add(swish(.4,500,5000,5),1.8,.04,-.6)                                            # red band slides in
 add(sparkle(.7,2),2.15,.02,.2)                                                   # headlight glint
 add(swish(.3,900,6000,6),4.3,.045,-.3)                                           # price block

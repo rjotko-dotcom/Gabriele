@@ -10,7 +10,7 @@
 @font-face{font-family:M;src:url(fonts/mont-700.woff2);font-weight:700;unicode-range:U+0100-024F}
 html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 *{box-sizing:border-box}
-#stage{position:absolute;inset:0;overflow:hidden;font-family:M,sans-serif;color:#fff;background:#050505}
+#stage{position:absolute;inset:0;overflow:hidden;font-family:M,sans-serif;color:#fff;background:#000}
 .abs{position:absolute}.layer{position:absolute;inset:0;overflow:hidden}
 .wall{position:absolute;inset:-60px;background:url(bgplate.png) center/cover;filter:blur(48px) brightness(.3)}
 .wallgrad{position:absolute;inset:0;background:radial-gradient(120% 60% at 50% 55%,transparent 0,rgba(0,0,0,.55) 70%,#000 100%),linear-gradient(180deg,#000 0,rgba(0,0,0,.15) 30%,rgba(0,0,0,.1) 60%,#000 100%)}
@@ -24,6 +24,8 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 .flare b{position:absolute;left:-90px;top:-90px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#fff 0,rgba(220,235,255,.6) 12%,rgba(180,210,255,.15) 40%,transparent 70%)}
 .flare s{position:absolute;left:-420px;top:-3px;width:840px;height:6px;background:linear-gradient(90deg,transparent,rgba(200,225,255,.85),transparent);filter:blur(1.5px)}
 .mask{position:absolute;overflow:hidden}
+.plate{-webkit-mask-image:radial-gradient(ellipse 46% 50% at 50% 58%,#000 35%,rgba(0,0,0,.6) 55%,transparent 78%)}
+.spot{position:absolute;left:-80px;top:520px;width:1240px;height:1000px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.07),transparent)}
 .red{background:#e30613}
 .hero{font-weight:800;line-height:.86;letter-spacing:-.02em;white-space:nowrap;-webkit-background-clip:text;background-clip:text;color:transparent}
 .band{position:absolute;left:-100px;width:1280px;height:84px;background:#e30613;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.5)}
@@ -34,8 +36,9 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 </style></head>
 <body><div id="stage">
  <div class="layer" id="main">
-  <div class="wall"></div><div class="wallgrad"></div><div class="beam" id="beam"></div>
-  <div class="carwrap feather" id="cbg"><img src="bgplate.png"></div>
+  <div class="beam" id="beam" style="display:none"></div>
+  <div class="spot" id="spot"></div>
+  <div class="carwrap plate" id="cbg"><img src="bgplate.png"></div>
   <div class="carwrap" id="car"><img src="carcut.png">
     <div class="sweep"><i id="sw"></i></div>
     <div class="flare" id="fa" style="left:648px;top:240px"><b></b><s></s></div>
@@ -43,7 +46,7 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
   </div>
 
   <!-- S1: BLACK FRIDAY hook -->
-  <div id="s1" class="abs" style="left:0;top:0;width:1080px;height:1920px">
+  <div id="s1" class="abs" style="left:0;top:0;width:1080px;height:1920px;display:none">
     <div class="abs hero" id="h1" style="font-size:232px;left:0;right:0;top:600px;text-align:center">BLACK</div>
     <div class="abs red" id="h1bar" style="left:50%;top:818px;height:12px;width:0;transform:translateX(-50%)"></div>
     <div class="abs hero" id="h2" style="font-size:232px;left:0;right:0;top:858px;text-align:center">FRIDAY</div>
@@ -61,7 +64,8 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
   <div id="s2" class="abs" style="left:0;top:0;width:1080px;height:1920px">
     <div class="mask" style="left:0;right:0;top:410px;height:300px">
       <div id="pc" class="abs" style="left:0;right:0;top:0;text-align:center;white-space:nowrap">
-        <span class="red" id="slash" style="display:inline-block;width:16px;height:220px;transform:skewX(-16deg) translateY(18px);margin-right:34px;vertical-align:top"></span><span id="pct" class="hero" style="font-size:290px;font-style:italic;display:inline-block;transform:skewX(-6deg)">-20%</span>
+        <div style="font-weight:700;font-size:42px;letter-spacing:.42em;text-indent:.42em;line-height:56px;margin-bottom:6px">BLACK FRIDAY</div>
+        <span class="red" id="slash" style="display:inline-block;width:14px;height:190px;transform:skewX(-16deg) translateY(16px);margin-right:30px;vertical-align:top"></span><span id="pct" class="hero" style="font-size:250px;font-style:italic;display:inline-block;transform:skewX(-6deg)">-20%</span>
       </div>
     </div>
   </div>
@@ -86,11 +90,10 @@ html,body{margin:0;background:#000;width:1080px;height:1920px;overflow:hidden}
 
   <!-- marquee band -->
   <div class="band" id="band" style="top:1402px"><div id="bandt"></div></div>
-  <div id="lim" class="abs" style="left:0;right:0;top:1520px;text-align:center;font-weight:500;font-size:28px;letter-spacing:.42em;text-indent:.42em;color:#bbb">RIBOTAS PASIŪLYMAS</div>
  </div>
 
  <!-- outro -->
- <div id="out" class="layer" style="opacity:0;background:radial-gradient(90% 55% at 50% 48%,#141414 0,#070707 60%,#000 100%)">
+ <div id="out" class="layer" style="opacity:0;background:#000">
   <div id="lock" class="abs" style="left:0;right:0;top:830px;height:260px;display:flex;justify-content:center;align-items:center">
     <div style="height:128px;overflow:hidden"><div id="ofa" class="fa">Fakto Auto</div></div>
     <div id="odiv" style="width:3px;height:0;background:rgba(255,255,255,.75);margin:0 44px"></div>
@@ -105,20 +108,20 @@ const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),P=(t,a,b)=>cl((t-a)/(b-a)),L=(a,b,x)=>a+(b-a)*x;
 const eo=x=>1-Math.pow(1-x,3),eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,q5=x=>1-Math.pow(1-x,5);
 const op=(id,v)=>$(id).style.opacity=v;
-const unit='BLACK FRIDAY  •  -20 %  •  NISSAN QASHQAI  •  ';
-$('bandt').textContent=unit.repeat(6);
+const unit='BLACK FRIDAY  •  -20 %  •  NISSAN QASHQAI  •  RIBOTAS PASIŪLYMAS  •  ';
+$('bandt').textContent=unit.repeat(5);const bu=document.createElement('span');bu.textContent=unit;bu.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;font:800 40px M;letter-spacing:.14em';document.body.appendChild(bu);
 const gc=$('grain').getContext('2d');const grains=[];
 for(let k=0;k<6;k++){const id=gc.createImageData(540,960);let seed=k*99991+7;
   for(let i=0;i<id.data.length;i+=4){seed=(seed*1103515245+12345)&0x7fffffff;const v=(seed>>8)&255;id.data[i]=id.data[i+1]=id.data[i+2]=v;id.data[i+3]=255}grains.push(id)}
 function cam(el,cx,cy,s,fx,fy){el.style.transform=`translate(${fx-cx*s}px,${fy-cy*s}px) scale(${s})`}
 function glint(el,t,a,b,base='#f0f0f0'){const g=L(-30,130,eio(P(t,a,b)));el.style.backgroundImage=`linear-gradient(100deg,${base} ${g-12}%,#ffffff ${g}%,${base} ${g+12}%)`}
-window.render=function(t,frame){
+window.renderI=function(t,frame){
   // ---- car + parallax (whole main section 0..7.6)
   const e=eo(P(t,0,7.6));
-  const carY=L(1070,1145,eio(P(t,1.4,2.2)));
+  const carY=1150;
   const s=L(1.0,0.9,e), sb=L(0.95,0.9,e);
   cam($('car'),566,330,s,540+L(30,-24,e),carY); cam($('cbg'),566,330,sb,540+L(-12,10,e),carY);
-  const lit=L(.22,1,eio(P(t,1.3,2.0)));
+  const lit=1;
   $('car').style.filter=$('cbg').style.filter=`brightness(${lit})`;
   $('beam').style.transform=`translateX(${L(-500,900,P(t,0,7.6))}px) rotate(28deg)`;
   $('sw').style.transform=`translateX(${L(-400,1500,eio(P(t,2.0,3.3)))}px) skewX(-22deg)`;
@@ -135,16 +138,16 @@ window.render=function(t,frame){
   op('h3',eo(P(t,0.7,1.1)));
   op('s1',1-out1);
   // ---- header
-  op('hdr',eo(P(t,1.55,2.0))*(1-eio(P(t,7.25,7.6))));
+  op('hdr',eo(P(t,1.35,1.75))*(1-eio(P(t,7.25,7.6))));
   // ---- S2 -20%
-  const pin=q5(P(t,1.65,2.15));
+  const pin=q5(P(t,1.38,1.9));
   $('pc').style.transform=`translateY(${L(300,0,pin)}px)`;
-  $('slash').style.height=L(0,220,eio(P(t,1.6,2.0)))+'px';
+  $('slash').style.height=L(0,190,eio(P(t,1.45,1.8)))+'px';
   glint($('pct'),t,2.4,3.2);
   const s2out=eio(P(t,4.25,4.55));
   $('pc').style.opacity=1-s2out; if(t>4.25)$('pc').style.transform=`translateY(${L(0,-300,s2out)}px)`;
   // model name
-  $('mdl').style.transform=`translateY(${L(140,0,q5(P(t,1.95,2.45)))}px)`;
+  $('mdl').style.transform=`translateY(${L(140,0,q5(P(t,1.7,2.2)))}px)`;
   op('mdl',1-eio(P(t,7.25,7.6)));
   // ---- S3 price
   op('old',eo(P(t,4.4,4.75)));$('old').style.transform=`translateY(${L(30,0,eo(P(t,4.4,4.75)))}px)`;
@@ -157,11 +160,10 @@ window.render=function(t,frame){
   const pp=P(t,6.05,6.4);op('pill',pp>0?eo(pp):0);$('pill').style.transform=`scale(${L(.85,1,q5(pp))})`;
   op('s3',1-eio(P(t,7.25,7.6)));
   // ---- band
-  const bi=q5(P(t,1.75,2.25));
+  const bi=q5(P(t,1.5,1.95));
   $('band').style.transform=`translateX(${L(-1300,0,bi)}px) rotate(-4deg)`;
-  $('bandt').style.transform=`translateX(${-((t*150)%1000)-200}px)`;
+  $('bandt').style.transform=`translateX(${-((t*150)%bu.getBoundingClientRect().width)}px)`;
   op('band',1-eio(P(t,7.25,7.6)));
-  op('lim',eo(P(t,2.3,2.8))*(1-eio(P(t,7.25,7.6))));
   // ---- main fade, outro
   const mo=eio(P(t,7.25,7.65));$('main').style.opacity=1-mo;
   op('out',mo);
@@ -174,5 +176,6 @@ window.render=function(t,frame){
   $('stage').style.filter=`brightness(${1-eio(P(t,10.0,10.5))})`;
   gc.putImageData(grains[frame%6],0,0);
 };
+window.render=(t,f)=>renderI(t+1.5,f);
 window.render(0,0);
 </script></body></html>
