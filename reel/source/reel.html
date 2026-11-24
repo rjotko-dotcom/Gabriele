@@ -132,26 +132,26 @@ function op(id,v){$(id).style.opacity=v}
 const CUTS=[2,4,6.5,12.5];
 window.render=function(t,frame){
   // ---------- visibility
-  op('s1',t<2.05?1:0); op('s2',t>=2&&t<4.05?1:0); op('s3',t>=4&&t<6.6?1:0); op('s4',t>=6.5?1:0);
+  op('s1',t<2.3?1:0); op('s2',t<4.3?eio(P(t,1.8,2.25)):0); op('s3',t<6.8?eio(P(t,3.8,4.25)):0); op('s4',eio(P(t,6.25,6.75)));
   // letterbox in scenes 1-2
   const lb=t<4?L(0,250,eo(P(t,0,.6))):L(250,0,eo(P(t,4,4.3)));
   $('barT').style.height=$('barB').style.height=lb+'px';
   // ---------- S1 headlight
   {const p=P(t,0,2.05);cam($('c1'),L(700,640,p),L(232,245,p),L(3.4,3.0,eio(p)));
    $('s1').style.filter=`brightness(${L(0,1,eo(P(t,0,.7)))})`;
-   const g=Math.max(0,1-Math.abs(t-1.15)/.5);$('f1').style.opacity=g;$('f1').style.transform=`scale(${.6+g*1.2})`;
+   const g=Math.max(0,1-Math.abs(t-1.15)/.8)**1.5;$('f1').style.opacity=g*.8;$('f1').style.transform=`scale(${.6+g*1.2})`;
    $('b1').style.transform=`translateX(${L(-700,1400,P(t,0,2))}px) rotate(28deg)`;
    op('cap1',cl(P(t,.5,.9))*cl(1-P(t,1.7,2)));$('cap1').style.letterSpacing=L(.4,.7,P(t,0,2))+'em';}
   // ---------- S2 wheel pan
-  {const p=P(t,2,4.05);cam($('c2'),L(560,430,eio(p)),L(400,385,p),L(2.6,2.85,p));
+  {const p=P(t,1.8,4.3);cam($('c2'),L(560,430,eio(p)),L(400,385,p),L(2.6,2.85,p));
    $('s2').style.filter=`contrast(1.08)`;
    op('cap2',cl(P(t,2.4,2.8))*cl(1-P(t,3.6,3.95)));$('cap2').style.letterSpacing=L(.4,.7,P(t,2,4))+'em';}
   // ---------- S3 type slam
-  {$('t3a').style.transform=`translateY(${L(240,0,eExpo(P(t,4,4.35)))}px)`;
-   $('t3b').style.transform=`translateY(${L(240,0,eExpo(P(t,4.5,4.85)))}px)`;
-   $('r3').style.width=L(0,300,eExpo(P(t,5,5.5)))+'px';
-   const z=L(1.0,1.08,P(t,4,6.5));const [sx,sy]=t<4.5?shake(t,4,16,.35):shake(t,4.5,18,.4);
-   $('s3').style.transform=`translate(${sx}px,${sy}px) scale(${z})`;
+  {$('t3a').style.transform=`translateY(${L(240,0,eio(P(t,4.15,5.0)))}px)`;
+   $('t3b').style.transform=`translateY(${L(240,0,eio(P(t,4.45,5.3)))}px)`;
+   $('r3').style.width=L(0,300,eio(P(t,5.1,5.9)))+'px';
+   const z=L(1.0,1.06,P(t,3.8,6.8));
+   $('s3').style.transform=`scale(${z})`;
    $('b3').style.transform=`translateX(${L(-400,900,P(t,4,6.5))}px) rotate(28deg)`;
    $('w3').style.transform=`scale(${L(1.1,1.25,P(t,4,6.5))})`;
    const out=P(t,6.2,6.5);$('s3').style.opacity=t>=4&&t<6.6?1-out*0:0;}
@@ -164,36 +164,36 @@ window.render=function(t,frame){
    $('sw4').style.transform=`translateX(${L(-400,1500,eio(P(t,7.0,8.4)))}px) skewX(-22deg)`;
    $('sw4').style.opacity=P(t,7.0,7.1);
    const sw2=P(t,12.9,14.1);if(t>12.9){$('sw4').style.transform=`translateX(${L(-400,1500,eio(sw2))}px) skewX(-22deg)`}
-   const g1=Math.max(0,1-Math.abs(t-8.0)/.45), g2=Math.max(0,1-Math.abs(t-13.6)/.45);
+   const g1=Math.max(0,1-Math.abs(t-8.3)/.8)**1.5*.8, g2=Math.max(0,1-Math.abs(t-13.6)/.8)**1.5*.8;
    const g=Math.max(g1,g2);['f4a','f4b'].forEach((id,i)=>{$(id).style.opacity=g*(i?0.8:1);$(id).style.transform=`scale(${(.5+g*1.3)/s})`});
    $('b4').style.transform=`translateX(${L(200,760,p)}px) rotate(30deg)`;
    // header
    op('hdr',eo(P(t,6.7,7.3)));$('hdr').style.transform=`translateY(${L(-30,0,eo(P(t,6.7,7.3)))}px)`;
    // title
-   $('t4a').style.transform=`translateY(${L(190,0,eExpo(P(t,7.0,7.45)))}px)`;
-   $('t4b').style.transform=`translateY(${L(190,0,eExpo(P(t,7.15,7.6)))}px)`;
-   $('r4').style.width=L(0,170,eExpo(P(t,7.5,8.0)))+'px';
+   $('t4a').style.transform=`translateY(${L(190,0,eio(P(t,6.9,7.6)))}px)`;
+   $('t4b').style.transform=`translateY(${L(190,0,eio(P(t,7.1,7.8)))}px)`;
+   $('r4').style.width=L(0,170,eio(P(t,7.6,8.3)))+'px';
    // -20%
-   $('slash').style.height=L(0,132,eExpo(P(t,7.9,8.15)))+'px';
-   const pp=P(t,8.0,8.35);op('pctt',pp>0?1:0);
-   $('pctt').style.transform=`skewX(-8deg) scale(${pp>0?L(1.9,1,back(pp)):1.9})`;
+   $('slash').style.height=L(0,132,eio(P(t,7.9,8.4)))+'px';
+   const pp=P(t,8.05,8.75);op('pctt',eo(pp));
+   $('pctt').style.transform=`skewX(-8deg) translateX(${L(40,0,eo(pp))}px) scale(${L(1.08,1,eo(pp))})`;
    $('pctt').style.transformOrigin='30% 60%';
    // model name
-   $('mdl').style.transform=`translateY(${L(150,0,eExpo(P(t,8.6,9.1)))}px)`;
+   $('mdl').style.transform=`translateY(${L(150,0,eio(P(t,8.6,9.3)))}px)`;
    // price
-   $('pbar').style.height=L(0,190,eExpo(P(t,9.6,10.0)))+'px';
+   $('pbar').style.height=L(0,190,eio(P(t,9.6,10.2)))+'px';
    op('old',eo(P(t,9.7,10.1)));$('old').style.transform=`translateX(${L(-40,0,eo(P(t,9.7,10.1)))}px)`;
    $('strike').style.width=L(0,262,eio(P(t,10.3,10.7)))+'px';
    const np=P(t,10.6,11.9);op('new',np>0?eo(P(t,10.6,10.9)):0);
-   const v=Math.round(L(38190,30070,eExpo(np))/10)*10;
+   const v=Math.round(L(38190,30070,eio(np))/10)*10;
    $('num').textContent=String(v).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' €';
    $('new').style.transform=`scale(${np>=1?L(1.06,1,eo(P(t,11.9,12.3))):1})`;$('new').style.transformOrigin='0 50%';
    // CTA
    op('cta',eo(P(t,12.6,13.2)));$('cta').style.transform=`translateY(${L(30,0,eo(P(t,12.6,13.2)))}px)`;
-   const [sx,sy]=shake(t,8.0,12,.35);$('s4').style.transform=`translate(${sx}px,${sy}px)`;
+   
   }
   // ---------- flashes at cuts and fade out
-  let f=0;[[2,.55],[4,.9],[6.5,.8],[8.0,.35],[12.5,.25]].forEach(([c,a])=>{const d=t-c;if(d>=-.04&&d<.3)f=Math.max(f,a*(d<0?1:1-d/.3))});
+  let f=0;[].forEach(([c,a])=>{const d=t-c;if(d>=-.04&&d<.3)f=Math.max(f,a*(d<0?1:1-d/.3))});
   $('flash').style.opacity=f;
   $('stage').style.filter=`brightness(${1-P(t,14.55,15)})`;
   gc.putImageData(grains[frame%6],0,0);
