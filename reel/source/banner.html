@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:M;src:url(fonts/montl-400.woff2);font-weight:400}
+@font-face{font-family:M;src:url(fonts/montl-500.woff2);font-weight:500}
+@font-face{font-family:M;src:url(fonts/montl-600.woff2);font-weight:600}
+@font-face{font-family:M;src:url(fonts/montl-700.woff2);font-weight:700}
+@font-face{font-family:M;src:url(fonts/montl-800.woff2);font-weight:800}
+@font-face{font-family:M;src:url(fonts/mont-400.woff2);font-weight:400;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-500.woff2);font-weight:500;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-600.woff2);font-weight:600;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-700.woff2);font-weight:700;unicode-range:U+0100-024F}
+@font-face{font-family:M;src:url(fonts/mont-800.woff2);font-weight:800;unicode-range:U+0100-024F}
+html,body{margin:0;width:2172px;height:724px;overflow:hidden;background:#000}
+*{box-sizing:border-box}
+#b{position:relative;width:2172px;height:724px;overflow:hidden;font-family:M,sans-serif;color:#fff;background:#050505}
+.abs{position:absolute}
+/* photo on the right, melting into black on the left, top and bottom */
+#photo{position:absolute;right:0;top:0;height:724px;width:1177px;background:url(banner_photo.jpg) center/cover;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 10%),linear-gradient(180deg,#000 82%,rgba(0,0,0,.55) 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+#glow{position:absolute;left:0;top:0;width:1300px;height:724px;background:radial-gradient(80% 90% at 20% 50%,rgba(255,255,255,.045),transparent 70%)}
+.hdr{display:flex;align-items:center;gap:26px}
+.hdr div.t{font-weight:600;font-size:40px}
+.red{background:#e30613}
+.strike{position:relative;display:inline-block;color:#9a9a9a}
+.strike:after{content:"";position:absolute;left:-5px;right:-5px;top:52%;height:3px;background:#e30613}
+</style></head>
+<body><div id="b">
+  <div id="glow"></div>
+  <div id="photo"></div>
+
+  <div class="abs hdr" style="left:92px;top:56px">
+    <div class="t">Fakto Auto</div>
+    <div style="width:2px;height:60px;background:rgba(255,255,255,.7)"></div>
+    <img src="logo_hd.png" style="height:70px">
+  </div>
+
+  <div class="abs" style="left:88px;top:150px;font-weight:800;font-size:112px;line-height:1;letter-spacing:-.02em;white-space:nowrap">BLACK FRIDAY</div>
+  <div class="abs" style="left:92px;top:280px;white-space:nowrap">
+    <span style="font-weight:700;font-size:50px">Nissan Qashqai MHEV</span>
+    <span style="font-weight:400;font-size:40px;color:#cfcfcf;margin-left:14px">N-Design</span>
+  </div>
+
+  <div class="abs" style="left:92px;top:372px;font-weight:500;font-size:40px"><span class="strike">37&nbsp;590&nbsp;€</span></div>
+  <div class="abs" style="left:86px;top:414px;font-weight:800;font-size:128px;line-height:1;letter-spacing:-.02em;white-space:nowrap">30&nbsp;070&nbsp;€</div>
+
+  <div class="abs" style="left:92px;top:566px;display:flex;align-items:center;gap:18px">
+    <div class="red" style="padding:12px 24px;border-radius:6px;font-weight:700;font-size:30px;letter-spacing:.06em;white-space:nowrap">SUTAUPOTE 7&nbsp;520&nbsp;€</div>
+    <div style="font-weight:800;font-style:italic;font-size:44px;color:#ff2b35;white-space:nowrap">−20&nbsp;%</div>
+    <div style="width:2px;height:44px;background:rgba(255,255,255,.35);margin:0 6px"></div>
+    <div style="font-weight:600;font-size:26px;letter-spacing:.14em;white-space:nowrap">TIK IKI LAPKRIČIO 30 D.</div>
+  </div>
+
+  <div class="abs" style="left:92px;top:664px;font-weight:400;font-size:18px;color:rgba(255,255,255,.55);white-space:nowrap">Pasiūlymas galioja iki 2026 m. lapkričio 30 d. Pasiūlymo sąlygos – salone. Nuotrauka iliustracinė.</div>
+</div>
+<script>window.render=()=>{};</script>
+</body></html>
